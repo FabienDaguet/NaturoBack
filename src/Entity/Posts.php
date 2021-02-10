@@ -2,8 +2,10 @@
 
 namespace App\Entity;
 
-use App\Repository\PostsRepository;
+use App\Entity\Users;
+use App\Entity\Category;
 use Doctrine\ORM\Mapping as ORM;
+use App\Repository\PostsRepository;
 
 /**
  * @ORM\Entity(repositoryClass=PostsRepository::class)
@@ -28,11 +30,6 @@ class Posts
     private $postContent;
 
     /**
-     * @ORM\Column(type="integer")
-     */
-    private $postCategory;
-
-    /**
      * @ORM\Column(type="text")
      */
     private $postImg;
@@ -47,6 +44,12 @@ class Posts
      * @ORM\JoinColumn(nullable=false)
      */
     private $postAuthor;
+
+    /**
+     * @ORM\ManyToOne(targetEntity=Category::class, inversedBy="posts")
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $postCategory;
 
     public function getId(): ?int
     {
@@ -73,18 +76,6 @@ class Posts
     public function setPostContent(string $postContent): self
     {
         $this->postContent = $postContent;
-
-        return $this;
-    }
-
-    public function getPostCategory(): ?int
-    {
-        return $this->postCategory;
-    }
-
-    public function setPostCategory(int $postCategory): self
-    {
-        $this->postCategory = $postCategory;
 
         return $this;
     }
@@ -121,6 +112,18 @@ class Posts
     public function setPostAuthor(?Users $postAuthor): self
     {
         $this->postAuthor = $postAuthor;
+
+        return $this;
+    }
+
+    public function getPostCategory(): ?Category
+    {
+        return $this->postCategory;
+    }
+
+    public function setPostCategory(?Category $postCategory): self
+    {
+        $this->postCategory = $postCategory;
 
         return $this;
     }
