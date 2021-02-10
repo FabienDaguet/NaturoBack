@@ -2,7 +2,9 @@
 
 namespace App\DataFixtures;
 
+use App\Entity\Category;
 use Faker;
+use App\Entity\Posts;
 use App\Entity\Users;
 use Doctrine\Persistence\ObjectManager;
 use Doctrine\Bundle\FixturesBundle\Fixture;
@@ -35,6 +37,25 @@ class AppFixtures extends Fixture
             ->setPassword($password);
             $manager->persist($user);
         }
+
+        for ($k = 0; $k < 3; $k++){
+            $cat = new Category();
+            $cat -> setCatName($generator->word());
+            $manager->persist($cat);
+        }
+        
+        for ($j = 0; $j < 20; $j++){
+            $post = new Posts();
+            $post
+            ->setPostTitle($generator->sentence)
+            ->setPostContent($generator->text())
+            ->setPostDate($generator->dateTimeBetween('-1 year', 'now'))
+            ->setPostAuthor($user)
+            ->setPostCategory($cat)
+            ->setPostImg($generator->imageUrl(750, 500));
+            $manager->persist($post);
+        }        
+
         $manager->flush();
     }
 }
