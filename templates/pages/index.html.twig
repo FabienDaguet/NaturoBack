@@ -2,83 +2,55 @@
 
 {% block title %}Bienvenue{% endblock %}
 
+{% block index %}active{% endblock %}
+
 {% block body %}
-<div class="locker">
 
-        <nav class="nav pb-0 pt-0 navbar-expand-md">
-            <div class="navbar-collapse offcanvas-collapse p-0" id="menu">
-                <ul class="navbar-nav w-100 flex-column flex-md-row justify-content-around">
-                    <li class="nav-item">
-                        <a href="index.html" class="p-3 nav-link active text-decoration-none  link"
-                            id="active">Accueil</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="histoire.html" class="p-3 nav-link text-decoration-none  link">Un peu d'histoire</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="qui-suis-je.html" class="p-3 nav-link text-decoration-none  link">Qui suis-je</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="séance.html" class="p-3 nav-link text-decoration-none  link">La séance</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="tarifs.html" class="p-3 nav-link text-decoration-none  link">Tarifs</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="contact.html" class="p-3 nav-link text-decoration-none  link">Contact</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="articles.html" class="p-3 nav-link text-decoration-none  link">Articles</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
+    <article class="content">
 
-        <article class="content">
+        <div class="content__title-container">
+            <h1 class="content__title">Qu'est ce que la <span class="content--color break">naturopathie</span> ?
+            </h1>
+        </div>
 
-            <div class="content__title-container">
-                <h1 class="content__title">Qu'est ce que la <span class="content--color break">naturopathie</span> ?
-                </h1>
-            </div>
-
-            <div class="content__paragraph">
-                <p class="content__paragraph--spacing">C’est un allemand John H. Scheel qui en 1895 est à l’origine du
-                    mot «naturopathie» qui vient de deux mots anglais «nature» et «path».</p>
-                <div class="content--center">
-                    <p class="content__paragraph--spacing">La naturopathie se traduit par le « chemin de la nature ».
-                    </p>
-                </div>
-                <p class="content--upper content__paragraph--spacing">« La naturopathie est l'art d'aider les personnes
-                    à conserver, trouver ou retrouver leur santé et leur bien être, de façon et par des moyens naturels»
+        <div class="content__paragraph">
+            <p class="content__paragraph--spacing">C’est un allemand John H. Scheel qui en 1895 est à l’origine du
+                mot «naturopathie» qui vient de deux mots anglais «nature» et «path».</p>
+            <div class="content--center">
+                <p class="content__paragraph--spacing">La naturopathie se traduit par le « chemin de la nature ».
                 </p>
             </div>
+            <p class="content--upper content__paragraph--spacing">« La naturopathie est l'art d'aider les personnes
+                à conserver, trouver ou retrouver leur santé et leur bien être, de façon et par des moyens naturels»
+            </p>
+        </div>
 
-            <p>Elle repose sur 3 grands piliers que sont :</p>
-            <div class="flex__container">
-                <div class="content__list">
-                    <div class="content__list-element-container">
-                        <span class="content__list-element ">une alimentation saine, vivante, équilibrée</span>
-                    </div>
-                    <div class="content__list-element-container">
-                        <span class="content__list-element">la gestion du stress et des émotions</span>
-                    </div>
-                    <div class="content__list-element-container">
-                        <span class="content__list-element">la gestion des mouvements et respiration</span>
-                    </div>
+        <p>Elle repose sur 3 grands piliers que sont :</p>
+        <div class="flex__container">
+            <div class="content__list">
+                <div class="content__list-element-container">
+                    <span class="content__list-element ">une alimentation saine, vivante, équilibrée</span>
                 </div>
-                <div class="img__flex-container">
-                    <div class="img__container">
-                        <img class="img__content" src="img/alimentation.jpg" alt="alimentation">
-                    </div>
-                    <div class="img__container">
-                        <img class="img__content" src="img/stress.jpg" alt="stress">
-                    </div>
-                    <div class="img__container">
-                        <img class="img__content" src="img/respiration.jpg" alt="respiration">
-                    </div>
+                <div class="content__list-element-container">
+                    <span class="content__list-element">la gestion du stress et des émotions</span>
+                </div>
+                <div class="content__list-element-container">
+                    <span class="content__list-element">la gestion des mouvements et respiration</span>
                 </div>
             </div>
+            <div class="img__flex-container">
+                <div class="img__container">
+                    <img class="img__content" src="img/alimentation.jpg" alt="alimentation">
+                </div>
+                <div class="img__container">
+                    <img class="img__content" src="img/stress.jpg" alt="stress">
+                </div>
+                <div class="img__container">
+                    <img class="img__content" src="img/respiration.jpg" alt="respiration">
+                </div>
+            </div>
+        </div>
 
-        </article>
-    </div>
+    </article>
+
 {% endblock %}

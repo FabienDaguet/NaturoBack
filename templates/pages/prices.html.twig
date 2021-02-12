@@ -1,0 +1,62 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Qui suis-je{% endblock %}
+
+{% block prices %}active{% endblock %}
+
+{% block body %}
+
+    <article class="content">
+
+        <div class="content__title-container">
+            <h1 class="content__title">Les <span class="content--color break">tarifs</span> </h1>
+        </div>
+
+        <section class="section price-section">
+            <h5 class="content--color price__section">1ere consultation 1h50</h5>
+            <div class="price__container">
+                <div>
+                    <span>Tarifs adultes :</span>
+                    <div class="content__list price">
+                        <span class="content__list-element content__list-element--spacing">en cabinet = 80€</span>
+                        <span class="content__list-element content__list-element--spacing">à domicile = 90€*</span>
+                        <span class="content__list-element content__list-element--spacing">en ligne = 80€</span>
+                    </div>
+                </div>
+                <div>
+                    <span>Tarifs enfants :</span>
+                    <div class="content__list price">
+                        <span class="content__list-element content__list-element--spacing">en cabinet = 60€</span>
+                        <span class="content__list-element content__list-element--spacing"> à domicile = 70€*</span>
+                    </div>
+                </div>
+            </div>
+
+
+            <h5 class="content--color">Suivi 45mn-1h</h5>
+            <div class="price__container">
+                <div>
+                    <span>Tarifs adultes :</span>
+                    <div class="content__list price">
+                        <span class="content__list-element content__list-element--spacing">en cabinet = 60€</span>
+                        <span class="content__list-element content__list-element--spacing">à domicile = 70€*</span>
+                        <span class="content__list-element content__list-element--spacing">en ligne = 60€</span>
+                    </div>
+                </div>
+                <div>
+                    <span>Tarifs enfants :</span>
+                    <div class="content__list price">
+                        <span class="content__list-element content__list-element--spacing">en cabinet = 50€</span>
+                        <span class="content__list-element content__list-element--spacing">à domicile = 60€*</span>
+                    </div>
+                </div>
+            </div>
+
+
+            <p class="warning">*Domicile à 15km alentours</p>
+
+        </section>
+
+    </article>
+        
+{% endblock %}
