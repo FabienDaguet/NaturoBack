@@ -1,0 +1,47 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello BlogController!{% endblock %}
+
+{% block blog %}active{% endblock %}
+
+{% block body %}
+
+    <div class="post__category-img-container">
+        <img class="post__category-img" src="img/alim.jpg" alt="fruits">
+    </div>
+
+    <article class="content">
+
+        <div class="content__title-container post__head">
+            <span class="category"><a href="{{ path('blog') }}">Blog</a> \ <a href="category.html">Categorie \</a></span>
+            <h1 class="content__title post__title">Titre de <span class="content--color break">l'articles</span> </h1>
+        </div>
+
+        <section>
+            <div class="preview__container">
+                <div class="preview__img">
+                    <img class="img__content post__img" src="img/alimentation.jpg" alt="plat sain">
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam possimus amet
+                        eveniet adipisci
+                        suscipit aliquid velit, fuga cum sequi eligendi. Voluptatibus ab sed dolores magni, ratione
+                        voluptate blanditiis dolorum sunt!
+                        Quas adipisci animi eaque temporibus nisi ex aut ipsam doloribus necessitatibus, id tempora
+                        illo
+                        rerum nesciunt facilis corrupti Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni doloremque saepe cumque veniam aut sint beatae adipisci facere deleniti, quo in exercitationem ad laudantium molestias vitae ratione natus eveniet odio.
+                        Vel deleniti quia cumque eius illum quaerat, minima fugit repellendus laudantium excepturi quisquam ab? Accusamus optio sapiente laudantium suscipit? Officiis fuga ut placeat necessitatibus odit tempora asperiores est nostrum fugiat.
+                        Placeat nihil ratione velit, maxime fugiat autem! Quae eum sequi dicta quidem distinctio velit fugit totam possimus exercitationem animi ab perspiciatis odit, aliquid accusantium a, placeat, dolorum ipsam aut iste.
+                        Quasi nulla ab sequi obcaecati quaerat molestiae dolores possimus dolorum a minima asperiores necessitatibus rem laudantium nisi quae expedita eius illo quibusdam deserunt nihil, quos exercitationem provident ullam deleniti? Quisquam!
+                        Officiis, laborum iure veritatis fuga eos labore. Veniam laudantium placeat omnis atque nam fugiat, corrupti quis ipsum neque ad adipisci ipsa repellendus tempora, iure suscipit voluptatum magni doloremque. Nisi, nam?
+                        Corrupti quo deleniti possimus. Excepturi maiores nostrum sunt perferendis, sit, aut ex amet rem eligendi illum eaque animi quasi, ab neque minima? Velit exercitationem odit fuga qui maxime sequi cupiditate.
+                        Deserunt saepe numquam eum? Ullam libero ducimus excepturi cum voluptatum, quibusdam eligendi nostrum ea molestias odit qui? Delectus, molestias rerum nemo, minus sed voluptates nobis nostrum molestiae laudantium mollitia sapiente!
+                        Dolor, nisi. Neque placeat aliquam voluptatibus minima possimus similique sapiente magnam, illo, fuga eaque et cupiditate a ipsa est, expedita id facilis voluptas sint laudantium modi repudiandae ipsam earum! Veritatis.
+                        Perspiciatis ad voluptatibus quasi possimus, voluptatem minima? Quasi modi quis dolores praesentium animi. Dolorem, eum atque? Vero, laudantium quo aliquid, dolor voluptatem optio labore modi non at quas voluptas! Nulla?
+                        Ab, amet blanditiis. Cum quia quod odio illo dolor quasi hic quis provident odit itaque quo ducimus voluptatum, facilis voluptates praesentium vel quam. Rerum cupiditate, placeat voluptatem quia nemo maxime?</p>
+        </div>
+
+        <span><a href="articles.html">Retour</a></span>
+
+    </article>
+
+{% endblock %}

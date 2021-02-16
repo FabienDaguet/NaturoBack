@@ -2,6 +2,8 @@
 
 namespace App\Controller;
 
+use App\Repository\CategoryRepository;
+use App\Repository\PostsRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -11,10 +13,18 @@ class BlogController extends AbstractController
     /**
      * @Route("/blog", name="blog")
      */
-    public function index(): Response
+    public function index(PostsRepository $postsRepository, CategoryRepository $categoryRepository): Response
     {
+        //$posts = $postsRepository->findAll();
+        //dd($posts);
+
+        $lastPosts = $postsRepository->findLastPosts(5);
+        $allCategory = $categoryRepository->findallCategory();
+        //dd($category);
+        //dd($lastPosts);
         return $this->render('blog/blog.html.twig', [
-            'controller_name' => 'BlogController',
+            'lastPosts' => $lastPosts,
+            'allCategory' => $allCategory 
         ]);
     }
 
