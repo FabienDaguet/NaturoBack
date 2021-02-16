@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Entity\Posts;
 use App\Repository\CategoryRepository;
 use App\Repository\PostsRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -29,10 +30,13 @@ class BlogController extends AbstractController
     }
 
     /**
-     * @Route("/article", name="post")
+     * @Route("/article/{id}", name="post")
      */
-    public function post(): Response
+    public function post(Posts $posts): Response
     {
-        return $this->render('blog/post.html.twig');
+        //dd($posts);
+        return $this->render('blog/post.html.twig', [
+            'post' => $posts
+        ]);
     }
 }
