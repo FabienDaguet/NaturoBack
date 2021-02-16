@@ -7,7 +7,7 @@
 {% block body %}
 
     <div class="post__category-img-container">
-        <img class="post__category-img" src="img/alim.jpg" alt="fruits">
+        <img class="post__category-img" src="{{ asset('img/alim.jpg') }}" alt="fruits">
     </div>
 
     <article class="content">
@@ -25,7 +25,7 @@
                 <p>{{post.postContent}}</p>
         </div>
 
-        <span><a href="{{ path(app.request.get('referer')) }}">Retour</a></span>
+        <span><a href="#">Retour</a></span>
 
     </article>
 
