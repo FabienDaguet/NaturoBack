@@ -23,7 +23,13 @@
                     {% endif %}
                         <div class="category__media">
                             <a href="category.html">
-                                <img src="img/alimentation.jpg" alt="alimentation" class="category__img">
+                                {% if loop.index== 1 %}
+                                    <img src="img/alimentation.jpg" alt="alimentation" class="category__img">
+                                    {% elseif loop.index == 2 %}
+                                    <img src="img/sommeil.jpg" alt="alimentation" class="category__img">
+                                    {% elseif loop.index == 3 %}
+                                    <img src="img/bienetre.jpg" alt="alimentation" class="category__img">
+                                {% endif %}        
                                 <span class="category__name">{{category.catName}}</span>
                             </a>
                         </div>
@@ -40,12 +46,12 @@
                 <div class="preview__container">
 
                     <div class="preview__img">
-                        <a href="{{ path('post', {id: post.id}) }}"><img class="img__content" src="{{ post.postImg }}" alt="plat sain"></a>
+                        <a href="{{ path('post', {slug: post.slug}) }}"><img class="img__content" src="{{ post.postImg }}" alt="plat sain"></a>
                     </div>
 
                     <span class="category__indicator"><a class="category__link" href="category.html">{{post.postCategory.catName}}</a></span>
 
-                    <h4 class="article__title"><a href="{{ path('post', {id: post.id}) }}">{{post.postTitle}}</a></h4>
+                    <h4 class="article__title"><a href="{{ path('post', {slug: post.slug}) }}">{{post.postTitle}}</a></h4>
 
                     <p>{{post.postContent |u.truncate(200)}}...</p>
 

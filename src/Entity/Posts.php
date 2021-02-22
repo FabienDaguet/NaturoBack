@@ -6,6 +6,7 @@ use App\Entity\Users;
 use App\Entity\Category;
 use Doctrine\ORM\Mapping as ORM;
 use App\Repository\PostsRepository;
+use Gedmo\Mapping\Annotation as Gedmo;
 
 /**
  * @ORM\Entity(repositoryClass=PostsRepository::class)
@@ -50,6 +51,12 @@ class Posts
      * @ORM\JoinColumn(nullable=false)
      */
     private $postCategory;
+
+    /**
+     * @Gedmo\Slug(fields={"postTitle"})
+     * @ORM\Column(type="string", length=255)
+     */
+    private $slug;
 
     public function getId(): ?int
     {
@@ -126,5 +133,10 @@ class Posts
         $this->postCategory = $postCategory;
 
         return $this;
+    }
+
+    public function getSlug(): ?string
+    {
+        return $this->slug;
     }
 }
