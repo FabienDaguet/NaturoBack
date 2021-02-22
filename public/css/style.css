@@ -434,13 +434,12 @@ body {
     }
 
     .category__side {
+        padding: 0;
         width: calc(100%/3 - 1rem);
         max-height: 20rem;
         min-height: 20rem;
         overflow: hidden;
     }
-
-    
 
     .category__name {
         position: absolute;
@@ -469,7 +468,7 @@ body {
     }
 
     .category__img:hover {
-        transform: scale(1.05);
+        transform: scale(1.07);
     }
 
     .img__container-history {
