@@ -53,20 +53,8 @@
             {% endfor %}
         </section>
 
-        <div>
-            <nav>
-                <ul class="pagination__nav">
-                    <li class="pagination__button">
-                        <a class="pagination__link" href="#">1</a>
-                    </li>
-                    <li class="pagination__button">
-                        <a class="pagination__link" href="#">2</a>
-                    </li>
-                    <li class="pagination__button">
-                        <a class="pagination__link" href="#">3</a>
-                    </li>
-                </ul>
-            </nav>
+        <div class="navigation">
+            {{ knp_pagination_render(lastPosts) }}
         </div>
 
     </article>

@@ -5,8 +5,10 @@ namespace App\Controller;
 use App\Entity\Posts;
 use App\Repository\CategoryRepository;
 use App\Repository\PostsRepository;
+use Knp\Component\Pager\PaginatorInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 
 class BlogController extends AbstractController
@@ -14,12 +16,17 @@ class BlogController extends AbstractController
     /**
      * @Route("/blog", name="blog")
      */
-    public function index(PostsRepository $postsRepository, CategoryRepository $categoryRepository): Response
+    public function index(PostsRepository $postsRepository, CategoryRepository $categoryRepository, Request $request, PaginatorInterface $paginator): Response
     {
         //$posts = $postsRepository->findAll();
         //dd($posts);
 
-        $lastPosts = $postsRepository->findLastPosts(5);
+        $donnees = $postsRepository->findBy([],['postDate' => 'desc']);
+        $lastPosts = $paginator->paginate(
+            $donnees, //On passe les données
+            $request->query->getInt('page', 1), //Numéro de la page, 1 par defaut
+            5
+        );
         $allCategory = $categoryRepository->findallCategory();
         //dd($category);
         //dd($lastPosts);

@@ -253,25 +253,20 @@ body {
     color: var(--main-color);
 }
 
-.pagination__nav {
-    list-style-type: none;
-    padding: 0;
-    display: flex;
-    align-items: center;
-}
-
-.pagination__button {
-    padding: 0.25rem 0.75rem;
-    margin-right: 0.5rem;
-    background-color: var(--main-color);
-}
-
-.pagination__link {
-    color: white;
-}
-
 .preview__container {
     margin-bottom: 2.5rem;
+}
+
+/*----Pagination----*/
+
+.page-link {
+    color: var(--main-color) !important;
+}
+
+.page-item.active .page-link {
+    color: #ffffff !important;
+    background-color: var(--main-color) !important;
+    border-color: var(--main-color) !important;
 }
 
 /*------POST-PAGE------*/
@@ -444,7 +439,7 @@ body {
     }
 
     .category__side:hover {
-        transform: scale(1.1);
+        transform: scale(1.05);
     }
 
     .category__name {
