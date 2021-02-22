@@ -29,6 +29,11 @@ class Category
      */
     private $posts;
 
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $catImg;
+
     public function __construct()
     {
         $this->posts = new ArrayCollection();
@@ -77,6 +82,18 @@ class Category
                 $post->setPostCategory(null);
             }
         }
+
+        return $this;
+    }
+
+    public function getCatImg(): ?string
+    {
+        return $this->catImg;
+    }
+
+    public function setCatImg(?string $catImg): self
+    {
+        $this->catImg = $catImg;
 
         return $this;
     }

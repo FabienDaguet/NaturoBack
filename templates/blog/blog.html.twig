@@ -23,13 +23,7 @@
                     {% endif %}
                         <div class="category__media">
                             <a href="category.html">
-                                {% if loop.index== 1 %}
-                                    <img src="img/alimentation.jpg" alt="alimentation" class="category__img">
-                                    {% elseif loop.index == 2 %}
-                                    <img src="img/sommeil.jpg" alt="alimentation" class="category__img">
-                                    {% elseif loop.index == 3 %}
-                                    <img src="img/bienetre.jpg" alt="alimentation" class="category__img">
-                                {% endif %}        
+                                <img src="{{ category.catImg }}" alt="alimentation" class="category__img">
                                 <span class="category__name">{{category.catName}}</span>
                             </a>
                         </div>
