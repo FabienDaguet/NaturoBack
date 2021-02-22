@@ -22,7 +22,7 @@
                         <div class="category__side rigth-side">
                     {% endif %}
                         <div class="category__media">
-                            <a href="category.html">
+                            <a href="{{ path('category', {slug: category.slug}) }}">
                                 <img src="{{ category.catImg }}" alt="alimentation" class="category__img">
                                 <span class="category__name">{{category.catName}}</span>
                             </a>
@@ -43,7 +43,7 @@
                         <a href="{{ path('post', {slug: post.slug}) }}"><img class="img__content" src="{{ post.postImg }}" alt="plat sain"></a>
                     </div>
 
-                    <span class="category__indicator"><a class="category__link" href="category.html">{{post.postCategory.catName}}</a></span>
+                    <span class="category__indicator"><a class="category__link" href="{{ path('category', {slug: post.postCategory.slug}) }}">{{post.postCategory.catName}}</a></span>
 
                     <h4 class="article__title"><a href="{{ path('post', {slug: post.slug}) }}">{{post.postTitle}}</a></h4>
 

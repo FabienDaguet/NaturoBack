@@ -22,7 +22,7 @@ class BlogController extends AbstractController
         //$posts = $postsRepository->findAll();
         //dd($posts);
 
-        $donnees = $postsRepository->findBy([],['postDate' => 'desc']);
+        $donnees = $postsRepository->findByDate();
         $lastPosts = $paginator->paginate(
             $donnees, //On passe les données
             $request->query->getInt('page', 1), //Numéro de la page, 1 par defaut
@@ -34,6 +34,29 @@ class BlogController extends AbstractController
         return $this->render('blog/blog.html.twig', [
             'lastPosts' => $lastPosts,
             'allCategory' => $allCategory 
+        ]);
+    }
+
+    /**
+     * @Route("/blog/{slug}", name="category", methods={"GET"})
+     */
+    public function category(PostsRepository $postsRepository, CategoryRepository $categoryRepository , Request $request, PaginatorInterface $paginator, $slug): Response
+    {
+        //$posts = $postsRepository->findAll();
+        //dd($posts);
+
+        $category = $categoryRepository->FindOneBySlug($slug);
+        $donnees = $postsRepository->findPostByCat($slug);
+        $lastPosts = $paginator->paginate(
+            $donnees,
+            $request->query->getInt('page', 1), 
+            5
+        );
+        //dd($lastPosts);
+        //dd($category);
+        return $this->render('blog/category.html.twig', [
+            'lastPosts' => $lastPosts,
+            'category' => $category
         ]);
     }
 

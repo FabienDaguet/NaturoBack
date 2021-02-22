@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello BlogController!{% endblock %}
+
+{% block blog %}active{% endblock %}
+
+{% block body %}
+
+    <article class="content">
+
+        <div class="content__title-container post__head">
+            <span class="category"><a href="{{ path('blog') }}">Blog</a> \</span>
+            <h1 class="content__title post__title">{{category.slug}}</h1>
+        </div>
+
+        <section>
+            {% for post in lastPosts %}
+                <div class="preview__container">
+
+                    <div class="preview__img">
+                        <a href="{{ path('post', {slug: post.slug}) }}"><img class="img__content" src="{{ post.postImg }}" alt="plat sain"></a>
+                    </div>
+
+                    <h4 class="article__title"><a href="{{ path('post', {slug: post.slug}) }}">{{post.postTitle}}</a></h4>
+
+                    <p>{{post.postContent |u.truncate(200)}}...</p>
+
+                </div>
+            {% endfor %}
+        </section>
+
+        <div class="navigation">
+            {{ knp_pagination_render(lastPosts) }}
+        </div>
+
+    </article>
+
+{% endblock %}

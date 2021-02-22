@@ -19,15 +19,29 @@ class PostsRepository extends ServiceEntityRepository
         parent::__construct($registry, Posts::class);
     }
 
-    public function findLastPosts(int $nb)
+    public function findPostByCat($value)
     {
         return $this->createQueryBuilder('p')
+        ->join('p.postCategory', 'c')
+        ->andWhere('c.slug = :val')
+        ->setParameter('val', $value)
+        ->orderBy('p.postDate', 'DESC')
+        ->getQuery()
+        ->getResult()
+    ;
+    }
+
+    
+    public function findByDate()
+    {
+        return $this->createQueryBuilder('p')
+            ->join('p.postCategory', 'c')
             ->orderBy('p.postDate', 'DESC')
-            ->setMaxResults($nb)
             ->getQuery()
             ->getResult()
         ;
     }
+    
 
     // /**
     //  * @return Posts[] Returns an array of Posts objects

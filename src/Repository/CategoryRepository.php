@@ -28,6 +28,17 @@ class CategoryRepository extends ServiceEntityRepository
         ;
     }
 
+    public function FindOneBySlug($value)
+    {
+        return $this->createQueryBuilder('c')
+            ->select(('c.slug'),('c.catName'))
+            ->andWhere('c.slug = :val')
+            ->setParameter('val', $value)
+            ->getQuery()
+            ->getOneOrNullResult()
+        ;
+    }
+
     // /**
     //  * @return Category[] Returns an array of Category objects
     //  */
