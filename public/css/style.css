@@ -14,6 +14,10 @@ a {
     color: black;
 }
 
+a:hover {
+    color: rgb(66, 148, 3);;
+}
+
 body {
     overflow-x: hidden;
 }
@@ -28,6 +32,10 @@ body {
 .logo {
     max-width: 100%;
     max-height: 100%;
+}
+
+.body-content {
+    padding: 0 4rem;
 }
 
 
@@ -47,9 +55,13 @@ body {
 
 /*----Navbar----*/
 
-#active {
-    color: white;
-    background-color: var(--main-color);
+.navbar-collapse {
+    text-align: center;
+}
+
+.open {
+    font-size: 2rem;
+    font-weight: bold;
 }
 
 .menu-btn {
@@ -121,16 +133,12 @@ body {
 
 /*------CONTENT------*/
 
-.content {
-    padding: 0 1.5rem;
-}
-
 .content__title-container {
     text-align: center;
 }
 
 .content__title {
-    margin-bottom: 1.25rem;
+    margin-bottom: 4rem;
 }
 
 .content__list {
@@ -225,9 +233,7 @@ body {
 
 .category__all {
     display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    flex-wrap: wrap;
+    flex-direction: column;
 }
 
 .category__side {
@@ -378,13 +384,19 @@ body {
 
     /*----Header----*/
 
+    .header__container {
+        margin-bottom: 4rem;
+    }
+
     .header {
         margin-bottom: 0;
     }
 
-    .nav {
-        margin-bottom: 1.25rem;
-        /*border-bottom: 1px solid var(--main-color);*/
+    /*----Nav----*/
+
+    .nav-link {
+        padding: 0 !important;
+        margin-right: 1rem;
     }
 
     /*----Content----*/
@@ -434,6 +446,9 @@ body {
     }
 
     .category__all {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
         justify-content: space-between;
     }
 
@@ -511,10 +526,32 @@ body {
 
 @media (min-width: 1024px) {
 
+    /*---Body----*/
+
+    body,html {
+        height: 100vh;
+    }
+
+    .body-content {
+        margin: auto;
+    }
+
+    .page {
+        position: relative;
+        min-height: 100%;
+    }
+
+    /*----Header----*/
+
+    .header__container {
+        display: flex;
+    }
+
+
     /*----Navbar----*/
 
-    .navbar-nav {
-        padding: 0 4rem;
+    .nav {
+        margin-left: auto;
     }
 
     /*----Content----*/
@@ -522,6 +559,7 @@ body {
     .content {
         width: calc(100% / 2);
         margin: auto;
+        padding: 0;
     }
 
     .container {
@@ -584,4 +622,18 @@ body {
     .container-login {
         width: calc(100% / 4);
     }
+
 }
+
+/*------DESKTOP-BIG-SCREEN------*/
+
+@media (min-width: 1024px) {
+ 
+/*----Body----*/
+
+.body-content {
+    max-width: 1425px;
+    margin: auto;
+}
+
+}    
