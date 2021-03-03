@@ -35,7 +35,7 @@ body {
 
 .header {
     margin-bottom: 1.25rem;
-    border-bottom: 1px solid var(--main-color);
+    /*border-bottom: 1px solid var(--main-color);*/
     background-color: white;
 }
 
@@ -332,6 +332,14 @@ body {
     margin-bottom: 1rem;
 }
 
+/*------LOGIN------*/
+
+.btn-log {
+    margin-top: 1rem;
+    background-color: var(--main-color);
+    border-color: var(--main-color);
+}
+
 
 /*------FOOTER------*/
 
@@ -376,7 +384,7 @@ body {
 
     .nav {
         margin-bottom: 1.25rem;
-        border-bottom: 1px solid var(--main-color);
+        /*border-bottom: 1px solid var(--main-color);*/
     }
 
     /*----Content----*/
@@ -489,6 +497,13 @@ body {
         width: 100%;
         height: 100%;
     }
+
+    /*----Login----*/
+
+    .container-login {
+        margin: auto;
+        width: calc(100% / 3);
+    }
     
 }
 
@@ -562,5 +577,11 @@ body {
 
     .img__container-history {
         margin: auto;
+    }
+
+    /*----Login----*/
+
+    .container-login {
+        width: calc(100% / 4);
     }
 }

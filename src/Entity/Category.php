@@ -110,6 +110,11 @@ class Category
         return $this->slug;
     }
 
+    public function __toString()
+    {
+        return $this->catName;
+    }
+
     /*public function setSlug(string $slug): self
     {
         $this->slug = $slug;

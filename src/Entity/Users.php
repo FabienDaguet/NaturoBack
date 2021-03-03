@@ -187,13 +187,13 @@ class Users implements UserInterface
         return $this->posts;
     }
 
+    
     public function addPost(Posts $post): self
     {
         if (!$this->posts->contains($post)) {
             $this->posts[] = $post;
             $post->setPostAuthor($this);
         }
-
         return $this;
     }
 
@@ -207,5 +207,12 @@ class Users implements UserInterface
         }
 
         return $this;
+    }
+
+    public function __toString()
+    {
+        return $this->firstName;
+        return $this->lastName;
+
     }
 }

@@ -40,7 +40,7 @@
                 <div class="preview__container">
 
                     <div class="preview__img">
-                        <a href="{{ path('post', {slug: post.slug}) }}"><img class="img__content" src="{{ post.postImg }}" alt="plat sain"></a>
+                        <a href="{{ path('post', {slug: post.slug}) }}"><img class="img__content" src="{{post.postImg}}" alt="photo de l'article"></a>
                     </div>
 
                     <span class="category__indicator"><a class="category__link" href="{{ path('category', {slug: post.postCategory.slug}) }}">{{post.postCategory.catName}}</a></span>

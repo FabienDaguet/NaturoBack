@@ -7,12 +7,16 @@ use App\Entity\Category;
 use Doctrine\ORM\Mapping as ORM;
 use App\Repository\PostsRepository;
 use Gedmo\Mapping\Annotation as Gedmo;
+use Symfony\Component\HttpFoundation\File\File;
+use Vich\UploaderBundle\Mapping\Annotation as Vich;
 
 /**
  * @ORM\Entity(repositoryClass=PostsRepository::class)
+ * @Vich\Uploadable
  */
 class Posts
 {
+    
     /**
      * @ORM\Id
      * @ORM\GeneratedValue
@@ -32,13 +36,31 @@ class Posts
 
     /**
      * @ORM\Column(type="text")
+     * @var string
      */
     private $postImg;
 
     /**
+     * @Vich\UploadableField(mapping="post_image", fileNameProperty="postImg")
+     * @var file
+     */
+    private $imageFile;
+
+    /**
+     * @var \DateTime $updateAt
+     * 
+     * @Gedmo\Timestampable(on="create")
      * @ORM\Column(type="datetime")
      */
     private $postDate;
+
+    /**
+     * @var \DateTime $updateAt
+     * 
+     * @Gedmo\Timestampable(on="update")
+     * @ORM\Column(type="datetime", nullable=true)
+     */
+    private $updateAt;
 
     /**
      * @ORM\ManyToOne(targetEntity=Users::class, inversedBy="posts")
@@ -58,6 +80,7 @@ class Posts
      */
     private $slug;
 
+
     public function getId(): ?int
     {
         return $this->id;
@@ -71,7 +94,6 @@ class Posts
     public function setPostTitle(string $postTitle): self
     {
         $this->postTitle = $postTitle;
-
         return $this;
     }
 
@@ -83,20 +105,37 @@ class Posts
     public function setPostContent(string $postContent): self
     {
         $this->postContent = $postContent;
-
         return $this;
     }
 
-    public function getPostImg(): ?string
+    public function getPostImg()
     {
         return $this->postImg;
     }
 
-    public function setPostImg(string $postImg): self
+    public function setPostImg($postImg)
     {
         $this->postImg = $postImg;
-
         return $this;
+    }
+
+    /**
+     * @return File|null
+     */
+    public function getImageFile()
+    {
+        return $this->imageFile;
+    }
+
+    /**
+     * @param File|null $imageFile
+     */
+    public function seImageFile($image = null)
+    {
+        $this->imageFile = $image;
+        if ($image) {
+            $this->updateAt= new \DateTime('now');
+        }    
     }
 
     public function getPostDate(): ?\DateTimeInterface
@@ -104,11 +143,10 @@ class Posts
         return $this->postDate;
     }
 
-    public function setPostDate(\DateTimeInterface $postDate): self
-    {
-        $this->postDate = $postDate;
 
-        return $this;
+    public function getUpdateAt(): ?\DateTimeInterface
+    {
+        return $this->updateAt;
     }
 
     public function getPostAuthor(): ?Users
@@ -119,7 +157,6 @@ class Posts
     public function setPostAuthor(?Users $postAuthor): self
     {
         $this->postAuthor = $postAuthor;
-
         return $this;
     }
 
@@ -131,7 +168,6 @@ class Posts
     public function setPostCategory(?Category $postCategory): self
     {
         $this->postCategory = $postCategory;
-
         return $this;
     }
 
@@ -139,4 +175,12 @@ class Posts
     {
         return $this->slug;
     }
+
+    /*public function setSlug(string $slug): self
+    {
+        $this->slug = $slug;
+
+        return $this;
+    }*/
+
 }
