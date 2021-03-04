@@ -15,13 +15,16 @@
             {% for post in lastPosts %}
                 <div class="preview__container">
 
-                    <div class="preview__img">
-                        <a href="{{ path('post', {slug: post.slug}) }}"><img class="img__content" src="{{ post.postImg }}" alt="plat sain"></a>
-                    </div>
+                   <div class="preview__img">
+                    
+                        <a href="{{ path('post', {slug: post.slug}) }}"><img class="img__content" src="{{post.postImg}}" alt="photo de l'article"></a>
+                    
+                        <div class="preview__descr">
+                            <h4 class="article__title"><a href="{{ path('post', {slug: post.slug}) }}">{{post.postTitle}}</a></h4>
+                        </div>
+                    </div>    
 
-                    <h4 class="article__title"><a href="{{ path('post', {slug: post.slug}) }}">{{post.postTitle}}</a></h4>
-
-                    <p>{{post.postContent |u.truncate(200)}}...</p>
+                    <p>{{post.postContent |u.truncate(200)}}... <br> <a href="{{ path('post', {slug: post.slug}) }}" class="">lire la suite</a></p>
 
                 </div>
             {% endfor %}
