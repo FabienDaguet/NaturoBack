@@ -7,9 +7,12 @@ use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use Gedmo\Mapping\Annotation as Gedmo;
+use Vich\UploaderBundle\Mapping\Annotation as Vich;
+
 
 /**
  * @ORM\Entity(repositoryClass=CategoryRepository::class)
+ * @Vich\Uploadable
  */
 class Category
 {
@@ -34,6 +37,12 @@ class Category
      * @ORM\Column(type="string", length=255, nullable=true)
      */
     private $catImg;
+
+    /**
+     * @Vich\UploadableField(mapping="cat_img", fileNameProperty="catImg")
+     * @var file
+     */
+    private $imageFile;
 
     /**
      * @Gedmo\Slug(fields={"catName"})
@@ -103,6 +112,22 @@ class Category
         $this->catImg = $catImg;
 
         return $this;
+    }
+
+    /**
+     * @return File|null
+     */
+    public function getImageFile()
+    {
+        return $this->imageFile;
+    }
+
+    /**
+     * @param File|null $imageFile
+     */
+    public function seImageFile($image = null)
+    {
+        $this->imageFile = $image;
     }
 
     public function getSlug(): ?string

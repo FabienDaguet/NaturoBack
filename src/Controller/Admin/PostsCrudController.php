@@ -3,6 +3,7 @@
 namespace App\Controller\Admin;
 
 use App\Entity\Posts;
+use EasyCorp\Bundle\EasyAdminBundle\Config\Crud;
 use EasyCorp\Bundle\EasyAdminBundle\Field\Field;
 use Vich\UploaderBundle\Form\Type\VichImageType;
 use EasyCorp\Bundle\EasyAdminBundle\Field\IdField;
@@ -23,16 +24,13 @@ class PostsCrudController extends AbstractCrudController
     
     public function configureFields(string $pageName): iterable
     {
-        return [
+
+        $imageFile = Field::new('imageFile') ->setFormType(VichImageType::class);
+        $image =  ImageField::new('postImg','image')->setBasePath($this->getParameter('app.path.upload_img'));
+
+        $fields = [
             IdField::new('id', 'Numéro')->onlyOnIndex(),
             DateField::new('postDate', 'Date de Publication')->onlyOnIndex(),
-            Field::new('imageFile')
-                ->setFormType(VichImageType::class)
-                ->onlyOnDetail(),
-            ImageField::new('postImg','image')
-            ->setBasePath($this->getParameter('app.path.upload_img'))
-            ->setUploadDir('public\upload\img')
-            ->onlyOnForms(),
             TextField::new('postTitle', 'Titres'),
             TextareaField::new('postContent', 'Article')
             ->onlyOnForms(),
@@ -40,6 +38,15 @@ class PostsCrudController extends AbstractCrudController
             /*AssociationField::new('postAuthor', 'Auteur')
             ->onlyWhenCreating(),*/
         ];
+        
+        if ($pageName == Crud::PAGE_INDEX) {
+            $fields[] = $image;
+        } else {
+            $fields[] = $imageFile;
+        }
+        
+        return $fields;
     }
+    
     
 }

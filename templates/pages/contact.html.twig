@@ -5,11 +5,14 @@
 {% block body %}
 
     <article class="content">
-
         <div class="content__title-container">
             <h1 class="content__title">Me <span class="content--color break">contacter</span> </h1>
         </div>
         <div class="container">
+        <div class="contact-rules">
+            Pour les personnes qui souhaitent prendre rendez-vous ou qui aimerais avoir plus de renseignement, je vous invite à renseigner le formulaire de contact afin de me contacter et je vous rappelerais pour repondre à toutes vos questions.
+        </div>
+
             {{ form_start(form) }}
                 <div class="form__element">
                     <label class="form__label" for="name"><i class="fas fa-user-alt form__element-icon"></i> Nom
@@ -44,8 +47,9 @@
                 </div>
             {{ form_end(form) }}
 
+            <iframe class="maps" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2640.7950229177227!2d3.0069886158953425!3d48.55632002988139!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47ef4fab8f5de473%3A0x86aaf652157eadc4!2s15%20Rue%20de%20la%20Lib%C3%A9ration%2C%2077370%20Nangis!5e0!3m2!1sfr!2sfr!4v1615207002437!5m2!1sfr!2sfr" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
 
-        <!--
+            <!--
             <form action="/email" method="post">
                 <div class="form__element">
                     <label class="form__label" for="name"><i class="fas fa-user-alt form__element-icon"></i> Nom
@@ -86,7 +90,7 @@
                 </div>
 
             </form>
-        -->    
+            -->    
         </div>
 
     </article>
