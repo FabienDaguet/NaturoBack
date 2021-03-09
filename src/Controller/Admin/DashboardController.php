@@ -17,16 +17,17 @@ class DashboardController extends AbstractDashboardController
      */
     public function index(): Response
     {
-        return parent::index();
+        return $this->render('bundles/easyadminBundle/welcome.html.twig'); //On défini le chemin de notre vue personnalisé.
+        //return parent::index(); Vue par default
     }
 
     public function configureDashboard(): Dashboard
     {
         return Dashboard::new()
-            ->setTitle("Vitalité ô naturel'l.b");
+            ->setTitle("Vitalité ô naturel'l.b"); //On défini le titre du backoffice
     }
 
-    public function configureMenuItems(): iterable
+    public function configureMenuItems(): iterable //Creation de notre menus
     {
         yield MenuItem::linktoDashboard('Dashboard', 'fa fa-home');
         yield MenuItem::linkToCrud('Articles', 'fas fa-newspaper', Posts::class);

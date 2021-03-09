@@ -20,14 +20,14 @@ class BlogController extends AbstractController
      */
     public function index(PostsRepository $postsRepository, CategoryRepository $categoryRepository, Request $request, PaginatorInterface $paginator): Response
     {
-        $donnees = $postsRepository->findByDate();
+        $donnees = $postsRepository->findBy([], ["postDate" => "DESC"]);
         $lastPosts = $paginator->paginate(
             $donnees, //On passe les données
             $request->query->getInt('page', 1), //Numéro de la page, 1 par defaut
             5
         );
         $allCategory = $categoryRepository->findAll();
-        //dd($allCategory);
+        //dd($lastPosts);
         return $this->render('blog/blog.html.twig', [
             'lastPosts' => $lastPosts,
             'allCategory' => $allCategory 

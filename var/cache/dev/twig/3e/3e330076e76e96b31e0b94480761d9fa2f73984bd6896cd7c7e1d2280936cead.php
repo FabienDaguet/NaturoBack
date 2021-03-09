@@ -86,12 +86,12 @@ class __TwigTemplate_bd16e2a899d38d8f43d21c14bf8eccb14163ee0d49f54a022ba3fc163ac
 
         // line 6
         echo "
-    <div class=\"post__category-img-container\">
-        <img class=\"post__category-img\" src=\"";
+    <!--<div class=\"post__category-img-container\">
+        <img class=\"post__category-img\" src=\"\\upload\\img\\";
         // line 8
         echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["post"]) || array_key_exists("post", $context) ? $context["post"] : (function () { throw new RuntimeError('Variable "post" does not exist.', 8, $this->source); })()), "postCategory", [], "any", false, false, false, 8), "catImg", [], "any", false, false, false, 8), "html", null, true);
         echo "\" alt=\"image de category\">
-    </div>
+    </div>-->
 
     <article class=\"content\">
 
@@ -99,7 +99,9 @@ class __TwigTemplate_bd16e2a899d38d8f43d21c14bf8eccb14163ee0d49f54a022ba3fc163ac
             <span class=\"category\"><a href=\"";
         // line 14
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("blog");
-        echo "\">Blog</a> \\ <a href=\"category.html\">";
+        echo "\">Blog</a> \\ <a href=\"";
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("category", ["slug" => twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["post"]) || array_key_exists("post", $context) ? $context["post"] : (function () { throw new RuntimeError('Variable "post" does not exist.', 14, $this->source); })()), "postCategory", [], "any", false, false, false, 14), "slug", [], "any", false, false, false, 14)]), "html", null, true);
+        echo "\">";
         echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["post"]) || array_key_exists("post", $context) ? $context["post"] : (function () { throw new RuntimeError('Variable "post" does not exist.', 14, $this->source); })()), "postCategory", [], "any", false, false, false, 14), "catName", [], "any", false, false, false, 14), "html", null, true);
         echo " \\</a></span>
             <h1 class=\"content__title post__title\">";
@@ -147,7 +149,7 @@ class __TwigTemplate_bd16e2a899d38d8f43d21c14bf8eccb14163ee0d49f54a022ba3fc163ac
 
     public function getDebugInfo()
     {
-        return array (  121 => 23,  116 => 21,  107 => 15,  101 => 14,  92 => 8,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  123 => 23,  118 => 21,  109 => 15,  101 => 14,  92 => 8,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -158,14 +160,14 @@ class __TwigTemplate_bd16e2a899d38d8f43d21c14bf8eccb14163ee0d49f54a022ba3fc163ac
 
 {% block body %}
 
-    <div class=\"post__category-img-container\">
-        <img class=\"post__category-img\" src=\"{{ post.postCategory.catImg }}\" alt=\"image de category\">
-    </div>
+    <!--<div class=\"post__category-img-container\">
+        <img class=\"post__category-img\" src=\"\\upload\\img\\{{ post.postCategory.catImg }}\" alt=\"image de category\">
+    </div>-->
 
     <article class=\"content\">
 
         <div class=\"content__title-container post__head\">
-            <span class=\"category\"><a href=\"{{ path('blog') }}\">Blog</a> \\ <a href=\"category.html\">{{post.postCategory.catName}} \\</a></span>
+            <span class=\"category\"><a href=\"{{ path('blog') }}\">Blog</a> \\ <a href=\"{{ path('category', {slug: post.postCategory.slug}) }}\">{{post.postCategory.catName}} \\</a></span>
             <h1 class=\"content__title post__title\">{{post.postTitle}}</h1>
         </div>
 

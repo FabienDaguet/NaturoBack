@@ -4,14 +4,14 @@
 
 {% block body %}
 
-    <div class="post__category-img-container">
-        <img class="post__category-img" src="{{ post.postCategory.catImg }}" alt="image de category">
-    </div>
+    <!--<div class="post__category-img-container">
+        <img class="post__category-img" src="\upload\img\{{ post.postCategory.catImg }}" alt="image de category">
+    </div>-->
 
     <article class="content">
 
         <div class="content__title-container post__head">
-            <span class="category"><a href="{{ path('blog') }}">Blog</a> \ <a href="category.html">{{post.postCategory.catName}} \</a></span>
+            <span class="category"><a href="{{ path('blog') }}">Blog</a> \ <a href="{{ path('category', {slug: post.postCategory.slug}) }}">{{post.postCategory.catName}} \</a></span>
             <h1 class="content__title post__title">{{post.postTitle}}</h1>
         </div>
 

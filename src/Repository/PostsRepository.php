@@ -27,21 +27,8 @@ class PostsRepository extends ServiceEntityRepository
         ->setParameter('val', $value)
         ->orderBy('p.postDate', 'DESC')
         ->getQuery()
-        ->getResult()
-    ;
+        ->getResult();
     }
-
-    
-    public function findByDate()
-    {
-        return $this->createQueryBuilder('p')
-            ->join('p.postCategory', 'c')
-            ->orderBy('p.postDate', 'DESC')
-            ->getQuery()
-            ->getResult()
-        ;
-    }
-    
 
     // /**
     //  * @return Posts[] Returns an array of Posts objects

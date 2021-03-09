@@ -3872,6 +3872,10 @@
         <argument>!KnpPaginator</argument>
       </call>
       <call method="addPath">
+        <argument>C:\Users\dague\Desktop\A jour\NaturoBack/templates/bundles/EasyAdminBundle</argument>
+        <argument>EasyAdmin</argument>
+      </call>
+      <call method="addPath">
         <argument>C:\Users\dague\Desktop\A jour\NaturoBack\vendor\easycorp\easyadmin-bundle\src/Resources/views</argument>
         <argument>EasyAdmin</argument>
       </call>
