@@ -441,6 +441,8 @@
       <tag name="controller.service_arguments"/>
       <tag name="ea.dashboard_controller"/>
       <tag name="container.service_subscriber"/>
+      <argument type="service" id="App\Repository\CategoryRepository"/>
+      <argument type="service" id="App\Repository\PostsRepository"/>
       <call method="setContainer">
         <argument type="service" id=".service_locator.cfm0szH.App\Controller\Admin\DashboardController"/>
       </call>

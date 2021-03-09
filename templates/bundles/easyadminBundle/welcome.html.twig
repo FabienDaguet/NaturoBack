@@ -1,20 +1,25 @@
 {# @var ea \EasyCorp\Bundle\EasyAdminBundle\Context\AdminContext #}
 {% extends '@EasyAdmin/page/content.html.twig' %}
 
-{% block page_title 'Welcome to EasyAdmin 3' %}
+{% block page_title 'Bienvenue dans votre backoffice' %}
 
 {% block page_content %}
    <div class="container">
         <div class="row">
-            <div class="col-4 alert-success">
-                ezzfr
-            </div>
-            <div class="col-4 alert-primary">
-                fefz
-            </div>
-            <div class="col-4 alert-warning">
-                defef
-            </div>
-        </div>
-   </div>
+            {% for category in allCategory %}
+                {% if loop.index== 1 %}
+                <div class="col-4 alert-success">
+                {% elseif loop.index == 2 %}
+                <div class="col-4 alert-primary">
+                {% elseif loop.index == 3 %}
+                <div class="col-4 alert-warning">   
+                {% endif %}
+                    <div class="h1">{{ category.catName }} </div>
+                    <div class="display-3">{{ category.posts | length }} Articles </div>
+                </div>
+            {% endfor %}
+    </div>
 {% endblock %}
+
+
+

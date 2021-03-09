@@ -4,6 +4,8 @@ namespace App\Controller\Admin;
 
 use App\Entity\Category;
 use App\Entity\Posts;
+use App\Repository\CategoryRepository;
+use App\Repository\PostsRepository;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Dashboard;
 use EasyCorp\Bundle\EasyAdminBundle\Config\MenuItem;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractDashboardController;
@@ -12,13 +14,29 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class DashboardController extends AbstractDashboardController
 {
+    protected $CategroyRepository;
+    protected $PostsRepository;
+
+    public function __construct(CategoryRepository $CategoryRepository, PostsRepository $PostsRepository)
+    {
+        $this->CategoryRepository = $CategoryRepository;
+        $this->PostsRepository = $PostsRepository;
+    }
+ 
     /**
      * @Route("/vitalité", name="admin")
      */
     public function index(): Response
     {
-        return $this->render('bundles/easyadminBundle/welcome.html.twig'); //On défini le chemin de notre vue personnalisé.
+        //return $this->render('bundles/easyadminBundle/welcome.html.twig'); //On défini le chemin de notre vue personnalisé.
         //return parent::index(); Vue par default
+        
+        $allCategory = $this->CategoryRepository->findAll();
+
+        //dd($allPosts, $allCategory);
+        return $this->render('bundles/easyadminBundle/welcome.html.twig', [
+            'allCategory' => $allCategory 
+        ]);
     }
 
     public function configureDashboard(): Dashboard
