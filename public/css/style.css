@@ -336,6 +336,8 @@ body {
 
 .img__content {
     width: 100%;
+    max-height: 500px;
+    object-fit: cover;
 }
 
 .img__container-history {

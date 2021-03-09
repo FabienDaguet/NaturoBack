@@ -312,4 +312,15 @@ class Category extends \App\Entity\Category implements \Doctrine\ORM\Proxy\Proxy
         return parent::__toString();
     }
 
+    /**
+     * {@inheritDoc}
+     */
+    public function setSlug(string $slug): \App\Entity\Category
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setSlug', [$slug]);
+
+        return parent::setSlug($slug);
+    }
+
 }

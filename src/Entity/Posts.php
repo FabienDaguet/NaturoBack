@@ -80,6 +80,11 @@ class Posts
      */
     private $slug;
 
+    public function __construct()
+    {
+        $this->updateAt = new \DateTime();
+    }
+
 
     public function getId(): ?int
     {
@@ -130,10 +135,10 @@ class Posts
     /**
      * @param File|null $imageFile
      */
-    public function seImageFile($image = null)
+    public function setImageFile($imageFile = null)
     {
-        $this->imageFile = $image;
-        if ($image) {
+        $this->imageFile = $imageFile;
+        if ($imageFile) {
             $this->updateAt= new \DateTime('now');
         }    
     }

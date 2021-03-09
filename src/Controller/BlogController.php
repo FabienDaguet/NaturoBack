@@ -27,7 +27,7 @@ class BlogController extends AbstractController
             5
         );
         $allCategory = $categoryRepository->findAll();
-        //dd($lastPosts);
+        //dd($allCategory);
         return $this->render('blog/blog.html.twig', [
             'lastPosts' => $lastPosts,
             'allCategory' => $allCategory 
