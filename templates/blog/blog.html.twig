@@ -3,60 +3,60 @@
 {% block title %}Blog{% endblock %}
 
 {% block body %}
-
-    <div class="content__title-container">
-        <h1 class="content__title blog-title">Le <span class="content--color break">blog</span> </h1>
-    </div>
-
-    <section class="category__section">
-        <div class="category__container">
-            <div class="category__all">
-                {% for category in allCategory %}
-                    {% if loop.index== 1 %}
-                        <div class="category__side left-side">
-                        {% elseif loop.index == 2 %}
-                        <div class="category__side center-side">  
-                        {% elseif loop.index == 3 %}
-                        <div class="category__side rigth-side">
-                    {% endif %}
-                        <div class="category__media">
-                            <a href="{{ path('category', {slug: category.slug}) }}">
-                                <img src="upload\img\{{ category.catImg }}" alt="{{ category.slug }}" class="category__img">
-                                <span class="category__name">{{category.catName}}</span>
-                            </a>
-                        </div>
-                    </div>
-                {% endfor %}
-            </div>
+    <div class = "content">
+        <div class="content__title-container">
+            <h1 class="content__title blog-title">Le <span class="content--color break">blog</span> </h1>
         </div>
-    </section>
 
-    <article class="content">
-
-        <section>
-            {% for post in lastPosts %}
-                <div class="preview__container">
-
-                    <div class="preview__img">
-                    
-                        <a href="{{ path('post', {slug: post.slug}) }}"><img class="img__content" src="upload\img\{{post.postImg}}" alt="{{ post.slug }}"></a>
-                    
-                        <div class="preview__descr">
-                            <span class="category__indicator"><a class="category__link" href="{{ path('category', {slug: post.postCategory.slug}) }}">{{post.postCategory.catName}}</a></span>
-                            <h4 class="article__title"><a href="{{ path('post', {slug: post.slug}) }}">{{post.postTitle}}</a></h4>
+        <section class="category__section">
+            <div class="category__container">
+                <div class="category__all">
+                    {% for category in allCategory %}
+                        {% if loop.index== 1 %}
+                            <div class="category__side left-side">
+                            {% elseif loop.index == 2 %}
+                            <div class="category__side center-side">  
+                            {% elseif loop.index == 3 %}
+                            <div class="category__side rigth-side">
+                        {% endif %}
+                            <div class="category__media">
+                                <a href="{{ path('category', {slug: category.slug}) }}">
+                                    <img src="upload\img\{{ category.catImg }}" alt="{{ category.slug }}" class="category__img">
+                                    <span class="category__name">{{category.catName}}</span>
+                                </a>
+                            </div>
                         </div>
-                    </div>    
-
-                    <p>{{post.postContent |u.truncate(200)}}... <br> <a href="{{ path('post', {slug: post.slug}) }}" class="">lire la suite</a></p>
-
+                    {% endfor %}
                 </div>
-            {% endfor %}
+            </div>
         </section>
 
-        <div class="navigation">
-            {{ knp_pagination_render(lastPosts) }}
-        </div>
+        <article>
 
-    </article>
+            <section>
+                {% for post in lastPosts %}
+                    <div class="preview__container">
 
+                        <div class="preview__img">
+                        
+                            <a href="{{ path('post', {slug: post.slug}) }}"><img class="img__content" src="upload\img\{{post.postImg}}" alt="{{ post.slug }}"></a>
+                        
+                            <div class="preview__descr">
+                                <span class="category__indicator"><a class="category__link" href="{{ path('category', {slug: post.postCategory.slug}) }}">{{post.postCategory.catName}}</a></span>
+                                <h4 class="article__title"><a href="{{ path('post', {slug: post.slug}) }}">{{post.postTitle}}</a></h4>
+                            </div>
+                        </div>    
+
+                        <p>{{post.postContent |u.truncate(200)}}... <br> <a href="{{ path('post', {slug: post.slug}) }}" class="">lire la suite</a></p>
+
+                    </div>
+                {% endfor %}
+            </section>
+
+            <div class="navigation">
+                {{ knp_pagination_render(lastPosts) }}
+            </div>
+
+        </article>
+    </div>
 {% endblock %}

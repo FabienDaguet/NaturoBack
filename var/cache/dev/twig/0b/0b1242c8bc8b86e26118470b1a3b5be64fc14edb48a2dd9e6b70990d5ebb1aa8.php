@@ -85,15 +85,15 @@ class __TwigTemplate_337d45db4c38708f742c81bca6d98da085fcf5e0a2143d16e9757f3dfe4
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
         // line 6
-        echo "
-    <div class=\"content__title-container\">
-        <h1 class=\"content__title blog-title\">Le <span class=\"content--color break\">blog</span> </h1>
-    </div>
+        echo "    <div class = \"content\">
+        <div class=\"content__title-container\">
+            <h1 class=\"content__title blog-title\">Le <span class=\"content--color break\">blog</span> </h1>
+        </div>
 
-    <section class=\"category__section\">
-        <div class=\"category__container\">
-            <div class=\"category__all\">
-                ";
+        <section class=\"category__section\">
+            <div class=\"category__container\">
+                <div class=\"category__all\">
+                    ";
         // line 14
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable((isset($context["allCategory"]) || array_key_exists("allCategory", $context) ? $context["allCategory"] : (function () { throw new RuntimeError('Variable "allCategory" does not exist.', 14, $this->source); })()));
@@ -112,42 +112,42 @@ class __TwigTemplate_337d45db4c38708f742c81bca6d98da085fcf5e0a2143d16e9757f3dfe4
         }
         foreach ($context['_seq'] as $context["_key"] => $context["category"]) {
             // line 15
-            echo "                    ";
+            echo "                        ";
             if ((0 === twig_compare(twig_get_attribute($this->env, $this->source, $context["loop"], "index", [], "any", false, false, false, 15), 1))) {
                 // line 16
-                echo "                        <div class=\"category__side left-side\">
-                        ";
+                echo "                            <div class=\"category__side left-side\">
+                            ";
             } elseif ((0 === twig_compare(twig_get_attribute($this->env, $this->source,             // line 17
 $context["loop"], "index", [], "any", false, false, false, 17), 2))) {
                 // line 18
-                echo "                        <div class=\"category__side center-side\">  
-                        ";
+                echo "                            <div class=\"category__side center-side\">  
+                            ";
             } elseif ((0 === twig_compare(twig_get_attribute($this->env, $this->source,             // line 19
 $context["loop"], "index", [], "any", false, false, false, 19), 3))) {
                 // line 20
-                echo "                        <div class=\"category__side rigth-side\">
-                    ";
+                echo "                            <div class=\"category__side rigth-side\">
+                        ";
             }
             // line 22
-            echo "                        <div class=\"category__media\">
-                            <a href=\"";
+            echo "                            <div class=\"category__media\">
+                                <a href=\"";
             // line 23
             echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("category", ["slug" => twig_get_attribute($this->env, $this->source, $context["category"], "slug", [], "any", false, false, false, 23)]), "html", null, true);
             echo "\">
-                                <img src=\"upload\\img\\";
+                                    <img src=\"upload\\img\\";
             // line 24
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["category"], "catImg", [], "any", false, false, false, 24), "html", null, true);
             echo "\" alt=\"";
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["category"], "slug", [], "any", false, false, false, 24), "html", null, true);
             echo "\" class=\"category__img\">
-                                <span class=\"category__name\">";
+                                    <span class=\"category__name\">";
             // line 25
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["category"], "catName", [], "any", false, false, false, 25), "html", null, true);
             echo "</span>
-                            </a>
+                                </a>
+                            </div>
                         </div>
-                    </div>
-                ";
+                    ";
             ++$context['loop']['index0'];
             ++$context['loop']['index'];
             $context['loop']['first'] = false;
@@ -161,24 +161,24 @@ $context["loop"], "index", [], "any", false, false, false, 19), 3))) {
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['category'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
         // line 30
-        echo "            </div>
-        </div>
-    </section>
+        echo "                </div>
+            </div>
+        </section>
 
-    <article class=\"content\">
+        <article>
 
-        <section>
-            ";
+            <section>
+                ";
         // line 37
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable((isset($context["lastPosts"]) || array_key_exists("lastPosts", $context) ? $context["lastPosts"] : (function () { throw new RuntimeError('Variable "lastPosts" does not exist.', 37, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["post"]) {
             // line 38
-            echo "                <div class=\"preview__container\">
+            echo "                    <div class=\"preview__container\">
 
-                    <div class=\"preview__img\">
-                    
-                        <a href=\"";
+                        <div class=\"preview__img\">
+                        
+                            <a href=\"";
             // line 42
             echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("post", ["slug" => twig_get_attribute($this->env, $this->source, $context["post"], "slug", [], "any", false, false, false, 42)]), "html", null, true);
             echo "\"><img class=\"img__content\" src=\"upload\\img\\";
@@ -186,48 +186,48 @@ $context["loop"], "index", [], "any", false, false, false, 19), 3))) {
             echo "\" alt=\"";
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["post"], "slug", [], "any", false, false, false, 42), "html", null, true);
             echo "\"></a>
-                    
-                        <div class=\"preview__descr\">
-                            <span class=\"category__indicator\"><a class=\"category__link\" href=\"";
+                        
+                            <div class=\"preview__descr\">
+                                <span class=\"category__indicator\"><a class=\"category__link\" href=\"";
             // line 45
             echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("category", ["slug" => twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["post"], "postCategory", [], "any", false, false, false, 45), "slug", [], "any", false, false, false, 45)]), "html", null, true);
             echo "\">";
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["post"], "postCategory", [], "any", false, false, false, 45), "catName", [], "any", false, false, false, 45), "html", null, true);
             echo "</a></span>
-                            <h4 class=\"article__title\"><a href=\"";
+                                <h4 class=\"article__title\"><a href=\"";
             // line 46
             echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("post", ["slug" => twig_get_attribute($this->env, $this->source, $context["post"], "slug", [], "any", false, false, false, 46)]), "html", null, true);
             echo "\">";
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["post"], "postTitle", [], "any", false, false, false, 46), "html", null, true);
             echo "</a></h4>
-                        </div>
-                    </div>    
+                            </div>
+                        </div>    
 
-                    <p>";
+                        <p>";
             // line 50
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $this->extensions['Twig\Extra\String\StringExtension']->createUnicodeString(twig_get_attribute($this->env, $this->source, $context["post"], "postContent", [], "any", false, false, false, 50)), "truncate", [0 => 200], "method", false, false, false, 50), "html", null, true);
             echo "... <br> <a href=\"";
             echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("post", ["slug" => twig_get_attribute($this->env, $this->source, $context["post"], "slug", [], "any", false, false, false, 50)]), "html", null, true);
             echo "\" class=\"\">lire la suite</a></p>
 
-                </div>
-            ";
+                    </div>
+                ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['post'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
         // line 54
-        echo "        </section>
+        echo "            </section>
 
-        <div class=\"navigation\">
-            ";
+            <div class=\"navigation\">
+                ";
         // line 57
         echo $this->extensions['Knp\Bundle\PaginatorBundle\Twig\Extension\PaginationExtension']->render($this->env, (isset($context["lastPosts"]) || array_key_exists("lastPosts", $context) ? $context["lastPosts"] : (function () { throw new RuntimeError('Variable "lastPosts" does not exist.', 57, $this->source); })()));
         echo "
-        </div>
+            </div>
 
-    </article>
-
+        </article>
+    </div>
 ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -259,62 +259,62 @@ $context["loop"], "index", [], "any", false, false, false, 19), 3))) {
 {% block title %}Blog{% endblock %}
 
 {% block body %}
-
-    <div class=\"content__title-container\">
-        <h1 class=\"content__title blog-title\">Le <span class=\"content--color break\">blog</span> </h1>
-    </div>
-
-    <section class=\"category__section\">
-        <div class=\"category__container\">
-            <div class=\"category__all\">
-                {% for category in allCategory %}
-                    {% if loop.index== 1 %}
-                        <div class=\"category__side left-side\">
-                        {% elseif loop.index == 2 %}
-                        <div class=\"category__side center-side\">  
-                        {% elseif loop.index == 3 %}
-                        <div class=\"category__side rigth-side\">
-                    {% endif %}
-                        <div class=\"category__media\">
-                            <a href=\"{{ path('category', {slug: category.slug}) }}\">
-                                <img src=\"upload\\img\\{{ category.catImg }}\" alt=\"{{ category.slug }}\" class=\"category__img\">
-                                <span class=\"category__name\">{{category.catName}}</span>
-                            </a>
-                        </div>
-                    </div>
-                {% endfor %}
-            </div>
+    <div class = \"content\">
+        <div class=\"content__title-container\">
+            <h1 class=\"content__title blog-title\">Le <span class=\"content--color break\">blog</span> </h1>
         </div>
-    </section>
 
-    <article class=\"content\">
-
-        <section>
-            {% for post in lastPosts %}
-                <div class=\"preview__container\">
-
-                    <div class=\"preview__img\">
-                    
-                        <a href=\"{{ path('post', {slug: post.slug}) }}\"><img class=\"img__content\" src=\"upload\\img\\{{post.postImg}}\" alt=\"{{ post.slug }}\"></a>
-                    
-                        <div class=\"preview__descr\">
-                            <span class=\"category__indicator\"><a class=\"category__link\" href=\"{{ path('category', {slug: post.postCategory.slug}) }}\">{{post.postCategory.catName}}</a></span>
-                            <h4 class=\"article__title\"><a href=\"{{ path('post', {slug: post.slug}) }}\">{{post.postTitle}}</a></h4>
+        <section class=\"category__section\">
+            <div class=\"category__container\">
+                <div class=\"category__all\">
+                    {% for category in allCategory %}
+                        {% if loop.index== 1 %}
+                            <div class=\"category__side left-side\">
+                            {% elseif loop.index == 2 %}
+                            <div class=\"category__side center-side\">  
+                            {% elseif loop.index == 3 %}
+                            <div class=\"category__side rigth-side\">
+                        {% endif %}
+                            <div class=\"category__media\">
+                                <a href=\"{{ path('category', {slug: category.slug}) }}\">
+                                    <img src=\"upload\\img\\{{ category.catImg }}\" alt=\"{{ category.slug }}\" class=\"category__img\">
+                                    <span class=\"category__name\">{{category.catName}}</span>
+                                </a>
+                            </div>
                         </div>
-                    </div>    
-
-                    <p>{{post.postContent |u.truncate(200)}}... <br> <a href=\"{{ path('post', {slug: post.slug}) }}\" class=\"\">lire la suite</a></p>
-
+                    {% endfor %}
                 </div>
-            {% endfor %}
+            </div>
         </section>
 
-        <div class=\"navigation\">
-            {{ knp_pagination_render(lastPosts) }}
-        </div>
+        <article>
 
-    </article>
+            <section>
+                {% for post in lastPosts %}
+                    <div class=\"preview__container\">
 
+                        <div class=\"preview__img\">
+                        
+                            <a href=\"{{ path('post', {slug: post.slug}) }}\"><img class=\"img__content\" src=\"upload\\img\\{{post.postImg}}\" alt=\"{{ post.slug }}\"></a>
+                        
+                            <div class=\"preview__descr\">
+                                <span class=\"category__indicator\"><a class=\"category__link\" href=\"{{ path('category', {slug: post.postCategory.slug}) }}\">{{post.postCategory.catName}}</a></span>
+                                <h4 class=\"article__title\"><a href=\"{{ path('post', {slug: post.slug}) }}\">{{post.postTitle}}</a></h4>
+                            </div>
+                        </div>    
+
+                        <p>{{post.postContent |u.truncate(200)}}... <br> <a href=\"{{ path('post', {slug: post.slug}) }}\" class=\"\">lire la suite</a></p>
+
+                    </div>
+                {% endfor %}
+            </section>
+
+            <div class=\"navigation\">
+                {{ knp_pagination_render(lastPosts) }}
+            </div>
+
+        </article>
+    </div>
 {% endblock %}
 ", "blog/blog.html.twig", "C:\\Users\\dague\\Desktop\\A jour\\NaturoBack\\templates\\blog\\blog.html.twig");
     }
