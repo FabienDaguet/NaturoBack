@@ -139,15 +139,6 @@ class __TwigTemplate_41a3756cf34702ec866c481caae5f514fccef4e86484d03bca58a0a9aba
                 du
                 dérèglement et va se servir de techniques naturelles pour y parvenir, comme le réglage alimentaire,
                 l’activité physique, la relaxation, la gestion du stress ...</p>
-
-            <p class=\"warning\">Attention : La naturopathie est une médecine non conventionnelle, complémentaire qui
-                vient donc en complément de la médecine traditionnelle et non la remplacer. Elle n’a pas vocation à
-                faire des diagnostics, seuls les médecins y sont habilités, tout comme un naturopathe n’a pas à vous
-                demander d’arrêter un traitement médical ou vous faire une ordonnance.</p>
-
-            <p class=\"content--center content--upper\">Le naturopathe est éducateur de santé, le client est acteur de
-                sa santé</p>
-
         </section>
 
     </article>
@@ -237,15 +228,6 @@ class __TwigTemplate_41a3756cf34702ec866c481caae5f514fccef4e86484d03bca58a0a9aba
                 du
                 dérèglement et va se servir de techniques naturelles pour y parvenir, comme le réglage alimentaire,
                 l’activité physique, la relaxation, la gestion du stress ...</p>
-
-            <p class=\"warning\">Attention : La naturopathie est une médecine non conventionnelle, complémentaire qui
-                vient donc en complément de la médecine traditionnelle et non la remplacer. Elle n’a pas vocation à
-                faire des diagnostics, seuls les médecins y sont habilités, tout comme un naturopathe n’a pas à vous
-                demander d’arrêter un traitement médical ou vous faire une ordonnance.</p>
-
-            <p class=\"content--center content--upper\">Le naturopathe est éducateur de santé, le client est acteur de
-                sa santé</p>
-
         </section>
 
     </article>

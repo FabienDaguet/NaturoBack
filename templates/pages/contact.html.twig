@@ -15,27 +15,27 @@
 
             {{ form_start(form) }}
                 <div class="form__element">
-                    <label class="form__label" for="name"><i class="fas fa-user-alt form__element-icon"></i> Nom
+                    <label class="form__label" for="mailer_form_name"><i class="fas fa-user-alt form__element-icon"></i> Nom
                         Prénom :</label>
                     {{ form_row(form.name, { 'attr': { 'class': 'form__element-input' } }) }}
                 </div>
                 <div class="form__element">
-                    <label class="form__label" for="email"><i class="fas fa-envelope form__element-icon"></i> Email
+                    <label class="form__label" for="mailer_form_email"><i class="fas fa-envelope form__element-icon"></i> Email
                         :</label>
                     {{ form_row(form.email, { 'attr': { 'class': 'form__element-input' } }) }}
                 </div>
                 <div class="form__element">
-                    <label class="form__label" for="phone"><i class="fas fa-phone-alt form__element-icon"></i>
+                    <label class="form__label" for="mailer_form_phone"><i class="fas fa-phone-alt form__element-icon"></i>
                         Téléphone :</label>
                     {{ form_row(form.phone, { 'attr': { 'class': 'form__element-input' } }) }}
                 </div>
                 <div class="form__element">
-                    <label class="form__label" for="object"><i class="fas fa-th-list form__element-icon"></i> Objet
+                    <label class="form__label" for="mailer_form_objet"><i class="fas fa-th-list form__element-icon"></i> Objet
                         :</label>
                     {{ form_row(form.objet, { 'attr': { 'class': 'form__element-input' } }) }}
                 </div>
                 <div class="form__element">
-                    <label class="form__label" for="message"><i class="fas fa-pen form__element-icon"></i>
+                    <label class="form__label" for="mailer_form_message"><i class="fas fa-pen form__element-icon"></i>
                         Message</label>
                     {{ form_row(form.message, { 'attr': { 'class': 'form__message', 'cols' : '58', 'rows' : '10', 'wrap' : "hard" } }) }}
                 </div>

@@ -106,7 +106,6 @@ class __TwigTemplate_e91a669eb3374c50976932f4ea34c409ecd473619f7f8d74415def0125e
             <p>Aujourd’hui, je vous propose de vous accompagner par un Programme d’Hygiène de Vie individuel afin de
                 vous permettre de trouver ou retrouver le chemin du bien être et que vous deveniez l’acteur
                 principal de votre santé.</p>
-            <p>Le naturopathe est éducateur de santé, le client est acteur de sa santé.</p>
         </div>
 
 
@@ -164,7 +163,6 @@ class __TwigTemplate_e91a669eb3374c50976932f4ea34c409ecd473619f7f8d74415def0125e
             <p>Aujourd’hui, je vous propose de vous accompagner par un Programme d’Hygiène de Vie individuel afin de
                 vous permettre de trouver ou retrouver le chemin du bien être et que vous deveniez l’acteur
                 principal de votre santé.</p>
-            <p>Le naturopathe est éducateur de santé, le client est acteur de sa santé.</p>
         </div>
 
 

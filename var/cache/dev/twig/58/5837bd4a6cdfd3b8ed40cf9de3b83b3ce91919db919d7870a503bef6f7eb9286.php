@@ -100,7 +100,7 @@ class __TwigTemplate_80ebc20a08ecd8f008a08529e602bf1da6f12e437a3281f6dc7a5e569f3
         echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 16, $this->source); })()), 'form_start');
         echo "
                 <div class=\"form__element\">
-                    <label class=\"form__label\" for=\"name\"><i class=\"fas fa-user-alt form__element-icon\"></i> Nom
+                    <label class=\"form__label\" for=\"mailer_form_name\"><i class=\"fas fa-user-alt form__element-icon\"></i> Nom
                         Prénom :</label>
                     ";
         // line 20
@@ -108,7 +108,7 @@ class __TwigTemplate_80ebc20a08ecd8f008a08529e602bf1da6f12e437a3281f6dc7a5e569f3
         echo "
                 </div>
                 <div class=\"form__element\">
-                    <label class=\"form__label\" for=\"email\"><i class=\"fas fa-envelope form__element-icon\"></i> Email
+                    <label class=\"form__label\" for=\"mailer_form_email\"><i class=\"fas fa-envelope form__element-icon\"></i> Email
                         :</label>
                     ";
         // line 25
@@ -116,7 +116,7 @@ class __TwigTemplate_80ebc20a08ecd8f008a08529e602bf1da6f12e437a3281f6dc7a5e569f3
         echo "
                 </div>
                 <div class=\"form__element\">
-                    <label class=\"form__label\" for=\"phone\"><i class=\"fas fa-phone-alt form__element-icon\"></i>
+                    <label class=\"form__label\" for=\"mailer_form_phone\"><i class=\"fas fa-phone-alt form__element-icon\"></i>
                         Téléphone :</label>
                     ";
         // line 30
@@ -124,7 +124,7 @@ class __TwigTemplate_80ebc20a08ecd8f008a08529e602bf1da6f12e437a3281f6dc7a5e569f3
         echo "
                 </div>
                 <div class=\"form__element\">
-                    <label class=\"form__label\" for=\"object\"><i class=\"fas fa-th-list form__element-icon\"></i> Objet
+                    <label class=\"form__label\" for=\"mailer_form_objet\"><i class=\"fas fa-th-list form__element-icon\"></i> Objet
                         :</label>
                     ";
         // line 35
@@ -132,7 +132,7 @@ class __TwigTemplate_80ebc20a08ecd8f008a08529e602bf1da6f12e437a3281f6dc7a5e569f3
         echo "
                 </div>
                 <div class=\"form__element\">
-                    <label class=\"form__label\" for=\"message\"><i class=\"fas fa-pen form__element-icon\"></i>
+                    <label class=\"form__label\" for=\"mailer_form_message\"><i class=\"fas fa-pen form__element-icon\"></i>
                         Message</label>
                     ";
         // line 40
@@ -241,27 +241,27 @@ class __TwigTemplate_80ebc20a08ecd8f008a08529e602bf1da6f12e437a3281f6dc7a5e569f3
 
             {{ form_start(form) }}
                 <div class=\"form__element\">
-                    <label class=\"form__label\" for=\"name\"><i class=\"fas fa-user-alt form__element-icon\"></i> Nom
+                    <label class=\"form__label\" for=\"mailer_form_name\"><i class=\"fas fa-user-alt form__element-icon\"></i> Nom
                         Prénom :</label>
                     {{ form_row(form.name, { 'attr': { 'class': 'form__element-input' } }) }}
                 </div>
                 <div class=\"form__element\">
-                    <label class=\"form__label\" for=\"email\"><i class=\"fas fa-envelope form__element-icon\"></i> Email
+                    <label class=\"form__label\" for=\"mailer_form_email\"><i class=\"fas fa-envelope form__element-icon\"></i> Email
                         :</label>
                     {{ form_row(form.email, { 'attr': { 'class': 'form__element-input' } }) }}
                 </div>
                 <div class=\"form__element\">
-                    <label class=\"form__label\" for=\"phone\"><i class=\"fas fa-phone-alt form__element-icon\"></i>
+                    <label class=\"form__label\" for=\"mailer_form_phone\"><i class=\"fas fa-phone-alt form__element-icon\"></i>
                         Téléphone :</label>
                     {{ form_row(form.phone, { 'attr': { 'class': 'form__element-input' } }) }}
                 </div>
                 <div class=\"form__element\">
-                    <label class=\"form__label\" for=\"object\"><i class=\"fas fa-th-list form__element-icon\"></i> Objet
+                    <label class=\"form__label\" for=\"mailer_form_objet\"><i class=\"fas fa-th-list form__element-icon\"></i> Objet
                         :</label>
                     {{ form_row(form.objet, { 'attr': { 'class': 'form__element-input' } }) }}
                 </div>
                 <div class=\"form__element\">
-                    <label class=\"form__label\" for=\"message\"><i class=\"fas fa-pen form__element-icon\"></i>
+                    <label class=\"form__label\" for=\"mailer_form_message\"><i class=\"fas fa-pen form__element-icon\"></i>
                         Message</label>
                     {{ form_row(form.message, { 'attr': { 'class': 'form__message', 'cols' : '58', 'rows' : '10', 'wrap' : \"hard\" } }) }}
                 </div>

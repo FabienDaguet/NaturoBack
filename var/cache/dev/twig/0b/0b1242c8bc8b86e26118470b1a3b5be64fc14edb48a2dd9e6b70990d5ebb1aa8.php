@@ -134,7 +134,7 @@ $context["loop"], "index", [], "any", false, false, false, 19), 3))) {
             // line 23
             echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("category", ["slug" => twig_get_attribute($this->env, $this->source, $context["category"], "slug", [], "any", false, false, false, 23)]), "html", null, true);
             echo "\">
-                                    <img src=\"upload\\img\\";
+                                    <img src=\"upload/img/";
             // line 24
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["category"], "catImg", [], "any", false, false, false, 24), "html", null, true);
             echo "\" alt=\"";
@@ -181,7 +181,7 @@ $context["loop"], "index", [], "any", false, false, false, 19), 3))) {
                             <a href=\"";
             // line 42
             echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("post", ["slug" => twig_get_attribute($this->env, $this->source, $context["post"], "slug", [], "any", false, false, false, 42)]), "html", null, true);
-            echo "\"><img class=\"img__content\" src=\"upload\\img\\";
+            echo "\"><img class=\"img__content\" src=\"upload/img/";
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["post"], "postImg", [], "any", false, false, false, 42), "html", null, true);
             echo "\" alt=\"";
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["post"], "slug", [], "any", false, false, false, 42), "html", null, true);
@@ -277,7 +277,7 @@ $context["loop"], "index", [], "any", false, false, false, 19), 3))) {
                         {% endif %}
                             <div class=\"category__media\">
                                 <a href=\"{{ path('category', {slug: category.slug}) }}\">
-                                    <img src=\"upload\\img\\{{ category.catImg }}\" alt=\"{{ category.slug }}\" class=\"category__img\">
+                                    <img src=\"upload/img/{{ category.catImg }}\" alt=\"{{ category.slug }}\" class=\"category__img\">
                                     <span class=\"category__name\">{{category.catName}}</span>
                                 </a>
                             </div>
@@ -295,7 +295,7 @@ $context["loop"], "index", [], "any", false, false, false, 19), 3))) {
 
                         <div class=\"preview__img\">
                         
-                            <a href=\"{{ path('post', {slug: post.slug}) }}\"><img class=\"img__content\" src=\"upload\\img\\{{post.postImg}}\" alt=\"{{ post.slug }}\"></a>
+                            <a href=\"{{ path('post', {slug: post.slug}) }}\"><img class=\"img__content\" src=\"upload/img/{{post.postImg}}\" alt=\"{{ post.slug }}\"></a>
                         
                             <div class=\"preview__descr\">
                                 <span class=\"category__indicator\"><a class=\"category__link\" href=\"{{ path('category', {slug: post.postCategory.slug}) }}\">{{post.postCategory.catName}}</a></span>

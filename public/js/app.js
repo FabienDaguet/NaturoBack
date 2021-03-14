@@ -30,13 +30,13 @@ function navAnimation() {
     });
 }
 
+
+//fonction Toutes pages
 function onLoad() {
 
   content.style.opacity ="1";
   content.style.transition = ".3s ease-in-out .2s";
  
-  
-  
   preview.forEach((element, i) => {
     element.style.opacity ="0";
     setTimeout(() => {

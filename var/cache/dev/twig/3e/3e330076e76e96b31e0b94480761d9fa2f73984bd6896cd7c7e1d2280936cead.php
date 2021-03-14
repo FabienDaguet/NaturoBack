@@ -113,7 +113,7 @@ class __TwigTemplate_bd16e2a899d38d8f43d21c14bf8eccb14163ee0d49f54a022ba3fc163ac
         <section>
             <div class=\"preview__container\">
                 <div class=\"preview__img\">
-                    <img class=\"img__content post__img\" src=\"\\upload\\img\\";
+                    <img class=\"img__content post__img\" src=\"/upload/img/";
         // line 21
         echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["post"]) || array_key_exists("post", $context) ? $context["post"] : (function () { throw new RuntimeError('Variable "post" does not exist.', 21, $this->source); })()), "postImg", [], "any", false, false, false, 21), "html", null, true);
         echo "\" alt=\"photo de l'article\">
@@ -122,9 +122,9 @@ class __TwigTemplate_bd16e2a899d38d8f43d21c14bf8eccb14163ee0d49f54a022ba3fc163ac
         // line 23
         echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["post"]) || array_key_exists("post", $context) ? $context["post"] : (function () { throw new RuntimeError('Variable "post" does not exist.', 23, $this->source); })()), "postContent", [], "any", false, false, false, 23), "html", null, true);
         echo "</p>
-        </div>
+            </div>
+        </section>
 
-        <span><a href=\"\">Retour</a></span>
 
     </article>
 
@@ -174,12 +174,12 @@ class __TwigTemplate_bd16e2a899d38d8f43d21c14bf8eccb14163ee0d49f54a022ba3fc163ac
         <section>
             <div class=\"preview__container\">
                 <div class=\"preview__img\">
-                    <img class=\"img__content post__img\" src=\"\\upload\\img\\{{post.postImg}}\" alt=\"photo de l'article\">
+                    <img class=\"img__content post__img\" src=\"/upload/img/{{post.postImg}}\" alt=\"photo de l'article\">
                 </div>
                 <p>{{post.postContent}}</p>
-        </div>
+            </div>
+        </section>
 
-        <span><a href=\"\">Retour</a></span>
 
     </article>
 
