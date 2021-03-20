@@ -6,7 +6,7 @@
     'aliases' => 
     array (
     ),
-    'reference' => '10849fe338a98d60ef9ce60bef4202420a913b20',
+    'reference' => '7c6fd9f312451af92489554db9232d12cd4503b3',
     'name' => '__root__',
   ),
   'versions' => 
@@ -18,7 +18,7 @@
       'aliases' => 
       array (
       ),
-      'reference' => '10849fe338a98d60ef9ce60bef4202420a913b20',
+      'reference' => '7c6fd9f312451af92489554db9232d12cd4503b3',
     ),
     'antishov/doctrine-extensions-bundle' => 
     array (
@@ -679,12 +679,12 @@
     ),
     'symfony/form' => 
     array (
-      'pretty_version' => 'v5.2.4',
-      'version' => '5.2.4.0',
+      'pretty_version' => 'v5.2.5',
+      'version' => '5.2.5.0',
       'aliases' => 
       array (
       ),
-      'reference' => '7664ad970bc54ae7ac1ccc2ba0c7133c1d0c90f8',
+      'reference' => '66fecedebe5c5fc6dc9553e8f311342ac711ed3a',
     ),
     'symfony/framework-bundle' => 
     array (

@@ -9,6 +9,9 @@ use Symfony\Component\Security\Core\Security;
 
 class PostSubscriber implements EventSubscriberInterface
 {
+
+    // Permet la récupération du nom de l'utilisateur connecté et de définir celui-ci comme autheur des articles en création
+
     /**
      * @var security
      */

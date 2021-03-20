@@ -47,7 +47,7 @@ class Posts
     private $imageFile;
 
     /**
-     * @var \DateTime $updateAt
+     * @var \DateTime
      * 
      * @Gedmo\Timestampable(on="create")
      * @ORM\Column(type="datetime")

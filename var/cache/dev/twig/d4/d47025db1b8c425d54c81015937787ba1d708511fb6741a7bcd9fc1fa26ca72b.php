@@ -86,7 +86,7 @@ class __TwigTemplate_2ce3fcef1542d0503d585503b77c634a455ba106b248b7dea96c9830f1f
 
         // line 6
         echo "
-    <article class=\"content\">
+    <article class=\"content content--margin\">
 
         <div class=\"content__title-container\">
             <h1 class=\"content__title\">Les <span class=\"content--color break\">tarifs</span> </h1>
@@ -171,7 +171,7 @@ class __TwigTemplate_2ce3fcef1542d0503d585503b77c634a455ba106b248b7dea96c9830f1f
 
 {% block body %}
 
-    <article class=\"content\">
+    <article class=\"content content--margin\">
 
         <div class=\"content__title-container\">
             <h1 class=\"content__title\">Les <span class=\"content--color break\">tarifs</span> </h1>
@@ -225,6 +225,6 @@ class __TwigTemplate_2ce3fcef1542d0503d585503b77c634a455ba106b248b7dea96c9830f1f
     </article>
         
 {% endblock %}
-", "pages/prices.html.twig", "C:\\Users\\dague\\Desktop\\A jour\\NaturoBack\\templates\\pages\\prices.html.twig");
+", "pages/prices.html.twig", "C:\\Users\\fagay\\Desktop\\naturo\\NaturoBack\\templates\\pages\\prices.html.twig");
     }
 }

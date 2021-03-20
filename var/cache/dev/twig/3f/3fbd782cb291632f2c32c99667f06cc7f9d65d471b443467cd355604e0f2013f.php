@@ -898,6 +898,6 @@ class __TwigTemplate_7776ef39c04c4307c4931467a8ef80b25fef0ad554fe36f23aa42e7f2b2
         </tbody>
     </table>
 {% endmacro %}
-", "@WebProfiler/Collector/translation.html.twig", "C:\\Users\\dague\\Desktop\\A jour\\NaturoBack\\vendor\\symfony\\web-profiler-bundle\\Resources\\views\\Collector\\translation.html.twig");
+", "@WebProfiler/Collector/translation.html.twig", "C:\\Users\\fagay\\Desktop\\naturo\\NaturoBack\\vendor\\symfony\\web-profiler-bundle\\Resources\\views\\Collector\\translation.html.twig");
     }
 }

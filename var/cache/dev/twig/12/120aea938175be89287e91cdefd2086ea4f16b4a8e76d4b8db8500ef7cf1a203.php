@@ -417,6 +417,6 @@ class __TwigTemplate_c200791637972bab713d9ad7d6b8cc1939d9e3f361feb9faf90ec3c5e6c
     });
 })();
 </script>
-", "@WebProfiler/Profiler/settings.html.twig", "C:\\Users\\dague\\Desktop\\A jour\\NaturoBack\\vendor\\symfony\\web-profiler-bundle\\Resources\\views\\Profiler\\settings.html.twig");
+", "@WebProfiler/Profiler/settings.html.twig", "C:\\Users\\fagay\\Desktop\\naturo\\NaturoBack\\vendor\\symfony\\web-profiler-bundle\\Resources\\views\\Profiler\\settings.html.twig");
     }
 }

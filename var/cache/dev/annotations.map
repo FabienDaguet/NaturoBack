@@ -1,9 +1,9 @@
 <?php return array (
   0 => 'Symfony\\Bundle\\FrameworkBundle\\Controller\\AbstractController',
-  1 => 'App\\Controller\\Admin\\DashboardController',
-  2 => 'App\\Controller\\Admin\\PostsCrudController',
-  3 => 'App\\Controller\\BlogController',
-  4 => 'App\\Controller\\MailerController',
+  1 => 'App\\Controller\\Admin\\CategoryCrudController',
+  2 => 'App\\Controller\\Admin\\DashboardController',
+  3 => 'App\\Controller\\Admin\\PostsCrudController',
+  4 => 'App\\Controller\\BlogController',
   5 => 'App\\Controller\\PagesController',
   6 => 'App\\Controller\\SecurityController',
   7 => 'App\\Entity\\Category',

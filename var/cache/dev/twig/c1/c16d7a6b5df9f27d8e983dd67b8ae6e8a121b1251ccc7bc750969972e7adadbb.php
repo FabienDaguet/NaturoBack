@@ -71,8 +71,10 @@ class __TwigTemplate_c8cd0614d64d46d37b040c04e3e772479e88dd0f74f4dc4b7420d809905
                 <div class=\"header__container\">
                     <header class=\"header d-flex align-items-center justify-content-center\">
                         <div class=\"logo__container logo__container--header\">
-                            <a href=\"index.html\"><img class=\"logo\" src=\"";
+                            <a href=\"";
         // line 21
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("index");
+        echo "\"><img class=\"logo\" src=\"";
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("img/logo.png"), "html", null, true);
         echo "\" alt=\"logo du site\"></a>
                         </div>
@@ -157,7 +159,7 @@ class __TwigTemplate_c8cd0614d64d46d37b040c04e3e772479e88dd0f74f4dc4b7420d809905
         // line 67
         $this->displayBlock('body', $context, $blocks);
         // line 68
-        echo "            </div>    
+        echo "            </div>
             <footer class=\"footer\">
                 <div class=\"logo__container\">
                     <a href=\"#\"><img class=\"logo\" src=\"";
@@ -235,7 +237,7 @@ class __TwigTemplate_c8cd0614d64d46d37b040c04e3e772479e88dd0f74f4dc4b7420d809905
 
     public function getDebugInfo()
     {
-        return array (  209 => 67,  190 => 5,  176 => 79,  165 => 71,  160 => 68,  158 => 67,  155 => 66,  146 => 64,  142 => 63,  131 => 55,  125 => 52,  119 => 49,  113 => 46,  107 => 43,  101 => 40,  95 => 37,  76 => 21,  62 => 10,  58 => 9,  51 => 5,  45 => 1,);
+        return array (  211 => 67,  192 => 5,  178 => 79,  167 => 71,  162 => 68,  160 => 67,  157 => 66,  148 => 64,  144 => 63,  133 => 55,  127 => 52,  121 => 49,  115 => 46,  109 => 43,  103 => 40,  97 => 37,  76 => 21,  62 => 10,  58 => 9,  51 => 5,  45 => 1,);
     }
 
     public function getSourceContext()
@@ -260,7 +262,7 @@ class __TwigTemplate_c8cd0614d64d46d37b040c04e3e772479e88dd0f74f4dc4b7420d809905
                 <div class=\"header__container\">
                     <header class=\"header d-flex align-items-center justify-content-center\">
                         <div class=\"logo__container logo__container--header\">
-                            <a href=\"index.html\"><img class=\"logo\" src=\"{{ asset('img/logo.png') }}\" alt=\"logo du site\"></a>
+                            <a href=\"{{ path('index') }}\"><img class=\"logo\" src=\"{{ asset('img/logo.png') }}\" alt=\"logo du site\"></a>
                         </div>
                         <div data-bs-toggle=\"offcanvas\" data-bs-target=\"#menu\" class=\"menu-btn navbar-toggler d-md-none\">
                             <div class=\"navbar-toggler-icon\">
@@ -307,7 +309,7 @@ class __TwigTemplate_c8cd0614d64d46d37b040c04e3e772479e88dd0f74f4dc4b7420d809905
                 {% endfor %}
 
                 {% block body %}{% endblock %}
-            </div>    
+            </div>
             <footer class=\"footer\">
                 <div class=\"logo__container\">
                     <a href=\"#\"><img class=\"logo\" src=\"{{ asset('img/logo.png') }}\" alt=\"logo du site\"></a>
@@ -321,6 +323,6 @@ class __TwigTemplate_c8cd0614d64d46d37b040c04e3e772479e88dd0f74f4dc4b7420d809905
         <script src=\"{{ asset('js/app.js') }}\"></script>
     </body>
 </html>
-", "base.html.twig", "C:\\Users\\dague\\Desktop\\A jour\\NaturoBack\\templates\\base.html.twig");
+", "base.html.twig", "C:\\Users\\fagay\\Desktop\\naturo\\NaturoBack\\templates\\base.html.twig");
     }
 }

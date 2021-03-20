@@ -6,9 +6,11 @@ namespace App\Form;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use Symfony\Component\Form\Extension\Core\Type\TelType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
+use Symfony\Component\Form\Extension\Core\Type\NumberType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 
 class MailerFormType extends AbstractType
@@ -23,16 +25,28 @@ class MailerFormType extends AbstractType
     {
         $builder
             ->add('name', TextType::class, ['label' => false])
-            ->add('email', EmailType::class, ['label' => false])
-            ->add('phone', TextType::class, ['label' => false])
+            ->add('email', EmailType::class, [
+                'label' => false,
+                'attr' => [
+                    'placeholder' => 'exemple@mail.com',
+                ],
+            ])
+            ->add('phone', TelType::class, [
+                'label' => false,
+            
+                'attr' => [
+                    'pattern'=> '[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]',
+                    'placeholder' => '0123456789',
+                ],
+            ])
             ->add('objet', ChoiceType::class, [
                 'choices' => [
-                    'Veuillez chosir un objet' => self::OBJ,
                     'Prise de rendez-vous' => self::RDV,
                     'Annuler un rendez-vous' => self::CANCEL,
                     'Demande de renseignement' => self::RENS,
                 ],
-                'label' => false
+                'label' => false,
+                'placeholder' => self::OBJ,
             ])
             ->add('message', TextareaType::class, ['label' => false])
         ;

@@ -18,7 +18,7 @@
                 <div class="header__container">
                     <header class="header d-flex align-items-center justify-content-center">
                         <div class="logo__container logo__container--header">
-                            <a href="index.html"><img class="logo" src="{{ asset('img/logo.png') }}" alt="logo du site"></a>
+                            <a href="{{ path('index') }}"><img class="logo" src="{{ asset('img/logo.png') }}" alt="logo du site"></a>
                         </div>
                         <div data-bs-toggle="offcanvas" data-bs-target="#menu" class="menu-btn navbar-toggler d-md-none">
                             <div class="navbar-toggler-icon">
@@ -65,7 +65,7 @@
                 {% endfor %}
 
                 {% block body %}{% endblock %}
-            </div>    
+            </div>
             <footer class="footer">
                 <div class="logo__container">
                     <a href="#"><img class="logo" src="{{ asset('img/logo.png') }}" alt="logo du site"></a>

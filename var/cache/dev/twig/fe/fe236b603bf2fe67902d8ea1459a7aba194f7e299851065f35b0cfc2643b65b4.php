@@ -102,7 +102,7 @@ class __TwigTemplate_e7a60375e587f8ac0e7029c67e76feb43064bb7d16a36d53e08ad3dac47
         if (twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 11, $this->source); })()), "user", [], "any", false, false, false, 11)) {
             // line 12
             echo "        <div class=\"mb-3\">
-            You are logged in as ";
+            Vous êtes connecté en tant que ";
             // line 13
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 13, $this->source); })()), "user", [], "any", false, false, false, 13), "username", [], "any", false, false, false, 13), "html", null, true);
             echo ", <a href=\"";
@@ -176,7 +176,7 @@ class __TwigTemplate_e7a60375e587f8ac0e7029c67e76feb43064bb7d16a36d53e08ad3dac47
 
     {% if app.user %}
         <div class=\"mb-3\">
-            You are logged in as {{ app.user.username }}, <a href=\"{{ path('app_logout') }}\">Logout</a>
+            Vous êtes connecté en tant que {{ app.user.username }}, <a href=\"{{ path('app_logout') }}\">Logout</a>
         </div>
     {% endif %}
     <div class=\"container-login\">
@@ -208,6 +208,6 @@ class __TwigTemplate_e7a60375e587f8ac0e7029c67e76feb43064bb7d16a36d53e08ad3dac47
 
 </form>
 {% endblock %}
-", "security/login.html.twig", "C:\\Users\\dague\\Desktop\\A jour\\NaturoBack\\templates\\security\\login.html.twig");
+", "security/login.html.twig", "C:\\Users\\fagay\\Desktop\\naturo\\NaturoBack\\templates\\security\\login.html.twig");
     }
 }

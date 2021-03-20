@@ -169,6 +169,6 @@ class __TwigTemplate_e91a669eb3374c50976932f4ea34c409ecd473619f7f8d74415def0125e
     </article>
 
 {% endblock %}
-", "pages/aboutMe.html.twig", "C:\\Users\\dague\\Desktop\\A jour\\NaturoBack\\templates\\pages\\aboutMe.html.twig");
+", "pages/aboutMe.html.twig", "C:\\Users\\fagay\\Desktop\\naturo\\NaturoBack\\templates\\pages\\aboutMe.html.twig");
     }
 }

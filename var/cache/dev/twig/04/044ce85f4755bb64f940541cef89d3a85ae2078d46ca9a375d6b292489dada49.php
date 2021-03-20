@@ -254,6 +254,6 @@ class __TwigTemplate_f33e62f0ed61d98d2aa3fb4df9d6aef95400da594494cfe3c058b8c86a2
     </div>
 {%- endblock -%}
 
-", "@VichUploader/Form/fields.html.twig", "C:\\Users\\dague\\Desktop\\A jour\\NaturoBack\\vendor\\vich\\uploader-bundle\\templates\\Form\\fields.html.twig");
+", "@VichUploader/Form/fields.html.twig", "C:\\Users\\fagay\\Desktop\\naturo\\NaturoBack\\vendor\\vich\\uploader-bundle\\templates\\Form\\fields.html.twig");
     }
 }

@@ -25,16 +25,16 @@ class PostsCrudController extends AbstractCrudController
     public function configureFields(string $pageName): iterable
     {
 
-        $imageFile = Field::new('imageFile') ->setFormType(VichImageType::class);
-        $image =  ImageField::new('postImg','image')->setBasePath($this->getParameter('app.path.upload_img'));
+        $imageFile = Field::new('imageFile', 'Image') ->setFormType(VichImageType::class);
+        $image =  ImageField::new('postImg','Image')->setBasePath($this->getParameter('app.path.upload_img'));
 
         $fields = [
             IdField::new('id', 'Numéro')->onlyOnIndex(),
             DateField::new('postDate', 'Date de Publication')->onlyOnIndex(),
-            TextField::new('postTitle', 'Titres'),
+            TextField::new('postTitle', 'Titre'),
             TextareaField::new('postContent', 'Article')
             ->onlyOnForms(),
-            AssociationField::new('postCategory', 'Catégory'),
+            AssociationField::new('postCategory', 'Catégorie'),
             /*AssociationField::new('postAuthor', 'Auteur')
             ->onlyWhenCreating(),*/
         ];
@@ -44,7 +44,6 @@ class PostsCrudController extends AbstractCrudController
         } else {
             $fields[] = $imageFile;
         }
-        
         return $fields;
     }
     

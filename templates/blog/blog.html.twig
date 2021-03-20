@@ -12,7 +12,7 @@
             <div class="category__container">
                 <div class="category__all">
                     {% for category in allCategory %}
-                        {% if loop.index== 1 %}
+                        {% if loop.index == 1 %}
                             <div class="category__side left-side">
                             {% elseif loop.index == 2 %}
                             <div class="category__side center-side">  
@@ -39,7 +39,7 @@
 
                         <div class="preview__img">
                         
-                            <a href="{{ path('post', {slug: post.slug}) }}"><img class="img__content" src="upload/img/{{post.postImg}}" alt="{{ post.slug }}"></a>
+                            <a href="{{ path('post', {slug: post.slug}) }}"><img class="img__content img__content--transform" src="upload/img/{{post.postImg}}" alt="{{ post.slug }}"></a>
                         
                             <div class="preview__descr">
                                 <span class="category__indicator"><a class="category__link" href="{{ path('category', {slug: post.postCategory.slug}) }}">{{post.postCategory.catName}}</a></span>
@@ -47,15 +47,15 @@
                             </div>
                         </div>    
 
-                        <p>{{post.postContent |u.truncate(200)}}... <br> <a href="{{ path('post', {slug: post.slug}) }}" class="">lire la suite</a></p>
+                        <p>{{post.postContent |u.truncate(170)}}... <br> <a href="{{ path('post', {slug: post.slug}) }}" class="">lire la suite</a></p>
 
                     </div>
                 {% endfor %}
             </section>
 
-            <div class="navigation">
+            
                 {{ knp_pagination_render(lastPosts) }}
-            </div>
+           
 
         </article>
     </div>

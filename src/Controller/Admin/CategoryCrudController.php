@@ -3,13 +3,12 @@
 namespace App\Controller\Admin;
 
 use App\Entity\Category;
+use EasyCorp\Bundle\EasyAdminBundle\Config\Crud;
 use EasyCorp\Bundle\EasyAdminBundle\Field\Field;
-use EasyCorp\Bundle\EasyAdminBundle\Field\IdField;
+use Vich\UploaderBundle\Form\Type\VichImageType;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\ImageField;
-use EasyCorp\Bundle\EasyAdminBundle\Field\TextEditorField;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;
-use Vich\UploaderBundle\Form\Type\VichImageType;
 
 class CategoryCrudController extends AbstractCrudController
 {
@@ -21,11 +20,20 @@ class CategoryCrudController extends AbstractCrudController
     
     public function configureFields(string $pageName): iterable
     {        
-        return [
+        $imageFile = Field::new('imageFile', 'Image') ->setFormType(VichImageType::class);
+        $image =  ImageField::new('catImg','Image')->setBasePath($this->getParameter('app.path.upload_img'));
+
+        $fields = [
             TextField::new('catName', 'Titre'),
-            Field::new('imageFile') ->setFormType(VichImageType::class) ->onlyOnForms(),
-            ImageField::new('catImg','image')->setBasePath($this->getParameter('app.path.upload_img')) ->onlyOnIndex(),
         ];
+
+        if ($pageName == Crud::PAGE_INDEX) {
+            $fields[] = $image;
+        } else {
+            $fields[] = $imageFile;
+        }
+
+        return $fields;
     }
     
 }

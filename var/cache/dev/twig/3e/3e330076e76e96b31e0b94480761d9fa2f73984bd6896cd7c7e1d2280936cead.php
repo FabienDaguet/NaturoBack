@@ -184,6 +184,6 @@ class __TwigTemplate_bd16e2a899d38d8f43d21c14bf8eccb14163ee0d49f54a022ba3fc163ac
     </article>
 
 {% endblock %}
-", "blog/post.html.twig", "C:\\Users\\dague\\Desktop\\A jour\\NaturoBack\\templates\\blog\\post.html.twig");
+", "blog/post.html.twig", "C:\\Users\\fagay\\Desktop\\naturo\\NaturoBack\\templates\\blog\\post.html.twig");
     }
 }

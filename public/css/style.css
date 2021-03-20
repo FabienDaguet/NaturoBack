@@ -105,7 +105,7 @@ body {
     transition: .2s;
 }
 
-/*--animation--*/
+/*----animation----*/
 
 .menu-btn.active span:nth-child(1) {
     transform: translate(-50%,-50%) translateY(-0.75rem);
@@ -127,7 +127,7 @@ body {
     transition-delay: .1s;
 }
 
-/*--/aniation--*/
+/*--aniation--*/
 
 
 .navbar-toggler {
@@ -377,6 +377,9 @@ body {
 
 .post__img {
     margin-bottom: 1rem;
+    width: 100%;
+    max-height: 500px;
+    object-fit: cover;
 }
 
 /*------LOGIN------*/
@@ -436,6 +439,21 @@ body {
 /*------TABLETTE-FORMAT------*/
 
 @media (min-width: 768px) {
+
+    /*----Body----*/
+    html,body {
+        height: 100vh;
+    }
+
+    .body-content {
+        flex-grow: 1;
+    }
+
+    .page {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+    }
 
     /*----Header----*/
 
@@ -512,7 +530,7 @@ body {
         padding: 0;
         width: calc(100%/3 - 1rem);
         max-height: 20rem;
-        min-height: 20rem;
+        min-height: 15rem;
         overflow: hidden;
     }
 
@@ -534,10 +552,11 @@ body {
     .category__media {
         display: inline-block;
         overflow: hidden;
-        height: 10rem;
+        height: 15rem;
     }
 
     .category__img {
+        height: 15rem;
         transition: transform .7s cubic-bezier(.2,1,.22,1), opacity 0.5s ease
     }
 
@@ -545,7 +564,7 @@ body {
         transform: scale(1.05);
     }
 
-   .img__content {
+   .img__content--transform {
         transition: transform .7s cubic-bezier(.2,1,.22,1), opacity 0.5s ease
     }
 
@@ -554,7 +573,7 @@ body {
         overflow: hidden;
     }
 
-    .preview__img:hover .img__content {
+    .preview__img:hover .img__content--transform {
         transform: scale(1.05);
     }
 
@@ -583,6 +602,12 @@ body {
         margin: auto;
         width: calc(100% / 3);
     }
+
+    /*----Footer----*/
+
+    .footer {
+        width: 100%;
+    }
     
 }
 
@@ -592,17 +617,8 @@ body {
 
     /*---Body----*/
 
-    body,html {
-        height: 100vh;
-    }
-
     .body-content {
         margin: auto;
-    }
-
-    .page {
-        position: relative;
-        min-height: 100%;
     }
 
     /*----Header----*/
@@ -624,6 +640,10 @@ body {
         max-width: 1024px;
         margin: auto;
         padding: 0;
+    }
+
+    .content--margin {
+        margin: 0 10rem;
     }
 
     .container {
@@ -696,18 +716,5 @@ body {
     .container-login {
         width: calc(100% / 4);
     }
-
-}
-
-/*------DESKTOP-BIG-SCREEN------*/
-
-@media (min-width: 1024px) {
- 
-/*----Body----*/
-
-.body-content {
-    max-width: 1425px;
-    margin: auto;
-}
 
 }    

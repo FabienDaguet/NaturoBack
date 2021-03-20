@@ -2,11 +2,12 @@
 
 namespace App\Entity;
 
-use App\Repository\CategoryRepository;
-use Doctrine\Common\Collections\ArrayCollection;
-use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
+use App\Repository\CategoryRepository;
 use Gedmo\Mapping\Annotation as Gedmo;
+use Doctrine\Common\Collections\Collection;
+use Symfony\Component\HttpFoundation\File\File;
+use Doctrine\Common\Collections\ArrayCollection;
 use Vich\UploaderBundle\Mapping\Annotation as Vich;
 
 
@@ -35,11 +36,12 @@ class Category
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
+     * @var string
      */
     private $catImg;
 
     /**
-     * @Vich\UploadableField(mapping="cat_img", fileNameProperty="catImg")
+     * @Vich\UploadableField(mapping="cat_image", fileNameProperty="catImg")
      * @var file
      */
     private $imageFile;
@@ -125,9 +127,10 @@ class Category
     /**
      * @param File|null $imageFile
      */
-    public function seImageFile($image = null)
+    public function seImageFile($imageFile = null)
     {
-        $this->imageFile = $image;
+        $this->imageFile = $imageFile;
+        return $this;
     }
 
     public function getSlug(): ?string

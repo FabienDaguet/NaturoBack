@@ -322,6 +322,6 @@ class __TwigTemplate_80ebc20a08ecd8f008a08529e602bf1da6f12e437a3281f6dc7a5e569f3
     </article>
 
 {% endblock %}
-", "pages/contact.html.twig", "C:\\Users\\dague\\Desktop\\A jour\\NaturoBack\\templates\\pages\\contact.html.twig");
+", "pages/contact.html.twig", "C:\\Users\\fagay\\Desktop\\naturo\\NaturoBack\\templates\\pages\\contact.html.twig");
     }
 }

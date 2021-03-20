@@ -62,12 +62,13 @@ class PagesController extends AbstractController
         $form = $this->createForm(MailerFormType::class);
         $contact = $form->handleRequest($request);
 
-        //dd($contact);
+        
         //Si le formulaire est envoyé et correctement remplis
         if ($form->isSubmitted() && $form->isValid()) {
             //on créeer le mail
             $email = (new TemplatedEmail())
             ->from($contact->get('email')->getData())
+            ->replyTo($contact->get('email')->getData())
             ->to('you@example.com')
             ->subject($contact->get('objet')->getData())
             ->htmlTemplate('email/contact.html.twig')
@@ -77,8 +78,11 @@ class PagesController extends AbstractController
                 'phone' => $contact->get('phone')->getData(),
                 'mail' => $contact->get('email')->getData(),
                 'message' => $contact->get('message')->getData(),
-            ]);  
+            ]); 
+
+            //dd($contact);
             //on envoie le mail
+            //dd($email);
             $mailer->send($email);
             
             //on confirme et redirige

@@ -181,7 +181,7 @@ $context["loop"], "index", [], "any", false, false, false, 19), 3))) {
                             <a href=\"";
             // line 42
             echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("post", ["slug" => twig_get_attribute($this->env, $this->source, $context["post"], "slug", [], "any", false, false, false, 42)]), "html", null, true);
-            echo "\"><img class=\"img__content\" src=\"upload/img/";
+            echo "\"><img class=\"img__content img__content--transform\" src=\"upload/img/";
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["post"], "postImg", [], "any", false, false, false, 42), "html", null, true);
             echo "\" alt=\"";
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["post"], "slug", [], "any", false, false, false, 42), "html", null, true);
@@ -205,7 +205,7 @@ $context["loop"], "index", [], "any", false, false, false, 19), 3))) {
 
                         <p>";
             // line 50
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $this->extensions['Twig\Extra\String\StringExtension']->createUnicodeString(twig_get_attribute($this->env, $this->source, $context["post"], "postContent", [], "any", false, false, false, 50)), "truncate", [0 => 200], "method", false, false, false, 50), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $this->extensions['Twig\Extra\String\StringExtension']->createUnicodeString(twig_get_attribute($this->env, $this->source, $context["post"], "postContent", [], "any", false, false, false, 50)), "truncate", [0 => 170], "method", false, false, false, 50), "html", null, true);
             echo "... <br> <a href=\"";
             echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("post", ["slug" => twig_get_attribute($this->env, $this->source, $context["post"], "slug", [], "any", false, false, false, 50)]), "html", null, true);
             echo "\" class=\"\">lire la suite</a></p>
@@ -219,12 +219,12 @@ $context["loop"], "index", [], "any", false, false, false, 19), 3))) {
         // line 54
         echo "            </section>
 
-            <div class=\"navigation\">
+            
                 ";
         // line 57
         echo $this->extensions['Knp\Bundle\PaginatorBundle\Twig\Extension\PaginationExtension']->render($this->env, (isset($context["lastPosts"]) || array_key_exists("lastPosts", $context) ? $context["lastPosts"] : (function () { throw new RuntimeError('Variable "lastPosts" does not exist.', 57, $this->source); })()));
         echo "
-            </div>
+           
 
         </article>
     </div>
@@ -268,7 +268,7 @@ $context["loop"], "index", [], "any", false, false, false, 19), 3))) {
             <div class=\"category__container\">
                 <div class=\"category__all\">
                     {% for category in allCategory %}
-                        {% if loop.index== 1 %}
+                        {% if loop.index == 1 %}
                             <div class=\"category__side left-side\">
                             {% elseif loop.index == 2 %}
                             <div class=\"category__side center-side\">  
@@ -295,7 +295,7 @@ $context["loop"], "index", [], "any", false, false, false, 19), 3))) {
 
                         <div class=\"preview__img\">
                         
-                            <a href=\"{{ path('post', {slug: post.slug}) }}\"><img class=\"img__content\" src=\"upload/img/{{post.postImg}}\" alt=\"{{ post.slug }}\"></a>
+                            <a href=\"{{ path('post', {slug: post.slug}) }}\"><img class=\"img__content img__content--transform\" src=\"upload/img/{{post.postImg}}\" alt=\"{{ post.slug }}\"></a>
                         
                             <div class=\"preview__descr\">
                                 <span class=\"category__indicator\"><a class=\"category__link\" href=\"{{ path('category', {slug: post.postCategory.slug}) }}\">{{post.postCategory.catName}}</a></span>
@@ -303,19 +303,19 @@ $context["loop"], "index", [], "any", false, false, false, 19), 3))) {
                             </div>
                         </div>    
 
-                        <p>{{post.postContent |u.truncate(200)}}... <br> <a href=\"{{ path('post', {slug: post.slug}) }}\" class=\"\">lire la suite</a></p>
+                        <p>{{post.postContent |u.truncate(170)}}... <br> <a href=\"{{ path('post', {slug: post.slug}) }}\" class=\"\">lire la suite</a></p>
 
                     </div>
                 {% endfor %}
             </section>
 
-            <div class=\"navigation\">
+            
                 {{ knp_pagination_render(lastPosts) }}
-            </div>
+           
 
         </article>
     </div>
 {% endblock %}
-", "blog/blog.html.twig", "C:\\Users\\dague\\Desktop\\A jour\\NaturoBack\\templates\\blog\\blog.html.twig");
+", "blog/blog.html.twig", "C:\\Users\\fagay\\Desktop\\naturo\\NaturoBack\\templates\\blog\\blog.html.twig");
     }
 }
