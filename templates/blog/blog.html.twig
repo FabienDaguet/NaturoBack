@@ -21,7 +21,7 @@
                         {% endif %}
                             <div class="category__media">
                                 <a href="{{ path('category', {slug: category.slug}) }}">
-                                    <img src="upload/img/{{ category.catImg }}" alt="{{ category.slug }}" class="category__img">
+                                    <img src="{{ asset('upload/img/') }}{{ category.catImg }}" alt="{{ category.slug }}" class="category__img">
                                     <span class="category__name">{{category.catName}}</span>
                                 </a>
                             </div>
@@ -39,7 +39,7 @@
 
                         <div class="preview__img">
                         
-                            <a href="{{ path('post', {slug: post.slug}) }}"><img class="img__content img__content--transform" src="upload/img/{{post.postImg}}" alt="{{ post.slug }}"></a>
+                            <a href="{{ path('post', {slug: post.slug}) }}"><img class="img__content img__content--transform" src="{{ asset('upload/img/') }}{{post.postImg}}" alt="{{ post.slug }}"></a>
                         
                             <div class="preview__descr">
                                 <span class="category__indicator"><a class="category__link" href="{{ path('category', {slug: post.postCategory.slug}) }}">{{post.postCategory.catName}}</a></span>

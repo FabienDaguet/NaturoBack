@@ -113,8 +113,9 @@ class __TwigTemplate_bd16e2a899d38d8f43d21c14bf8eccb14163ee0d49f54a022ba3fc163ac
         <section>
             <div class=\"preview__container\">
                 <div class=\"preview__img\">
-                    <img class=\"img__content post__img\" src=\"/upload/img/";
+                    <img class=\"img__content post__img\" src=\"";
         // line 21
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("upload/img/"), "html", null, true);
         echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["post"]) || array_key_exists("post", $context) ? $context["post"] : (function () { throw new RuntimeError('Variable "post" does not exist.', 21, $this->source); })()), "postImg", [], "any", false, false, false, 21), "html", null, true);
         echo "\" alt=\"photo de l'article\">
                 </div>
@@ -149,7 +150,7 @@ class __TwigTemplate_bd16e2a899d38d8f43d21c14bf8eccb14163ee0d49f54a022ba3fc163ac
 
     public function getDebugInfo()
     {
-        return array (  123 => 23,  118 => 21,  109 => 15,  101 => 14,  92 => 8,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  124 => 23,  118 => 21,  109 => 15,  101 => 14,  92 => 8,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -174,7 +175,7 @@ class __TwigTemplate_bd16e2a899d38d8f43d21c14bf8eccb14163ee0d49f54a022ba3fc163ac
         <section>
             <div class=\"preview__container\">
                 <div class=\"preview__img\">
-                    <img class=\"img__content post__img\" src=\"/upload/img/{{post.postImg}}\" alt=\"photo de l'article\">
+                    <img class=\"img__content post__img\" src=\"{{ asset('upload/img/') }}{{post.postImg}}\" alt=\"photo de l'article\">
                 </div>
                 <p>{{post.postContent}}</p>
             </div>

@@ -35,8 +35,6 @@ class PostsCrudController extends AbstractCrudController
             TextareaField::new('postContent', 'Article')
             ->onlyOnForms(),
             AssociationField::new('postCategory', 'Catégorie'),
-            /*AssociationField::new('postAuthor', 'Auteur')
-            ->onlyWhenCreating(),*/
         ];
         
         if ($pageName == Crud::PAGE_INDEX) {
@@ -46,6 +44,5 @@ class PostsCrudController extends AbstractCrudController
         }
         return $fields;
     }
-    
     
 }

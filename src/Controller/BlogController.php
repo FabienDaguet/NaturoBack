@@ -35,7 +35,6 @@ class BlogController extends AbstractController
     }
 
 
-
     /**
      * @Route("/blog/{slug}", name="category", methods={"GET"})
      */
@@ -60,11 +59,11 @@ class BlogController extends AbstractController
     /**
      * @Route("/blog/article/{slug}", name="post", methods={"GET"})
      */
-    public function post(Posts $posts): Response
+    public function post(Posts $post): Response
     {
         //dd($posts);
         return $this->render('blog/post.html.twig', [
-            'post' => $posts
+            'post' => $post
         ]);
     }
 }
