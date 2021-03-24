@@ -35,7 +35,7 @@ class MailerFormType extends AbstractType
                 'label' => false,
             
                 'attr' => [
-                    'pattern'=> '[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]',
+                    'pattern'=> '(0|\\+33|0033)[1-9][0-9]{8}',
                     'placeholder' => '0123456789',
                 ],
             ])

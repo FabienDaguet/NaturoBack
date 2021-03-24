@@ -30,3 +30,11 @@ c92433,::1,GET,http://localhost:8000/blog/article/Voluptatem-et-rem-beatae-eos-f
 5ea43a,::1,GET,http://localhost:8000/blog/article/Voluptatem-et-rem-beatae-eos-facere-modi-sed-ut.,1616519595,,200
 de99c2,::1,GET,http://localhost:8000/blog/article/Voluptatem-et-rem-beatae-eos-facere-modi-sed-ut.,1616519657,,200
 9f50b0,::1,GET,http://localhost:8000/blog/article/Voluptatem-et-rem-beatae-eos-facere-modi-sed-ut.,1616519662,,200
+881fcf,::1,GET,http://localhost:8000/blog/article/Voluptatem-et-rem-beatae-eos-facere-modi-sed-ut.,1616579673,,200
+cd474c,::1,GET,http://localhost:8000/contact,1616579675,,200
+3277ad,::1,POST,http://localhost:8000/contact,1616583292,,302
+1a5f5b,::1,GET,http://localhost:8000/,1616583292,,200
+6b9b9c,::1,GET,http://localhost:8000/s%C3%A9ance,1616583603,,200
+1155dd,::1,GET,http://localhost:8000/blog,1616583609,,200
+351d30,::1,GET,http://localhost:8000/contact,1616583614,,200
+c235f9,::1,GET,http://localhost:8000/blog,1616589420,,200

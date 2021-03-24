@@ -134,8 +134,9 @@ $context["loop"], "index", [], "any", false, false, false, 19), 3))) {
             // line 23
             echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("category", ["slug" => twig_get_attribute($this->env, $this->source, $context["category"], "slug", [], "any", false, false, false, 23)]), "html", null, true);
             echo "\">
-                                    <img src=\"upload/img/";
+                                    <img src=\"";
             // line 24
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("upload/img/"), "html", null, true);
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["category"], "catImg", [], "any", false, false, false, 24), "html", null, true);
             echo "\" alt=\"";
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["category"], "slug", [], "any", false, false, false, 24), "html", null, true);
@@ -181,7 +182,8 @@ $context["loop"], "index", [], "any", false, false, false, 19), 3))) {
                             <a href=\"";
             // line 42
             echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("post", ["slug" => twig_get_attribute($this->env, $this->source, $context["post"], "slug", [], "any", false, false, false, 42)]), "html", null, true);
-            echo "\"><img class=\"img__content img__content--transform\" src=\"upload/img/";
+            echo "\"><img class=\"img__content img__content--transform\" src=\"";
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("upload/img/"), "html", null, true);
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["post"], "postImg", [], "any", false, false, false, 42), "html", null, true);
             echo "\" alt=\"";
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["post"], "slug", [], "any", false, false, false, 42), "html", null, true);
@@ -249,7 +251,7 @@ $context["loop"], "index", [], "any", false, false, false, 19), 3))) {
 
     public function getDebugInfo()
     {
-        return array (  225 => 57,  220 => 54,  208 => 50,  199 => 46,  193 => 45,  183 => 42,  177 => 38,  173 => 37,  164 => 30,  145 => 25,  139 => 24,  135 => 23,  132 => 22,  128 => 20,  126 => 19,  123 => 18,  121 => 17,  118 => 16,  115 => 15,  98 => 14,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  227 => 57,  222 => 54,  210 => 50,  201 => 46,  195 => 45,  184 => 42,  178 => 38,  174 => 37,  165 => 30,  146 => 25,  139 => 24,  135 => 23,  132 => 22,  128 => 20,  126 => 19,  123 => 18,  121 => 17,  118 => 16,  115 => 15,  98 => 14,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -277,7 +279,7 @@ $context["loop"], "index", [], "any", false, false, false, 19), 3))) {
                         {% endif %}
                             <div class=\"category__media\">
                                 <a href=\"{{ path('category', {slug: category.slug}) }}\">
-                                    <img src=\"upload/img/{{ category.catImg }}\" alt=\"{{ category.slug }}\" class=\"category__img\">
+                                    <img src=\"{{ asset('upload/img/') }}{{ category.catImg }}\" alt=\"{{ category.slug }}\" class=\"category__img\">
                                     <span class=\"category__name\">{{category.catName}}</span>
                                 </a>
                             </div>
@@ -295,7 +297,7 @@ $context["loop"], "index", [], "any", false, false, false, 19), 3))) {
 
                         <div class=\"preview__img\">
                         
-                            <a href=\"{{ path('post', {slug: post.slug}) }}\"><img class=\"img__content img__content--transform\" src=\"upload/img/{{post.postImg}}\" alt=\"{{ post.slug }}\"></a>
+                            <a href=\"{{ path('post', {slug: post.slug}) }}\"><img class=\"img__content img__content--transform\" src=\"{{ asset('upload/img/') }}{{post.postImg}}\" alt=\"{{ post.slug }}\"></a>
                         
                             <div class=\"preview__descr\">
                                 <span class=\"category__indicator\"><a class=\"category__link\" href=\"{{ path('category', {slug: post.postCategory.slug}) }}\">{{post.postCategory.catName}}</a></span>
