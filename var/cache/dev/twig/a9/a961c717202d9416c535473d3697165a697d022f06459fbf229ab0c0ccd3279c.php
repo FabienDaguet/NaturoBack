@@ -193,6 +193,6 @@ class __TwigTemplate_2db6f9060e47742e0b9a5dd00726cdba70a69629e456eca5e232fc3d533
         {% block body '' %}
     </body>
 </html>
-", "@WebProfiler/Profiler/base.html.twig", "C:\\Users\\dague\\Desktop\\Présentation\\NaturoBack\\vendor\\symfony\\web-profiler-bundle\\Resources\\views\\Profiler\\base.html.twig");
+", "@WebProfiler/Profiler/base.html.twig", "C:\\Users\\fagay\\Desktop\\naturo\\NaturoBack\\vendor\\symfony\\web-profiler-bundle\\Resources\\views\\Profiler\\base.html.twig");
     }
 }

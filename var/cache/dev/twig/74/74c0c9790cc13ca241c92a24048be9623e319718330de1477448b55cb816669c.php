@@ -409,6 +409,6 @@ class __TwigTemplate_ea064ca82940cc2352d83d876545ec2fe0af6d04188923b0ce228ec2451
 </ul>
 
 {% block main_menu_after %}{% endblock %}
-", "@EasyAdmin/menu.html.twig", "C:\\Users\\dague\\Desktop\\Présentation\\NaturoBack\\templates\\bundles\\easyadminBundle\\menu.html.twig");
+", "@EasyAdmin/menu.html.twig", "C:\\Users\\fagay\\Desktop\\naturo\\NaturoBack\\templates\\bundles\\easyadminBundle\\menu.html.twig");
     }
 }

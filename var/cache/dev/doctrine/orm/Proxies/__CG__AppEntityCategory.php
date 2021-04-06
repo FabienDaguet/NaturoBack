@@ -282,12 +282,12 @@ class Category extends \App\Entity\Category implements \Doctrine\ORM\Proxy\Proxy
     /**
      * {@inheritDoc}
      */
-    public function seImageFile($imageFile = NULL)
+    public function setImageFile($imageFile = NULL)
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'seImageFile', [$imageFile]);
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setImageFile', [$imageFile]);
 
-        return parent::seImageFile($imageFile);
+        return parent::setImageFile($imageFile);
     }
 
     /**

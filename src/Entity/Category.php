@@ -2,6 +2,7 @@
 
 namespace App\Entity;
 
+use App\Entity\Posts;
 use Doctrine\ORM\Mapping as ORM;
 use App\Repository\CategoryRepository;
 use Gedmo\Mapping\Annotation as Gedmo;
@@ -127,7 +128,7 @@ class Category
     /**
      * @param File|null $imageFile
      */
-    public function seImageFile($imageFile = null)
+    public function setImageFile($imageFile = null)
     {
         $this->imageFile = $imageFile;
         return $this;

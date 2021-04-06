@@ -644,6 +644,6 @@ class __TwigTemplate_88e00f3a041d72540cbc0d63be1ac8c56243931910e4b6ee5bee0dcd1dd
         </div>
     {% endfor %}
 {% endblock %}
-", "@WebProfiler/Collector/notifier.html.twig", "C:\\Users\\dague\\Desktop\\Présentation\\NaturoBack\\vendor\\symfony\\web-profiler-bundle\\Resources\\views\\Collector\\notifier.html.twig");
+", "@WebProfiler/Collector/notifier.html.twig", "C:\\Users\\fagay\\Desktop\\naturo\\NaturoBack\\vendor\\symfony\\web-profiler-bundle\\Resources\\views\\Collector\\notifier.html.twig");
     }
 }

@@ -168,6 +168,6 @@ class __TwigTemplate_db65231301b240f390e1360fe50e88a07d96b708e64f7c273cc765a395a
 
     {{ include('@WebProfiler/Profiler/toolbar_item.html.twig', { link: false }) }}
 {% endblock %}
-", "@WebProfiler/Collector/ajax.html.twig", "C:\\Users\\dague\\Desktop\\Présentation\\NaturoBack\\vendor\\symfony\\web-profiler-bundle\\Resources\\views\\Collector\\ajax.html.twig");
+", "@WebProfiler/Collector/ajax.html.twig", "C:\\Users\\fagay\\Desktop\\naturo\\NaturoBack\\vendor\\symfony\\web-profiler-bundle\\Resources\\views\\Collector\\ajax.html.twig");
     }
 }

@@ -117,15 +117,14 @@ class __TwigTemplate_337d45db4c38708f742c81bca6d98da085fcf5e0a2143d16e9757f3dfe4
                 // line 16
                 echo "                            <div class=\"category__side left-side\">
                             ";
-            } elseif ((0 === twig_compare(twig_get_attribute($this->env, $this->source,             // line 17
-$context["loop"], "index", [], "any", false, false, false, 17), 2))) {
+            } elseif (twig_get_attribute($this->env, $this->source,             // line 17
+$context["loop"], "last", [], "any", false, false, false, 17)) {
                 // line 18
-                echo "                            <div class=\"category__side center-side\">  
-                            ";
-            } elseif ((0 === twig_compare(twig_get_attribute($this->env, $this->source,             // line 19
-$context["loop"], "index", [], "any", false, false, false, 19), 3))) {
-                // line 20
                 echo "                            <div class=\"category__side rigth-side\">
+                            ";
+            } else {
+                // line 20
+                echo "                            <div class=\"category__side center-side\">  
                         ";
             }
             // line 22
@@ -251,7 +250,7 @@ $context["loop"], "index", [], "any", false, false, false, 19), 3))) {
 
     public function getDebugInfo()
     {
-        return array (  227 => 57,  222 => 54,  210 => 50,  201 => 46,  195 => 45,  184 => 42,  178 => 38,  174 => 37,  165 => 30,  146 => 25,  139 => 24,  135 => 23,  132 => 22,  128 => 20,  126 => 19,  123 => 18,  121 => 17,  118 => 16,  115 => 15,  98 => 14,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  226 => 57,  221 => 54,  209 => 50,  200 => 46,  194 => 45,  183 => 42,  177 => 38,  173 => 37,  164 => 30,  145 => 25,  138 => 24,  134 => 23,  131 => 22,  127 => 20,  123 => 18,  121 => 17,  118 => 16,  115 => 15,  98 => 14,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -272,10 +271,10 @@ $context["loop"], "index", [], "any", false, false, false, 19), 3))) {
                     {% for category in allCategory %}
                         {% if loop.index == 1 %}
                             <div class=\"category__side left-side\">
-                            {% elseif loop.index == 2 %}
-                            <div class=\"category__side center-side\">  
-                            {% elseif loop.index == 3 %}
+                            {% elseif loop.last %}
                             <div class=\"category__side rigth-side\">
+                            {% else %}
+                            <div class=\"category__side center-side\">  
                         {% endif %}
                             <div class=\"category__media\">
                                 <a href=\"{{ path('category', {slug: category.slug}) }}\">
@@ -318,6 +317,6 @@ $context["loop"], "index", [], "any", false, false, false, 19), 3))) {
         </article>
     </div>
 {% endblock %}
-", "blog/blog.html.twig", "C:\\Users\\dague\\Desktop\\Présentation\\NaturoBack\\templates\\blog\\blog.html.twig");
+", "blog/blog.html.twig", "C:\\Users\\fagay\\Desktop\\naturo\\NaturoBack\\templates\\blog\\blog.html.twig");
     }
 }

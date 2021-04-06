@@ -187,6 +187,6 @@ class __TwigTemplate_2329ca140d0d95c85acf3854f9a3af6d4e8b765397dc6c3b51738057d6c
     </article>
 
 {% endblock %}
-", "pages/seance.html.twig", "C:\\Users\\dague\\Desktop\\Présentation\\NaturoBack\\templates\\pages\\seance.html.twig");
+", "pages/seance.html.twig", "C:\\Users\\fagay\\Desktop\\naturo\\NaturoBack\\templates\\pages\\seance.html.twig");
     }
 }

@@ -14,10 +14,10 @@
                     {% for category in allCategory %}
                         {% if loop.index == 1 %}
                             <div class="category__side left-side">
-                            {% elseif loop.index == 2 %}
-                            <div class="category__side center-side">  
-                            {% elseif loop.index == 3 %}
+                            {% elseif loop.last %}
                             <div class="category__side rigth-side">
+                            {% else %}
+                            <div class="category__side center-side">  
                         {% endif %}
                             <div class="category__media">
                                 <a href="{{ path('category', {slug: category.slug}) }}">

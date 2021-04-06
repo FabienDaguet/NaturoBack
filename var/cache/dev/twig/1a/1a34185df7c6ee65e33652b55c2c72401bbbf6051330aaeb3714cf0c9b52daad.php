@@ -248,6 +248,6 @@ class __TwigTemplate_e47b919fdd2d820555ce63069e2b7d283868dc226338ba454b9924778eb
         <li><a href=\"https://github.com/EasyCorp/EasyAdminBundle\">Project homepage</a></li>
     </ul>
 {% endblock %}
-", "@EasyAdmin/inspector/data_collector.html.twig", "C:\\Users\\dague\\Desktop\\Présentation\\NaturoBack\\templates\\bundles\\easyadminBundle\\inspector\\data_collector.html.twig");
+", "@EasyAdmin/inspector/data_collector.html.twig", "C:\\Users\\fagay\\Desktop\\naturo\\NaturoBack\\templates\\bundles\\easyadminBundle\\inspector\\data_collector.html.twig");
     }
 }

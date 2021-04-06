@@ -53,7 +53,7 @@ class __TwigTemplate_685971648f42b5bf55591e6f78034548fb9c817c3891375e897addf61db
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "@EasyAdmin/page/content.html.twig"));
 
         // line 3
-        $context["__internal_1fa6bb554073f5926a0b8e90aa38d370a5d0b0976357a678f5ea63088831f542"] = twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["ea"]) || array_key_exists("ea", $context) ? $context["ea"] : (function () { throw new RuntimeError('Variable "ea" does not exist.', 3, $this->source); })()), "i18n", [], "any", false, false, false, 3), "translationDomain", [], "any", false, false, false, 3);
+        $context["__internal_e9b5a0898fd24939b98b3ceef5116dcbbf6871c6ce47b7200fd2c0abb65316f5"] = twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["ea"]) || array_key_exists("ea", $context) ? $context["ea"] : (function () { throw new RuntimeError('Variable "ea" does not exist.', 3, $this->source); })()), "i18n", [], "any", false, false, false, 3), "translationDomain", [], "any", false, false, false, 3);
         // line 2
         $this->getParent($context)->display($context, array_merge($this->blocks, $blocks));
         
@@ -390,6 +390,6 @@ class __TwigTemplate_685971648f42b5bf55591e6f78034548fb9c817c3891375e897addf61db
         </section>
     </div>
 {% endblock content %}
-", "@EasyAdmin/page/content.html.twig", "C:\\Users\\dague\\Desktop\\Présentation\\NaturoBack\\templates\\bundles\\easyadminBundle\\page\\content.html.twig");
+", "@EasyAdmin/page/content.html.twig", "C:\\Users\\fagay\\Desktop\\naturo\\NaturoBack\\templates\\bundles\\easyadminBundle\\page\\content.html.twig");
     }
 }

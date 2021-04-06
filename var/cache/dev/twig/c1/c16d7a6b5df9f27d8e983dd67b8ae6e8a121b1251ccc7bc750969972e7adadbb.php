@@ -323,6 +323,6 @@ class __TwigTemplate_c8cd0614d64d46d37b040c04e3e772479e88dd0f74f4dc4b7420d809905
         <script src=\"{{ asset('js/app.js') }}\"></script>
     </body>
 </html>
-", "base.html.twig", "C:\\Users\\dague\\Desktop\\Présentation\\NaturoBack\\templates\\base.html.twig");
+", "base.html.twig", "C:\\Users\\fagay\\Desktop\\naturo\\NaturoBack\\templates\\base.html.twig");
     }
 }

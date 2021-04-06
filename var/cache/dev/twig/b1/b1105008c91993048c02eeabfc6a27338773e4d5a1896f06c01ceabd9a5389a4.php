@@ -103,6 +103,6 @@ class __TwigTemplate_576b7413f29eeead38ffbee4bcf5ca889597efe7c46d149ad02a22af0ef
         {{ render_as_html ? field.formattedValue|raw : field.formattedValue|striptags }}
     </span>
 {% endif %}
-", "@EasyAdmin/crud/field/text.html.twig", "C:\\Users\\dague\\Desktop\\Présentation\\NaturoBack\\templates\\bundles\\easyadminBundle\\crud\\field\\text.html.twig");
+", "@EasyAdmin/crud/field/text.html.twig", "C:\\Users\\fagay\\Desktop\\naturo\\NaturoBack\\templates\\bundles\\easyadminBundle\\crud\\field\\text.html.twig");
     }
 }
