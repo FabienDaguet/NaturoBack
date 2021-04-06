@@ -155,6 +155,6 @@ class __TwigTemplate_366cbba2800bd7e5010d87bd31eb424856bf2f3a09dabecdc1888f2202e
 {% block panel %}
     {{ render(path('_profiler_router', { token: token })) }}
 {% endblock %}
-", "@WebProfiler/Collector/router.html.twig", "C:\\Users\\fagay\\Desktop\\naturo\\NaturoBack\\vendor\\symfony\\web-profiler-bundle\\Resources\\views\\Collector\\router.html.twig");
+", "@WebProfiler/Collector/router.html.twig", "C:\\Users\\dague\\Desktop\\Présentation\\NaturoBack\\vendor\\symfony\\web-profiler-bundle\\Resources\\views\\Collector\\router.html.twig");
     }
 }

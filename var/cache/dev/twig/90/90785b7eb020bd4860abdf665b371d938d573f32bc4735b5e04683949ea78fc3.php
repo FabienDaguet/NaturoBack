@@ -120,6 +120,6 @@ class __TwigTemplate_b92d1c2c3cf2d106bd9895b540376c9dde64995fd40f1cde916cbf1d15d
         <label class=\"custom-control-label\" for=\"{{ field.uniqueId }}\"></label>
     </div>
 {% endif %}
-", "@EasyAdmin/crud/field/boolean.html.twig", "C:\\Users\\fagay\\Desktop\\naturo\\NaturoBack\\templates\\bundles\\easyadminBundle\\crud\\field\\boolean.html.twig");
+", "@EasyAdmin/crud/field/boolean.html.twig", "C:\\Users\\dague\\Desktop\\Présentation\\NaturoBack\\templates\\bundles\\easyadminBundle\\crud\\field\\boolean.html.twig");
     }
 }

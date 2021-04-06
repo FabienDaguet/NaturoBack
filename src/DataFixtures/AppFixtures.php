@@ -49,7 +49,7 @@ class AppFixtures extends Fixture
             $post
             ->setPostTitle($generator->sentence)
             ->setPostContent($generator->text())
-            ->setPostDate($generator->dateTimeBetween('-1 year', 'now'))
+            //->setPostDate($generator->dateTimeBetween('-1 year', 'now'))
             ->setPostAuthor($user)
             ->setPostCategory($cat)
             ->setPostImg($generator->imageUrl(750, 500));

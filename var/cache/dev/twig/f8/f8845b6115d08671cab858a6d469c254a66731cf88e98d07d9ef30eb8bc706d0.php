@@ -97,6 +97,6 @@ class __TwigTemplate_e0f3b7ffdee908635cadfb87d04a8ec746a8637051b4bc359943e192372
 <div id=\"{{ html_id }}\" class=\"ea-lightbox\">
     <img src=\"{{ asset(field.formattedValue) }}\">
 </div>
-", "@EasyAdmin/crud/field/image.html.twig", "C:\\Users\\fagay\\Desktop\\naturo\\NaturoBack\\templates\\bundles\\easyadminBundle\\crud\\field\\image.html.twig");
+", "@EasyAdmin/crud/field/image.html.twig", "C:\\Users\\dague\\Desktop\\Présentation\\NaturoBack\\templates\\bundles\\easyadminBundle\\crud\\field\\image.html.twig");
     }
 }

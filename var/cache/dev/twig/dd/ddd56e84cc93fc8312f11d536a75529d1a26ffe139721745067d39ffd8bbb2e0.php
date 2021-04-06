@@ -184,6 +184,6 @@ class __TwigTemplate_5238eae2e5f35ed9db8024e3a0abcc607315d1d1c771eebdd4843b2892f
         </ul>
     </nav>
 </div>
-", "@EasyAdmin/crud/paginator.html.twig", "C:\\Users\\fagay\\Desktop\\naturo\\NaturoBack\\templates\\bundles\\easyadminBundle\\crud\\paginator.html.twig");
+", "@EasyAdmin/crud/paginator.html.twig", "C:\\Users\\dague\\Desktop\\Présentation\\NaturoBack\\templates\\bundles\\easyadminBundle\\crud\\paginator.html.twig");
     }
 }

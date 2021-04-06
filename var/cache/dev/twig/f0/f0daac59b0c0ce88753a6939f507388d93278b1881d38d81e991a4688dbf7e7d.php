@@ -141,6 +141,6 @@ class __TwigTemplate_d5b0180c986f3b5c540c78d6b4bcffcb69752184d08e080a546e715af74
         </div>
     </div>
 {% endif %}
-", "@EasyAdmin/crud/field/text_editor.html.twig", "C:\\Users\\fagay\\Desktop\\naturo\\NaturoBack\\templates\\bundles\\easyadminBundle\\crud\\field\\text_editor.html.twig");
+", "@EasyAdmin/crud/field/text_editor.html.twig", "C:\\Users\\dague\\Desktop\\Présentation\\NaturoBack\\templates\\bundles\\easyadminBundle\\crud\\field\\text_editor.html.twig");
     }
 }

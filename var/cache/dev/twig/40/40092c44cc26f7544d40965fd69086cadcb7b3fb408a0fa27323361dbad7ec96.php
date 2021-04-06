@@ -61,6 +61,6 @@ class __TwigTemplate_75b26e52ac7b41ac9ff181f7337e9e452d3ab8b8167a6b7f6f9d720f2b0
     {
         return new Source("{# this template is rendered when an error or exception occurs while
    trying to get the value of the field (by default nothing is displayed) #}
-", "@EasyAdmin/label/undefined.html.twig", "C:\\Users\\fagay\\Desktop\\naturo\\NaturoBack\\templates\\bundles\\easyadminBundle\\label\\undefined.html.twig");
+", "@EasyAdmin/label/undefined.html.twig", "C:\\Users\\dague\\Desktop\\Présentation\\NaturoBack\\templates\\bundles\\easyadminBundle\\label\\undefined.html.twig");
     }
 }

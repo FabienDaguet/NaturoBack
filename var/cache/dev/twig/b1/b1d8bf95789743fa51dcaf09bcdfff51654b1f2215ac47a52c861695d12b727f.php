@@ -113,7 +113,8 @@ class __TwigTemplate_964bc9cb0e4617f36f0df6f21a000705f6a1cbbac9692d98bb256d684c4
                         <a href=\"";
             // line 20
             echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("post", ["slug" => twig_get_attribute($this->env, $this->source, $context["post"], "slug", [], "any", false, false, false, 20)]), "html", null, true);
-            echo "\"><img class=\"img__content img__content--transform\" src=\"/upload/img/";
+            echo "\"><img class=\"img__content img__content--transform\" src=\"";
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("upload/img/"), "html", null, true);
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["post"], "postImg", [], "any", false, false, false, 20), "html", null, true);
             echo "\" alt=\"photo de l'article\"></a>
                     
@@ -143,12 +144,12 @@ class __TwigTemplate_964bc9cb0e4617f36f0df6f21a000705f6a1cbbac9692d98bb256d684c4
         // line 31
         echo "        </section>
 
-        <div class=\"navigation\">
+
             ";
         // line 34
         echo $this->extensions['Knp\Bundle\PaginatorBundle\Twig\Extension\PaginationExtension']->render($this->env, (isset($context["lastPosts"]) || array_key_exists("lastPosts", $context) ? $context["lastPosts"] : (function () { throw new RuntimeError('Variable "lastPosts" does not exist.', 34, $this->source); })()));
         echo "
-        </div>
+     
 
     </article>
 
@@ -173,7 +174,7 @@ class __TwigTemplate_964bc9cb0e4617f36f0df6f21a000705f6a1cbbac9692d98bb256d684c4
 
     public function getDebugInfo()
     {
-        return array (  149 => 34,  144 => 31,  132 => 27,  123 => 23,  115 => 20,  109 => 16,  105 => 15,  98 => 11,  94 => 10,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  150 => 34,  145 => 31,  133 => 27,  124 => 23,  115 => 20,  109 => 16,  105 => 15,  98 => 11,  94 => 10,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -197,7 +198,7 @@ class __TwigTemplate_964bc9cb0e4617f36f0df6f21a000705f6a1cbbac9692d98bb256d684c4
 
                    <div class=\"preview__img\">
                     
-                        <a href=\"{{ path('post', {slug: post.slug}) }}\"><img class=\"img__content img__content--transform\" src=\"/upload/img/{{post.postImg}}\" alt=\"photo de l'article\"></a>
+                        <a href=\"{{ path('post', {slug: post.slug}) }}\"><img class=\"img__content img__content--transform\" src=\"{{ asset('upload/img/') }}{{post.postImg}}\" alt=\"photo de l'article\"></a>
                     
                         <div class=\"preview__descr\">
                             <h4 class=\"article__title\"><a href=\"{{ path('post', {slug: post.slug}) }}\">{{post.postTitle}}</a></h4>
@@ -210,13 +211,13 @@ class __TwigTemplate_964bc9cb0e4617f36f0df6f21a000705f6a1cbbac9692d98bb256d684c4
             {% endfor %}
         </section>
 
-        <div class=\"navigation\">
+
             {{ knp_pagination_render(lastPosts) }}
-        </div>
+     
 
     </article>
 
 {% endblock %}
-", "blog/category.html.twig", "C:\\Users\\fagay\\Desktop\\naturo\\NaturoBack\\templates\\blog\\category.html.twig");
+", "blog/category.html.twig", "C:\\Users\\dague\\Desktop\\Présentation\\NaturoBack\\templates\\blog\\category.html.twig");
     }
 }

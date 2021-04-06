@@ -197,6 +197,6 @@ $context["loop"], "index", [], "any", false, false, false, 14), 3))) {
 
 
 
-", "@EasyAdmin/welcome.html.twig", "C:\\Users\\fagay\\Desktop\\naturo\\NaturoBack\\templates\\bundles\\easyadminBundle\\welcome.html.twig");
+", "@EasyAdmin/welcome.html.twig", "C:\\Users\\dague\\Desktop\\Présentation\\NaturoBack\\templates\\bundles\\easyadminBundle\\welcome.html.twig");
     }
 }

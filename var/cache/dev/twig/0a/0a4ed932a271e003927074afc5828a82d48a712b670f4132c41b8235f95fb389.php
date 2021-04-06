@@ -90,6 +90,6 @@ class __TwigTemplate_4bacb929417b19fe781a081b04096452c47c36f8f6cc121fbe178576291
 {% else %}
     <a href=\"mailto:{{ field.value }}\">{{ field.formattedValue }}</a>
 {% endif %}
-", "@EasyAdmin/crud/field/email.html.twig", "C:\\Users\\fagay\\Desktop\\naturo\\NaturoBack\\templates\\bundles\\easyadminBundle\\crud\\field\\email.html.twig");
+", "@EasyAdmin/crud/field/email.html.twig", "C:\\Users\\dague\\Desktop\\Présentation\\NaturoBack\\templates\\bundles\\easyadminBundle\\crud\\field\\email.html.twig");
     }
 }

@@ -318,6 +318,6 @@ $context["loop"], "index", [], "any", false, false, false, 19), 3))) {
         </article>
     </div>
 {% endblock %}
-", "blog/blog.html.twig", "C:\\Users\\fagay\\Desktop\\naturo\\NaturoBack\\templates\\blog\\blog.html.twig");
+", "blog/blog.html.twig", "C:\\Users\\dague\\Desktop\\Présentation\\NaturoBack\\templates\\blog\\blog.html.twig");
     }
 }

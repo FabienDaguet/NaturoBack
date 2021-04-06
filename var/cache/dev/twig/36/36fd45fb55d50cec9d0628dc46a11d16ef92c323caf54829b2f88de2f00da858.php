@@ -118,6 +118,6 @@ class __TwigTemplate_530fb290b5c347ec05a38ffa8b9f6f6e9c30ee8f12de7f16e65a6461ee2
         </div>
     </div>
 </div>
-", "@EasyAdmin/crud/includes/_batch_action_modal.html.twig", "C:\\Users\\fagay\\Desktop\\naturo\\NaturoBack\\templates\\bundles\\easyadminBundle\\crud\\includes\\_batch_action_modal.html.twig");
+", "@EasyAdmin/crud/includes/_batch_action_modal.html.twig", "C:\\Users\\dague\\Desktop\\Présentation\\NaturoBack\\templates\\bundles\\easyadminBundle\\crud\\includes\\_batch_action_modal.html.twig");
     }
 }
