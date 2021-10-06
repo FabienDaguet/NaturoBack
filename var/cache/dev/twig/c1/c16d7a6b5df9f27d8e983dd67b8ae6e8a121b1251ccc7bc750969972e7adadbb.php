@@ -68,11 +68,14 @@ class __TwigTemplate_c8cd0614d64d46d37b040c04e3e772479e88dd0f74f4dc4b7420d809905
     <body>
         <div class=\"locker page\">
             <div class=\"body-content\">
+                <div class=\"demo\">
+                    <span class=\"demo-span\">demo</span>
+                </div>  
                 <div class=\"header__container\">
                     <header class=\"header d-flex align-items-center justify-content-center\">
                         <div class=\"logo__container logo__container--header\">
                             <a href=\"";
-        // line 21
+        // line 24
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("index");
         echo "\"><img class=\"logo\" src=\"";
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("img/logo.png"), "html", null, true);
@@ -93,43 +96,43 @@ class __TwigTemplate_c8cd0614d64d46d37b040c04e3e772479e88dd0f74f4dc4b7420d809905
                                 <ul class=\"navbar-nav w-100 flex-column flex-md-row justify-content-between\">
                                     <li class=\"nav-item\">
                                         <a href=\"";
-        // line 37
+        // line 40
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("index");
         echo "\" class=\"p-2 nav-link text-decoration-none link\" >Accueil</a>
                                     </li>
                                     <li class=\"nav-item\">
                                         <a href=\"";
-        // line 40
+        // line 43
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("history");
         echo "\" class=\"p-2 nav-link text-decoration-none link\">Un peu d'histoire</a>
                                     </li>
                                     <li class=\"nav-item\">
                                         <a href=\"";
-        // line 43
+        // line 46
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("aboutMe");
         echo "\" class=\"p-2 nav-link text-decoration-none link\">Qui suis-je</a>
                                     </li>
                                     <li class=\"nav-item\">
                                         <a href=\"";
-        // line 46
+        // line 49
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("seance");
         echo "\" class=\"p-2 nav-link text-decoration-none link\">La séance</a>
                                     </li>
                                     <li class=\"nav-item\">
                                         <a href=\"";
-        // line 49
+        // line 52
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("prices");
         echo "\" class=\"p-2 nav-link text-decoration-none link\">Tarifs</a>
                                     </li>
                                     <li class=\"nav-item\">
                                         <a href=\"";
-        // line 52
+        // line 55
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("contact");
         echo "\" class=\"p-2 nav-link text-decoration-none link\">Contact</a>
                                     </li>
                                     <li class=\"nav-item\">
                                         <a href=\"";
-        // line 55
+        // line 58
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("blog");
         echo "\" class=\"p-2 nav-link text-decoration-none link\">Blog</a>
                                     </li>
@@ -140,11 +143,11 @@ class __TwigTemplate_c8cd0614d64d46d37b040c04e3e772479e88dd0f74f4dc4b7420d809905
                 </div>
                 
                 ";
-        // line 63
+        // line 66
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 63, $this->source); })()), "flashes", [0 => "success"], "method", false, false, false, 63));
+        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 66, $this->source); })()), "flashes", [0 => "success"], "method", false, false, false, 66));
         foreach ($context['_seq'] as $context["_key"] => $context["message"]) {
-            // line 64
+            // line 67
             echo "                    <div class=\"alert alert-success\" role=\"alert\">";
             echo twig_escape_filter($this->env, $context["message"], "html", null, true);
             echo " </div>
@@ -153,17 +156,17 @@ class __TwigTemplate_c8cd0614d64d46d37b040c04e3e772479e88dd0f74f4dc4b7420d809905
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['message'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 66
+        // line 69
         echo "
                 ";
-        // line 67
+        // line 70
         $this->displayBlock('body', $context, $blocks);
-        // line 68
+        // line 71
         echo "            </div>
             <footer class=\"footer\">
                 <div class=\"logo__container\">
                     <a href=\"#\"><img class=\"logo\" src=\"";
-        // line 71
+        // line 74
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("img/logo.png"), "html", null, true);
         echo "\" alt=\"logo du site\"></a>
                 </div>
@@ -174,7 +177,7 @@ class __TwigTemplate_c8cd0614d64d46d37b040c04e3e772479e88dd0f74f4dc4b7420d809905
         integrity=\"sha384-BOsAfwzjNJHrJ8cZidOg56tcQWfp6y72vEJ8xQ9w6Quywb24iOsW913URv1IS4GD\"
         crossorigin=\"anonymous\"></script>
         <script src=\"";
-        // line 79
+        // line 82
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/app.js"), "html", null, true);
         echo "\"></script>
     </body>
@@ -207,7 +210,7 @@ class __TwigTemplate_c8cd0614d64d46d37b040c04e3e772479e88dd0f74f4dc4b7420d809905
 
     }
 
-    // line 67
+    // line 70
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -237,7 +240,7 @@ class __TwigTemplate_c8cd0614d64d46d37b040c04e3e772479e88dd0f74f4dc4b7420d809905
 
     public function getDebugInfo()
     {
-        return array (  211 => 67,  192 => 5,  178 => 79,  167 => 71,  162 => 68,  160 => 67,  157 => 66,  148 => 64,  144 => 63,  133 => 55,  127 => 52,  121 => 49,  115 => 46,  109 => 43,  103 => 40,  97 => 37,  76 => 21,  62 => 10,  58 => 9,  51 => 5,  45 => 1,);
+        return array (  214 => 70,  195 => 5,  181 => 82,  170 => 74,  165 => 71,  163 => 70,  160 => 69,  151 => 67,  147 => 66,  136 => 58,  130 => 55,  124 => 52,  118 => 49,  112 => 46,  106 => 43,  100 => 40,  79 => 24,  62 => 10,  58 => 9,  51 => 5,  45 => 1,);
     }
 
     public function getSourceContext()
@@ -259,6 +262,9 @@ class __TwigTemplate_c8cd0614d64d46d37b040c04e3e772479e88dd0f74f4dc4b7420d809905
     <body>
         <div class=\"locker page\">
             <div class=\"body-content\">
+                <div class=\"demo\">
+                    <span class=\"demo-span\">demo</span>
+                </div>  
                 <div class=\"header__container\">
                     <header class=\"header d-flex align-items-center justify-content-center\">
                         <div class=\"logo__container logo__container--header\">
@@ -323,6 +329,6 @@ class __TwigTemplate_c8cd0614d64d46d37b040c04e3e772479e88dd0f74f4dc4b7420d809905
         <script src=\"{{ asset('js/app.js') }}\"></script>
     </body>
 </html>
-", "base.html.twig", "C:\\Users\\fagay\\Desktop\\naturo\\NaturoBack\\templates\\base.html.twig");
+", "base.html.twig", "D:\\Work\\NaturoBack\\templates\\base.html.twig");
     }
 }

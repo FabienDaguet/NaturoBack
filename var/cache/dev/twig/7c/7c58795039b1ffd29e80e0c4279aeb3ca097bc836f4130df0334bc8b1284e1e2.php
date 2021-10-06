@@ -93,6 +93,6 @@ class __TwigTemplate_50df1fcdca98eb9a586af419e48cdc17d4c12508c436774d0567213482a
 {% if field.customOptions.get('showValue') %}
     {{ field.formattedValue }}
 {% endif %}
-", "@EasyAdmin/crud/field/color.html.twig", "C:\\Users\\dague\\Desktop\\Présentation\\NaturoBack\\templates\\bundles\\easyadminBundle\\crud\\field\\color.html.twig");
+", "@EasyAdmin/crud/field/color.html.twig", "D:\\Work\\NaturoBack\\templates\\bundles\\easyadminBundle\\crud\\field\\color.html.twig");
     }
 }

@@ -6,7 +6,7 @@
     'aliases' => 
     array (
     ),
-    'reference' => 'fc5c7849a38afea3f7bc8809e9581993e3a73de4',
+    'reference' => 'b5394147003eb0fef596a2881bfdc536d9b100b1',
     'name' => '__root__',
   ),
   'versions' => 
@@ -18,7 +18,7 @@
       'aliases' => 
       array (
       ),
-      'reference' => 'fc5c7849a38afea3f7bc8809e9581993e3a73de4',
+      'reference' => 'b5394147003eb0fef596a2881bfdc536d9b100b1',
     ),
     'antishov/doctrine-extensions-bundle' => 
     array (

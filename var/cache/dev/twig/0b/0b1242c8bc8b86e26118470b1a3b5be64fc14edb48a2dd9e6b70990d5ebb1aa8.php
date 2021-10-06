@@ -317,6 +317,6 @@ $context["loop"], "last", [], "any", false, false, false, 17)) {
         </article>
     </div>
 {% endblock %}
-", "blog/blog.html.twig", "C:\\Users\\fagay\\Desktop\\naturo\\NaturoBack\\templates\\blog\\blog.html.twig");
+", "blog/blog.html.twig", "D:\\Work\\NaturoBack\\templates\\blog\\blog.html.twig");
     }
 }

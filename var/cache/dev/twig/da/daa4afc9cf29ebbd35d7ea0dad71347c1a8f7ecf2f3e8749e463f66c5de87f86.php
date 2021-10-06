@@ -81,6 +81,6 @@ class __TwigTemplate_e8ddab623cb6314c447a8496e283e37e570f30fb9cfe798dd99be427ac3
 <span class=\"badge badge-danger\" title=\"{{ 'label.inaccessible.explanation'|trans }}\">
     {{ 'label.inaccessible'|trans }}
 </span>
-", "@EasyAdmin/label/inaccessible.html.twig", "C:\\Users\\dague\\Desktop\\Présentation\\NaturoBack\\templates\\bundles\\easyadminBundle\\label\\inaccessible.html.twig");
+", "@EasyAdmin/label/inaccessible.html.twig", "D:\\Work\\NaturoBack\\templates\\bundles\\easyadminBundle\\label\\inaccessible.html.twig");
     }
 }

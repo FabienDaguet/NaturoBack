@@ -208,6 +208,6 @@ class __TwigTemplate_e7a60375e587f8ac0e7029c67e76feb43064bb7d16a36d53e08ad3dac47
 
 </form>
 {% endblock %}
-", "security/login.html.twig", "C:\\Users\\fagay\\Desktop\\naturo\\NaturoBack\\templates\\security\\login.html.twig");
+", "security/login.html.twig", "D:\\Work\\NaturoBack\\templates\\security\\login.html.twig");
     }
 }

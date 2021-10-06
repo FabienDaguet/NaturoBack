@@ -155,6 +155,6 @@ class __TwigTemplate_293ac508c4d5da81e7b4c241cd3a3dae4ef224610245d7a6381e6bbe7f8
         </span>
     </button>
 {% endif %}
-", "@EasyAdmin/crud/action.html.twig", "C:\\Users\\fagay\\Desktop\\naturo\\NaturoBack\\templates\\bundles\\easyadminBundle\\crud\\action.html.twig");
+", "@EasyAdmin/crud/action.html.twig", "D:\\Work\\NaturoBack\\templates\\bundles\\easyadminBundle\\crud\\action.html.twig");
     }
 }

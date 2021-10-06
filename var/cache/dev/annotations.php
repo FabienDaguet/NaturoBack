@@ -199,8 +199,8 @@ return [[
 '%5B%5BC%5DApp%5CEntity%5CCategory%23setCatImg%5D%5B1%5D' => 2,
 '%5BApp%5CEntity%5CCategory%23getImageFile%5D%5B1%5D' => 1,
 '%5B%5BC%5DApp%5CEntity%5CCategory%23getImageFile%5D%5B1%5D' => 2,
-'%5BApp%5CEntity%5CCategory%23seImageFile%5D%5B1%5D' => 1,
-'%5B%5BC%5DApp%5CEntity%5CCategory%23seImageFile%5D%5B1%5D' => 2,
+'%5BApp%5CEntity%5CCategory%23setImageFile%5D%5B1%5D' => 1,
+'%5B%5BC%5DApp%5CEntity%5CCategory%23setImageFile%5D%5B1%5D' => 2,
 '%5BApp%5CEntity%5CCategory%23getSlug%5D%5B1%5D' => 1,
 '%5B%5BC%5DApp%5CEntity%5CCategory%23getSlug%5D%5B1%5D' => 2,
 '%5BApp%5CEntity%5CCategory%23__toString%5D%5B1%5D' => 1,
@@ -1450,7 +1450,7 @@ return [[
 
 0 => 'N;',
 1 => [],
-2 => 1616616078,
+2 => 1633525045,
 3 => static function () {
     return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
         $o = [

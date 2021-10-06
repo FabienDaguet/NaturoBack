@@ -72,6 +72,6 @@ class __TwigTemplate_d491f6babd76c20e289e554c6cd4062741241a3fa66907364ff4de93432
 {# @var field \\EasyCorp\\Bundle\\EasyAdminBundle\\Dto\\FieldDto #}
 {# @var entity \\EasyCorp\\Bundle\\EasyAdminBundle\\Dto\\EntityDto #}
 {{ field.formattedValue }}
-", "@EasyAdmin/crud/field/integer.html.twig", "C:\\Users\\dague\\Desktop\\Présentation\\NaturoBack\\templates\\bundles\\easyadminBundle\\crud\\field\\integer.html.twig");
+", "@EasyAdmin/crud/field/integer.html.twig", "D:\\Work\\NaturoBack\\templates\\bundles\\easyadminBundle\\crud\\field\\integer.html.twig");
     }
 }

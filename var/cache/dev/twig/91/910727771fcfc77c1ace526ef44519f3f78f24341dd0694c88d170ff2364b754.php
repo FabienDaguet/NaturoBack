@@ -195,6 +195,6 @@ class __TwigTemplate_f8bd7b7cb06dbeff0fb74a37412d4efd1d126b8b155c7d403bf70205d76
         });
     </script>
 {% endblock javascript_filter_modal %}
-", "@EasyAdmin/crud/includes/_filters_modal.html.twig", "C:\\Users\\dague\\Desktop\\Présentation\\NaturoBack\\templates\\bundles\\easyadminBundle\\crud\\includes\\_filters_modal.html.twig");
+", "@EasyAdmin/crud/includes/_filters_modal.html.twig", "D:\\Work\\NaturoBack\\templates\\bundles\\easyadminBundle\\crud\\includes\\_filters_modal.html.twig");
     }
 }

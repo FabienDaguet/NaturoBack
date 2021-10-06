@@ -193,6 +193,6 @@ class __TwigTemplate_975aeae53364d3edbc0b3759644571a655591966345d8ee2820430db5a3
         {{ exception.publicMessage|trans(exception.translationParameters, 'EasyAdminBundle') }}
     </div>
 {% endblock %}
-", "@EasyAdmin/exception.html.twig", "C:\\Users\\dague\\Desktop\\Présentation\\NaturoBack\\templates\\bundles\\easyadminBundle\\exception.html.twig");
+", "@EasyAdmin/exception.html.twig", "D:\\Work\\NaturoBack\\templates\\bundles\\easyadminBundle\\exception.html.twig");
     }
 }

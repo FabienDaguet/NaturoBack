@@ -123,12 +123,28 @@ $context["loop"], "index", [], "any", false, false, false, 14), 3))) {
                 ";
             }
             // line 17
-            echo "                    <div class=\"h1\">";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["category"], "catName", [], "any", false, false, false, 17), "html", null, true);
+            echo "                ";
+            $context['_parent'] = $context;
+            $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, $context["category"], "posts", [], "any", false, false, false, 17));
+            foreach ($context['_seq'] as $context["_key"] => $context["post"]) {
+                // line 18
+                echo "                    ";
+                echo $this->extensions['Symfony\Bridge\Twig\Extension\DumpExtension']->dump($this->env, $context, $context["post"]);
+                echo "
+                ";
+            }
+            $_parent = $context['_parent'];
+            unset($context['_seq'], $context['_iterated'], $context['_key'], $context['post'], $context['_parent'], $context['loop']);
+            $context = array_intersect_key($context, $_parent) + $_parent;
+            // line 19
+            echo "    
+                    <div class=\"h1\">";
+            // line 20
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["category"], "catName", [], "any", false, false, false, 20), "html", null, true);
             echo " </div>
                     <div class=\"display-3\">";
-            // line 18
-            echo twig_escape_filter($this->env, twig_length_filter($this->env, twig_get_attribute($this->env, $this->source, $context["category"], "posts", [], "any", false, false, false, 18)), "html", null, true);
+            // line 21
+            echo twig_escape_filter($this->env, twig_length_filter($this->env, twig_get_attribute($this->env, $this->source, $context["category"], "posts", [], "any", false, false, false, 21)), "html", null, true);
             echo " Articles </div>
                 </div>
             ";
@@ -144,7 +160,7 @@ $context["loop"], "index", [], "any", false, false, false, 14), 3))) {
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['category'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 21
+        // line 24
         echo "    </div>
 ";
         
@@ -167,7 +183,7 @@ $context["loop"], "index", [], "any", false, false, false, 14), 3))) {
 
     public function getDebugInfo()
     {
-        return array (  148 => 21,  131 => 18,  126 => 17,  122 => 15,  120 => 14,  117 => 13,  115 => 12,  112 => 11,  109 => 10,  92 => 9,  88 => 7,  78 => 6,  59 => 4,  36 => 2,);
+        return array (  164 => 24,  147 => 21,  143 => 20,  140 => 19,  131 => 18,  126 => 17,  122 => 15,  120 => 14,  117 => 13,  115 => 12,  112 => 11,  109 => 10,  92 => 9,  88 => 7,  78 => 6,  59 => 4,  36 => 2,);
     }
 
     public function getSourceContext()
@@ -188,6 +204,9 @@ $context["loop"], "index", [], "any", false, false, false, 14), 3))) {
                 {% elseif loop.index == 3 %}
                 <div class=\"col-4 alert-warning\">   
                 {% endif %}
+                {% for post in category.posts %}
+                    {{ dump(post) }}
+                {% endfor %}    
                     <div class=\"h1\">{{ category.catName }} </div>
                     <div class=\"display-3\">{{ category.posts | length }} Articles </div>
                 </div>
@@ -197,6 +216,6 @@ $context["loop"], "index", [], "any", false, false, false, 14), 3))) {
 
 
 
-", "bundles/easyadminBundle/welcome.html.twig", "C:\\Users\\fagay\\Desktop\\naturo\\NaturoBack\\templates\\bundles\\easyadminBundle\\welcome.html.twig");
+", "bundles/easyadminBundle/welcome.html.twig", "D:\\Work\\NaturoBack\\templates\\bundles\\easyadminBundle\\welcome.html.twig");
     }
 }

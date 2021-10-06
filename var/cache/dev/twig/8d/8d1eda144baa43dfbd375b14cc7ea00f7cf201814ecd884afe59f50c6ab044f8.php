@@ -89,6 +89,6 @@ class __TwigTemplate_4d077d34b4f4d75d0dc0f8fbd86b89402797821727d1e88ebd9c6feee52
 .logo {
     max-width: 100%;
     max-height: 100%;
-}", "@styles/app.css", "C:\\Users\\dague\\Desktop\\Présentation\\NaturoBack\\assets\\styles\\app.css");
+}", "@styles/app.css", "D:\\Work\\NaturoBack\\assets\\styles\\app.css");
     }
 }

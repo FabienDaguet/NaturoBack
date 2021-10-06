@@ -70,6 +70,6 @@ class __TwigTemplate_40a36737656ff49f295f1e0244b22484c07542f767625eba1ca9ed38dc7
     public function getSourceContext()
     {
         return new Source("<span class=\"badge badge-secondary\">{{ 'label.empty'|trans(domain = 'EasyAdminBundle') }}</span>
-", "@EasyAdmin/label/empty.html.twig", "C:\\Users\\dague\\Desktop\\Présentation\\NaturoBack\\templates\\bundles\\easyadminBundle\\label\\empty.html.twig");
+", "@EasyAdmin/label/empty.html.twig", "D:\\Work\\NaturoBack\\templates\\bundles\\easyadminBundle\\label\\empty.html.twig");
     }
 }

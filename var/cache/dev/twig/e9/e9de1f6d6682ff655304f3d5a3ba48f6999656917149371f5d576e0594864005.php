@@ -1671,6 +1671,6 @@ class __TwigTemplate_89e9092b7c8228853cbecc002f1f59b2da336a6d384ae4702637161cfac
         </tbody>
     </table>
 {% endmacro %}
-", "@Doctrine/Collector/db.html.twig", "C:\\Users\\fagay\\Desktop\\naturo\\NaturoBack\\vendor\\doctrine\\doctrine-bundle\\Resources\\views\\Collector\\db.html.twig");
+", "@Doctrine/Collector/db.html.twig", "D:\\Work\\NaturoBack\\vendor\\doctrine\\doctrine-bundle\\Resources\\views\\Collector\\db.html.twig");
     }
 }

@@ -91,6 +91,6 @@ class __TwigTemplate_9b094adbd384a58b4448720e198ca34e02e3b205ce1e12c4f0455f4e285
 {% if field.customOptions.get('showName') %}
     {{ field.formattedValue ?? '' }}
 {% endif %}
-", "@EasyAdmin/crud/field/locale.html.twig", "C:\\Users\\dague\\Desktop\\Présentation\\NaturoBack\\templates\\bundles\\easyadminBundle\\crud\\field\\locale.html.twig");
+", "@EasyAdmin/crud/field/locale.html.twig", "D:\\Work\\NaturoBack\\templates\\bundles\\easyadminBundle\\crud\\field\\locale.html.twig");
     }
 }

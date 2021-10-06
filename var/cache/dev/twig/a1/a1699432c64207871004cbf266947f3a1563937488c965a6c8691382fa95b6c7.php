@@ -87,6 +87,6 @@ class __TwigTemplate_af62ac69f1ed520d21c7f9e4992662746a875e1d3a063dd2869fa3bb24f
 {% else %}
     {{ field.formattedValue }}
 {% endif %}
-", "@EasyAdmin/crud/field/collection.html.twig", "C:\\Users\\dague\\Desktop\\Présentation\\NaturoBack\\templates\\bundles\\easyadminBundle\\crud\\field\\collection.html.twig");
+", "@EasyAdmin/crud/field/collection.html.twig", "D:\\Work\\NaturoBack\\templates\\bundles\\easyadminBundle\\crud\\field\\collection.html.twig");
     }
 }

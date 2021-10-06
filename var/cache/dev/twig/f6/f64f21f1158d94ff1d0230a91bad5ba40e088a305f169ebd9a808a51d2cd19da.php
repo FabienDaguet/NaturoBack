@@ -56,7 +56,7 @@ class __TwigTemplate_1d051f9adc843ca2f6a936df3e918cf8ea5405e1ff81c15743bab5e95d2
         // line 4
         $this->env->getRuntime("Symfony\\Component\\Form\\FormRenderer")->setTheme((isset($context["new_form"]) || array_key_exists("new_form", $context) ? $context["new_form"] : (function () { throw new RuntimeError('Variable "new_form" does not exist.', 4, $this->source); })()), twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["ea"]) || array_key_exists("ea", $context) ? $context["ea"] : (function () { throw new RuntimeError('Variable "ea" does not exist.', 4, $this->source); })()), "crud", [], "any", false, false, false, 4), "formThemes", [], "any", false, false, false, 4), false);
         // line 6
-        $context["__internal_c7c7dc45828f2e855bd34a296ec85c3fd1ebeaf8d051208fd25cba8a269298e1"] = twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["ea"]) || array_key_exists("ea", $context) ? $context["ea"] : (function () { throw new RuntimeError('Variable "ea" does not exist.', 6, $this->source); })()), "i18n", [], "any", false, false, false, 6), "translationDomain", [], "any", false, false, false, 6);
+        $context["__internal_881e1173b141e9f0ffba8572c9e4500b27f28491c4229d07efb50f0ac75c5354"] = twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["ea"]) || array_key_exists("ea", $context) ? $context["ea"] : (function () { throw new RuntimeError('Variable "ea" does not exist.', 6, $this->source); })()), "i18n", [], "any", false, false, false, 6), "translationDomain", [], "any", false, false, false, 6);
         // line 3
         $this->getParent($context)->display($context, array_merge($this->blocks, $blocks));
         
@@ -230,7 +230,7 @@ class __TwigTemplate_1d051f9adc843ca2f6a936df3e918cf8ea5405e1ff81c15743bab5e95d2
         // line 35
         echo "        ";
         echo (((null === twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["ea"]) || array_key_exists("ea", $context) ? $context["ea"] : (function () { throw new RuntimeError('Variable "ea" does not exist.', 35, $this->source); })()), "crud", [], "any", false, false, false, 35), "customPageTitle", [], "any", false, false, false, 35))) ? ((isset($context["default_title"]) || array_key_exists("default_title", $context) ? $context["default_title"] : (function () { throw new RuntimeError('Variable "default_title" does not exist.', 35, $this->source); })())) : ($this->extensions['Symfony\Bridge\Twig\Extension\TranslationExtension']->trans(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["ea"]) || array_key_exists("ea", $context) ? $context["ea"] : (function () { throw new RuntimeError('Variable "ea" does not exist.', 35, $this->source); })()), "crud", [], "any", false, false, false, 35), "customPageTitle", [0 => "new"], "method", false, false, false, 35), twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["ea"]) || array_key_exists("ea", $context) ? $context["ea"] : (function () { throw new RuntimeError('Variable "ea" does not exist.', 35, $this->source); })()), "i18n", [], "any", false, false, false, 35), "translationParameters", [], "any", false, false, false, 35),         // line 6
-(isset($context["__internal_c7c7dc45828f2e855bd34a296ec85c3fd1ebeaf8d051208fd25cba8a269298e1"]) || array_key_exists("__internal_c7c7dc45828f2e855bd34a296ec85c3fd1ebeaf8d051208fd25cba8a269298e1", $context) ? $context["__internal_c7c7dc45828f2e855bd34a296ec85c3fd1ebeaf8d051208fd25cba8a269298e1"] : (function () { throw new RuntimeError('Variable "__internal_c7c7dc45828f2e855bd34a296ec85c3fd1ebeaf8d051208fd25cba8a269298e1" does not exist.', 6, $this->source); })()))));
+(isset($context["__internal_881e1173b141e9f0ffba8572c9e4500b27f28491c4229d07efb50f0ac75c5354"]) || array_key_exists("__internal_881e1173b141e9f0ffba8572c9e4500b27f28491c4229d07efb50f0ac75c5354", $context) ? $context["__internal_881e1173b141e9f0ffba8572c9e4500b27f28491c4229d07efb50f0ac75c5354"] : (function () { throw new RuntimeError('Variable "__internal_881e1173b141e9f0ffba8572c9e4500b27f28491c4229d07efb50f0ac75c5354" does not exist.', 6, $this->source); })()))));
         $___internal_3624573309de462841b5151f5527ba754a28ef07d732ab45cdbdfefda17b769b_ = ('' === $tmp = ob_get_clean()) ? '' : new Markup($tmp, $this->env->getCharset());
         // line 33
         echo twig_spaceless($___internal_3624573309de462841b5151f5527ba754a28ef07d732ab45cdbdfefda17b769b_);
@@ -610,6 +610,6 @@ class __TwigTemplate_1d051f9adc843ca2f6a936df3e918cf8ea5405e1ff81c15743bab5e95d2
 
     {{ include('@EasyAdmin/crud/includes/_select2_widget.html.twig') }}
 {% endblock %}
-", "@EasyAdmin/crud/new.html.twig", "C:\\Users\\fagay\\Desktop\\naturo\\NaturoBack\\templates\\bundles\\easyadminBundle\\crud\\new.html.twig");
+", "@EasyAdmin/crud/new.html.twig", "D:\\Work\\NaturoBack\\templates\\bundles\\easyadminBundle\\crud\\new.html.twig");
     }
 }

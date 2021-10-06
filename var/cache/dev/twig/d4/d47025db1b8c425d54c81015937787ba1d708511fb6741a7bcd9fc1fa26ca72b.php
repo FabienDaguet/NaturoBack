@@ -225,6 +225,6 @@ class __TwigTemplate_2ce3fcef1542d0503d585503b77c634a455ba106b248b7dea96c9830f1f
     </article>
         
 {% endblock %}
-", "pages/prices.html.twig", "C:\\Users\\fagay\\Desktop\\naturo\\NaturoBack\\templates\\pages\\prices.html.twig");
+", "pages/prices.html.twig", "D:\\Work\\NaturoBack\\templates\\pages\\prices.html.twig");
     }
 }
