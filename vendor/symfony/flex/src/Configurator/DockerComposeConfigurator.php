@@ -43,16 +43,20 @@ class DockerComposeConfigurator extends AbstractConfigurator
 
         $rootDir = $this->options->get('root-dir');
         foreach ($this->normalizeConfig($config) as $file => $extra) {
-            if (
-                (null === $dockerComposeFile = $this->findDockerComposeFile($rootDir, $file)) ||
-                $this->isFileMarked($recipe, $dockerComposeFile)
-            ) {
+            $dockerComposeFile = $this->findDockerComposeFile($rootDir, $file);
+            if (null === $dockerComposeFile) {
+                $dockerComposeFileName = preg_replace('/\.yml$/', '.yaml', $file);
+                $dockerComposeFile = $rootDir.'/'.$dockerComposeFileName;
+                file_put_contents($dockerComposeFile, "version: '3'\n");
+                $this->write(sprintf('  Created <fg=green>"%s"</>', $dockerComposeFileName));
+            }
+            if ($this->isFileMarked($recipe, $dockerComposeFile)) {
                 continue;
             }
 
             $this->write(sprintf('Adding Docker Compose definitions to "%s"', $dockerComposeFile));
 
-            $offset = 8;
+            $offset = 2;
             $node = null;
             $endAt = [];
             $lines = [];
@@ -107,7 +111,7 @@ class DockerComposeConfigurator extends AbstractConfigurator
 
             $name = $recipe->getName();
             // Remove recipe and add break line
-            $contents = preg_replace(sprintf('{%s+###> %s ###.*?###< %s ###%s+}s', "\n", $name, $name, "\n"), PHP_EOL.PHP_EOL, file_get_contents($dockerComposeFile), -1, $count);
+            $contents = preg_replace(sprintf('{%s+###> %s ###.*?###< %s ###%s+}s', "\n", $name, $name, "\n"), \PHP_EOL.\PHP_EOL, file_get_contents($dockerComposeFile), -1, $count);
             if (!$count) {
                 return;
             }

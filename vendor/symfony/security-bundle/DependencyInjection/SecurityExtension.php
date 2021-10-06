@@ -132,6 +132,8 @@ class SecurityExtension extends Extension implements PrependExtensionInterface
         $loader->load('collectors.php');
         $loader->load('guard.php');
 
+        $container->getDefinition('data_collector.security')->addArgument($this->authenticatorManagerEnabled);
+
         if ($container->hasParameter('kernel.debug') && $container->getParameter('kernel.debug')) {
             $loader->load('security_debug.php');
         }
@@ -206,6 +208,12 @@ class SecurityExtension extends Extension implements PrependExtensionInterface
             $attributes = $access['roles'];
             if ($access['allow_if']) {
                 $attributes[] = $this->createExpression($container, $access['allow_if']);
+            }
+
+            $emptyAccess = 0 === \count(array_filter($access));
+
+            if ($emptyAccess) {
+                throw new InvalidConfigurationException('One or more access control items are empty. Did you accidentally add lines only containing a "-" under "security.access_control"?');
             }
 
             $container->getDefinition('security.access_map')
@@ -331,6 +339,8 @@ class SecurityExtension extends Extension implements PrependExtensionInterface
 
         $config->replaceArgument(4, $firewall['stateless']);
 
+        $firewallEventDispatcherId = 'security.event_dispatcher.'.$id;
+
         // Provider id (must be configured explicitly per firewall/authenticator if more than one provider is set)
         $defaultProvider = null;
         if (isset($firewall['provider'])) {
@@ -341,7 +351,7 @@ class SecurityExtension extends Extension implements PrependExtensionInterface
 
             if ($this->authenticatorManagerEnabled) {
                 $container->setDefinition('security.listener.'.$id.'.user_provider', new ChildDefinition('security.listener.user_provider.abstract'))
-                    ->addTag('kernel.event_listener', ['event' => CheckPassportEvent::class, 'priority' => 2048, 'method' => 'checkPassport'])
+                    ->addTag('kernel.event_listener', ['dispatcher' => $firewallEventDispatcherId, 'event' => CheckPassportEvent::class, 'priority' => 2048, 'method' => 'checkPassport'])
                     ->replaceArgument(0, new Reference($defaultProvider));
             }
         } elseif (1 === \count($providerIds)) {
@@ -351,7 +361,6 @@ class SecurityExtension extends Extension implements PrependExtensionInterface
         $config->replaceArgument(5, $defaultProvider);
 
         // Register Firewall-specific event dispatcher
-        $firewallEventDispatcherId = 'security.event_dispatcher.'.$id;
         $container->register($firewallEventDispatcherId, EventDispatcher::class);
 
         // Register listeners
@@ -866,7 +875,7 @@ class SecurityExtension extends Extension implements PrependExtensionInterface
             foreach ($ips as $ip) {
                 $container->resolveEnvPlaceholders($ip, null, $usedEnvs);
 
-                if (!$usedEnvs && !$this->isValidIp($ip)) {
+                if (!$usedEnvs && !$this->isValidIps($ip)) {
                     throw new \LogicException(sprintf('The given value "%s" in the "security.access_control" config option is not a valid IP address.', $ip));
                 }
 
@@ -922,6 +931,25 @@ class SecurityExtension extends Extension implements PrependExtensionInterface
     {
         // first assemble the factories
         return new MainConfiguration($this->factories, $this->userProviderFactories);
+    }
+
+    private function isValidIps($ips): bool
+    {
+        $ipsList = array_reduce((array) $ips, static function (array $ips, string $ip) {
+            return array_merge($ips, preg_split('/\s*,\s*/', $ip));
+        }, []);
+
+        if (!$ipsList) {
+            return false;
+        }
+
+        foreach ($ipsList as $cidr) {
+            if (!$this->isValidIp($cidr)) {
+                return false;
+            }
+        }
+
+        return true;
     }
 
     private function isValidIp(string $cidr): bool

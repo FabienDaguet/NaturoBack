@@ -36,7 +36,7 @@ return static function (ContainerConfigurator $container) {
             ->args([
                 service('annotations.reader'),
                 inline_service(DoctrineProvider::class)->args([
-                    inline_service(ArrayAdapter::class)
+                    inline_service(ArrayAdapter::class),
                 ]),
                 abstract_arg('Debug-Flag'),
             ])
@@ -61,14 +61,16 @@ return static function (ContainerConfigurator $container) {
                 param('kernel.debug'),
             ])
 
+        ->set('annotations.cache_adapter', PhpArrayAdapter::class)
+            ->factory([PhpArrayAdapter::class, 'create'])
+            ->args([
+                param('kernel.cache_dir').'/annotations.php',
+                service('cache.annotations'),
+            ])
+
         ->set('annotations.cache', DoctrineProvider::class)
             ->args([
-                inline_service(PhpArrayAdapter::class)
-                    ->factory([PhpArrayAdapter::class, 'create'])
-                    ->args([
-                        param('kernel.cache_dir').'/annotations.php',
-                        service('cache.annotations'),
-                    ]),
+                service('annotations.cache_adapter'),
             ])
             ->tag('container.hot_path')
 

@@ -37,7 +37,7 @@ class Uuid extends AbstractUid
     public static function fromString(string $uuid): parent
     {
         if (22 === \strlen($uuid) && 22 === strspn($uuid, BinaryUtil::BASE58[''])) {
-            $uuid = BinaryUtil::fromBase($uuid, BinaryUtil::BASE58);
+            $uuid = str_pad(BinaryUtil::fromBase($uuid, BinaryUtil::BASE58), 16, "\0", \STR_PAD_LEFT);
         }
 
         if (16 === \strlen($uuid)) {
@@ -121,7 +121,7 @@ class Uuid extends AbstractUid
         return $this->uid;
     }
 
-    public function compare(parent $other): int
+    public function compare(AbstractUid $other): int
     {
         if (false !== $cmp = uuid_compare($this->uid, $other->uid)) {
             return $cmp;

@@ -31,8 +31,10 @@ use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Input\InputOption;
+use Symfony\Component\PasswordHasher\Hasher\NativePasswordHasher;
 use Symfony\Component\Security\Core\Encoder\Argon2iPasswordEncoder;
 use Symfony\Component\Security\Core\Encoder\NativePasswordEncoder;
+use Symfony\Component\Security\Core\Exception\UserNotFoundException;
 use Symfony\Component\Security\Core\User\PasswordUpgraderInterface;
 use Symfony\Component\Yaml\Yaml;
 
@@ -115,6 +117,11 @@ final class MakeUser extends AbstractMaker
         $userWillHavePassword = $io->confirm('Does this app need to hash/check user passwords?');
         $input->setOption('with-password', $userWillHavePassword);
 
+        $symfonyGte53 = class_exists(NativePasswordHasher::class);
+        if ($symfonyGte53) {
+            return;
+        }
+
         if ($userWillHavePassword && !class_exists(NativePasswordEncoder::class) && Argon2iPasswordEncoder::isSupported()) {
             $io->writeln('The newer <comment>Argon2i</comment> password hasher requires PHP 7.2, libsodium or paragonie/sodium_compat. Your system DOES support this algorithm.');
             $io->writeln('You should use <comment>Argon2i</comment> unless your production system will not support it.');
@@ -159,10 +166,8 @@ final class MakeUser extends AbstractMaker
             true
         );
         $manipulator->setIo($io);
-        $this->userClassBuilder->addUserInterfaceImplementation(
-            $manipulator,
-            $userClassConfiguration
-        );
+
+        $this->userClassBuilder->addUserInterfaceImplementation($manipulator, $userClassConfiguration);
 
         $generator->dumpFile($classPath, $manipulator->getSourceCode());
 
@@ -173,6 +178,7 @@ final class MakeUser extends AbstractMaker
                 $userClassConfiguration->getUserProviderClass(),
                 'security/UserProvider.tpl.php',
                 [
+                    'uses_user_identifier' => class_exists(UserNotFoundException::class),
                     'user_short_name' => $userClassNameDetails->getShortName(),
                 ]
             );

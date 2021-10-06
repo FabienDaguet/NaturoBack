@@ -14,6 +14,7 @@ namespace Symfony\Component\DependencyInjection\Compiler;
 use Symfony\Component\DependencyInjection\Alias;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\ContainerInterface;
+use Symfony\Component\DependencyInjection\Exception\InvalidArgumentException;
 use Symfony\Component\DependencyInjection\Exception\ServiceNotFoundException;
 use Symfony\Component\DependencyInjection\Reference;
 
@@ -70,6 +71,7 @@ class DecoratorServicePass extends AbstractRecursivePass
                 $public = $alias->isPublic();
                 $private = $alias->isPrivate();
                 $container->setAlias($renamedId, new Alias((string) $alias, false));
+                $decoratedDefinition = $container->findDefinition($alias);
             } elseif ($container->hasDefinition($inner)) {
                 $decoratedDefinition = $container->getDefinition($inner);
                 $public = $decoratedDefinition->isPublic();
@@ -83,8 +85,13 @@ class DecoratorServicePass extends AbstractRecursivePass
             } elseif (ContainerInterface::NULL_ON_INVALID_REFERENCE === $invalidBehavior) {
                 $public = $definition->isPublic();
                 $private = $definition->isPrivate();
+                $decoratedDefinition = null;
             } else {
                 throw new ServiceNotFoundException($inner, $id);
+            }
+
+            if ($decoratedDefinition && $decoratedDefinition->isSynthetic()) {
+                throw new InvalidArgumentException(sprintf('A synthetic service cannot be decorated: service "%s" cannot decorate "%s".', $id, $inner));
             }
 
             if (isset($decoratingDefinitions[$inner])) {
@@ -93,10 +100,12 @@ class DecoratorServicePass extends AbstractRecursivePass
                 $decoratingTags = $decoratingDefinition->getTags();
                 $resetTags = [];
 
-                if (isset($decoratingTags['container.service_locator'])) {
-                    // container.service_locator has special logic and it must not be transferred out to decorators
-                    $resetTags = ['container.service_locator' => $decoratingTags['container.service_locator']];
-                    unset($decoratingTags['container.service_locator']);
+                // container.service_locator and container.service_subscriber have special logic and they must not be transferred out to decorators
+                foreach (['container.service_locator', 'container.service_subscriber'] as $containerTag) {
+                    if (isset($decoratingTags[$containerTag])) {
+                        $resetTags[$containerTag] = $decoratingTags[$containerTag];
+                        unset($decoratingTags[$containerTag]);
+                    }
                 }
 
                 $definition->setTags(array_merge($decoratingTags, $definition->getTags()));

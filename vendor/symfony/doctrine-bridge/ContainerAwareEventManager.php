@@ -54,7 +54,7 @@ class ContainerAwareEventManager extends EventManager
             return;
         }
 
-        $eventArgs = null === $eventArgs ? EventArgs::getEmptyInstance() : $eventArgs;
+        $eventArgs = $eventArgs ?? EventArgs::getEmptyInstance();
 
         if (!isset($this->initialized[$eventName])) {
             $this->initializeListeners($eventName);
@@ -177,6 +177,7 @@ class ContainerAwareEventManager extends EventManager
             if (!isset($this->listeners[$event])) {
                 $this->listeners[$event] = [];
             }
+            unset($this->initialized[$event]);
             $this->listeners[$event] += $listeners;
         }
         $this->subscribers = [];
@@ -194,10 +195,7 @@ class ContainerAwareEventManager extends EventManager
         return spl_object_hash($listener);
     }
 
-    /**
-     * @param object $listener
-     */
-    private function getMethod($listener, string $event): string
+    private function getMethod(object $listener, string $event): string
     {
         if (!method_exists($listener, $event) && method_exists($listener, '__invoke')) {
             return '__invoke';

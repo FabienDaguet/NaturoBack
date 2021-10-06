@@ -56,7 +56,7 @@ class ChoiceType extends AbstractType
      */
     public function __construct(ChoiceListFactoryInterface $choiceListFactory = null, $translator = null)
     {
-        $this->choiceListFactory = $choiceListFactory ?: new CachingFactoryDecorator(
+        $this->choiceListFactory = $choiceListFactory ?? new CachingFactoryDecorator(
             new PropertyAccessDecorator(
                 new DefaultChoiceListFactory()
             )
@@ -159,6 +159,8 @@ class ChoiceType extends AbstractType
                             $knownValues[$child->getName()] = $value;
                             unset($unknownValues[$value]);
                             continue;
+                        } else {
+                            $knownValues[$child->getName()] = null;
                         }
                     }
                 } else {
@@ -184,13 +186,14 @@ class ChoiceType extends AbstractType
         }
 
         if ($options['multiple']) {
-            $builder->addEventListener(FormEvents::POST_SUBMIT, function (FormEvent $event) use (&$unknownValues) {
+            $messageTemplate = $options['invalid_message'] ?? 'The value {{ value }} is not valid.';
+
+            $builder->addEventListener(FormEvents::POST_SUBMIT, function (FormEvent $event) use (&$unknownValues, $messageTemplate) {
                 // Throw exception if unknown values were submitted
                 if (\count($unknownValues) > 0) {
                     $form = $event->getForm();
 
-                    $clientDataAsString = is_scalar($form->getViewData()) ? (string) $form->getViewData() : \gettype($form->getViewData());
-                    $messageTemplate = 'The value {{ value }} is not valid.';
+                    $clientDataAsString = is_scalar($form->getViewData()) ? (string) $form->getViewData() : (\is_array($form->getViewData()) ? implode('", "', array_keys($unknownValues)) : \gettype($form->getViewData()));
 
                     if (null !== $this->translator) {
                         $message = $this->translator->trans($messageTemplate, ['{{ value }}' => $clientDataAsString], 'validators');
@@ -198,7 +201,7 @@ class ChoiceType extends AbstractType
                         $message = strtr($messageTemplate, ['{{ value }}' => $clientDataAsString]);
                     }
 
-                    $form->addError(new FormError($message, $messageTemplate, ['{{ value }}' => $clientDataAsString], null, new TransformationFailedException(sprintf('The choices "%s" do not exist in the choice list.', implode('", "', array_keys($unknownValues))))));
+                    $form->addError(new FormError($message, $messageTemplate, ['{{ value }}' => $clientDataAsString], null, new TransformationFailedException(sprintf('The choices "%s" do not exist in the choice list.', $clientDataAsString))));
                 }
             });
 

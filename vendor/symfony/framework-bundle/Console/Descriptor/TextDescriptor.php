@@ -141,7 +141,7 @@ class TextDescriptor extends Descriptor
         }
     }
 
-    protected function describeContainerService($service, array $options = [], ContainerBuilder $builder = null)
+    protected function describeContainerService(object $service, array $options = [], ContainerBuilder $builder = null)
     {
         if (!isset($options['id'])) {
             throw new \InvalidArgumentException('An "id" option must be provided.');
@@ -476,7 +476,7 @@ class TextDescriptor extends Descriptor
 
     protected function describeEventDispatcherListeners(EventDispatcherInterface $eventDispatcher, array $options = [])
     {
-        $event = \array_key_exists('event', $options) ? $options['event'] : null;
+        $event = $options['event'] ?? null;
 
         if (null !== $event) {
             $title = sprintf('Registered Listeners for "%s" Event', $event);
@@ -548,12 +548,16 @@ class TextDescriptor extends Descriptor
                 $r = new \ReflectionMethod($controller, '__invoke');
             } elseif (!\is_string($controller)) {
                 return $anchorText;
-            } elseif (false !== strpos($controller, '::')) {
+            } elseif (str_contains($controller, '::')) {
                 $r = new \ReflectionMethod($controller);
             } else {
                 $r = new \ReflectionFunction($controller);
             }
         } catch (\ReflectionException $e) {
+            if (\is_array($controller)) {
+                $controller = implode('::', $controller);
+            }
+
             $id = $controller;
             $method = '__invoke';
 
@@ -597,7 +601,7 @@ class TextDescriptor extends Descriptor
 
         if ($callable instanceof \Closure) {
             $r = new \ReflectionFunction($callable);
-            if (false !== strpos($r->name, '{closure}')) {
+            if (str_contains($r->name, '{closure}')) {
                 return 'Closure()';
             }
             if ($class = $r->getClosureScopeClass()) {

@@ -112,7 +112,7 @@ class NullAdapter implements AdapterInterface, CacheInterface
      */
     public function save(CacheItemInterface $item)
     {
-        return false;
+        return true;
     }
 
     /**
@@ -122,7 +122,7 @@ class NullAdapter implements AdapterInterface, CacheInterface
      */
     public function saveDeferred(CacheItemInterface $item)
     {
-        return false;
+        return true;
     }
 
     /**
@@ -132,7 +132,7 @@ class NullAdapter implements AdapterInterface, CacheInterface
      */
     public function commit()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -143,7 +143,7 @@ class NullAdapter implements AdapterInterface, CacheInterface
         return $this->deleteItem($key);
     }
 
-    private function generateItems(array $keys)
+    private function generateItems(array $keys): \Generator
     {
         $f = $this->createCacheItem;
 

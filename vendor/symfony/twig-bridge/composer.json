@@ -17,7 +17,7 @@
     ],
     "require": {
         "php": ">=7.2.5",
-        "symfony/polyfill-php80": "^1.15",
+        "symfony/polyfill-php80": "^1.16",
         "symfony/translation-contracts": "^1.1|^2",
         "twig/twig": "^2.13|^3.0.4"
     },
@@ -47,9 +47,9 @@
         "symfony/expression-language": "^4.4|^5.0",
         "symfony/web-link": "^4.4|^5.0",
         "symfony/workflow": "^5.2",
-        "twig/cssinliner-extra": "^2.12",
-        "twig/inky-extra": "^2.12",
-        "twig/markdown-extra": "^2.12"
+        "twig/cssinliner-extra": "^2.12|^3",
+        "twig/inky-extra": "^2.12|^3",
+        "twig/markdown-extra": "^2.12|^3"
     },
     "conflict": {
         "phpdocumentor/reflection-docblock": "<3.2.2",

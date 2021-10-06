@@ -161,11 +161,12 @@ class QueryException extends ORMException
      */
     public static function invalidLiteral($literal)
     {
-        return new self("Invalid literal '$literal'");
+        return new self("Invalid literal '" . $literal . "'");
     }
 
     /**
-     * @param array $assoc
+     * @param string[] $assoc
+     * @psalm-param array<string, string> $assoc
      *
      * @return QueryException
      */
@@ -190,7 +191,8 @@ class QueryException extends ORMException
     }
 
     /**
-     * @param array $assoc
+     * @param string[] $assoc
+     * @psalm-param array<string, string> $assoc
      *
      * @return QueryException
      */
@@ -215,7 +217,8 @@ class QueryException extends ORMException
     }
 
     /**
-     * @param array $assoc
+     * @param string[] $assoc
+     * @psalm-param array<string, string> $assoc
      *
      * @return QueryException
      */

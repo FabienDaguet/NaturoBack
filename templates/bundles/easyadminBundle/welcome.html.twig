@@ -14,6 +14,9 @@
                 {% elseif loop.index == 3 %}
                 <div class="col-4 alert-warning">   
                 {% endif %}
+                {% for post in category.posts %}
+                    {{ dump(post) }}
+                {% endfor %}    
                     <div class="h1">{{ category.catName }} </div>
                     <div class="display-3">{{ category.posts | length }} Articles </div>
                 </div>

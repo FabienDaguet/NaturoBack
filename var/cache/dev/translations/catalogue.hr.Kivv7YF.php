@@ -101,6 +101,7 @@ $catalogue = new MessageCatalogue('hr', array (
     'This value should satisfy at least one of the following constraints:' => 'Ova vrijednost mora zadovoljiti jedan od sljedećih ograničenja:',
     'Each element of this collection should satisfy its own set of constraints.' => 'Svaki element ove kolekcije mora zadovoljiti vlastiti skup ograničenja.',
     'This value is not a valid International Securities Identification Number (ISIN).' => 'Ova vrijednost nije ispravan međunarodni identifikacijski broj vrijednosnih papira (ISIN).',
+    'This value should be a valid expression.' => 'Ova vrijednost mora biti valjani izraz.',
     'This form should not contain extra fields.' => 'Ovaj obrazac ne smije sadržavati dodatna polja.',
     'The uploaded file was too large. Please try to upload a smaller file.' => 'Prenesena datoteka je prevelika. Molim pokušajte prenijeti manju datoteku.',
     'The CSRF token is invalid. Please try to resubmit the form.' => 'CSRF vrijednost nije ispravna. Pokušajte ponovo poslati obrazac.',
@@ -154,6 +155,8 @@ $catalogue = new MessageCatalogue('hr', array (
     'Account is locked.' => 'Račun je zaključan.',
     'Too many failed login attempts, please try again later.' => 'Previše neuspjelih pokušaja prijave, molim pokušajte ponovo kasnije.',
     'Invalid or expired login link.' => 'Link za prijavu je isteako ili je neispravan.',
+    'Too many failed login attempts, please try again in %minutes% minute.' => 'Previše neuspjelih pokušaja prijave, molim pokušajte ponovo za %minutes% minutu.',
+    'Too many failed login attempts, please try again in %minutes% minutes.' => 'Previše neuspjelih pokušaja prijave, molim pokušajte ponovo za %minutes% minutu.|Previše neuspjelih pokušaja prijave, molim pokušajte ponovo za %minutes% minute.|Previše neuspjelih pokušaja prijave, molim pokušajte ponovo za %minutes% minuta.',
   ),
   'EasyAdminBundle' => 
   array (
@@ -303,6 +306,7 @@ $catalogueEn = new MessageCatalogue('en', array (
     'This value should satisfy at least one of the following constraints:' => 'This value should satisfy at least one of the following constraints:',
     'Each element of this collection should satisfy its own set of constraints.' => 'Each element of this collection should satisfy its own set of constraints.',
     'This value is not a valid International Securities Identification Number (ISIN).' => 'This value is not a valid International Securities Identification Number (ISIN).',
+    'This value should be a valid expression.' => 'This value should be a valid expression.',
     'This form should not contain extra fields.' => 'This form should not contain extra fields.',
     'The uploaded file was too large. Please try to upload a smaller file.' => 'The uploaded file was too large. Please try to upload a smaller file.',
     'The CSRF token is invalid. Please try to resubmit the form.' => 'The CSRF token is invalid. Please try to resubmit the form.',
@@ -356,6 +360,8 @@ $catalogueEn = new MessageCatalogue('en', array (
     'Account is locked.' => 'Account is locked.',
     'Too many failed login attempts, please try again later.' => 'Too many failed login attempts, please try again later.',
     'Invalid or expired login link.' => 'Invalid or expired login link.',
+    'Too many failed login attempts, please try again in %minutes% minute.' => 'Too many failed login attempts, please try again in %minutes% minute.',
+    'Too many failed login attempts, please try again in %minutes% minutes.' => 'Too many failed login attempts, please try again in %minutes% minutes.',
   ),
   'KnpPaginatorBundle' => 
   array (

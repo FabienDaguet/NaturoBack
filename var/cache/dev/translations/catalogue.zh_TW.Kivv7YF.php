@@ -37,11 +37,11 @@ $catalogue = new MessageCatalogue('zh_TW', array (
     'The file is too large.' => '檔案太大。',
     'The file could not be uploaded.' => '無法上傳此檔案。',
     'This value should be a valid number.' => '該值應該為有效的數字。',
-    'This value is not a valid country.' => '該值不是有效的國家名。',
     'This file is not a valid image.' => '該檔案不是有效的圖片。',
     'This is not a valid IP address.' => '該值不是有效的IP地址。',
     'This value is not a valid language.' => '該值不是有效的語言名。',
     'This value is not a valid locale.' => '該值不是有效的區域值（locale）。',
+    'This value is not a valid country.' => '該值不是有效的國家名。',
     'This value is already used.' => '該值已經被使用。',
     'The size of the image could not be detected.' => '不能解析圖片大小。',
     'The image width is too big ({{ width }}px). Allowed maximum width is {{ max_width }}px.' => '圖片太寬 ({{ width }}px)，最大寬度為 {{ max_width }}px 。',
@@ -154,6 +154,8 @@ $catalogue = new MessageCatalogue('zh_TW', array (
     'Account is locked.' => '賬號已被鎖定。',
     'Too many failed login attempts, please try again later.' => '登入失敗的次數過多，請稍後再試。',
     'Invalid or expired login link.' => '失效或過期的登入鏈接。',
+    'Too many failed login attempts, please try again in %minutes% minute.' => '登錄失敗的次數過多，請在%minutes%分鐘後再試。',
+    'Too many failed login attempts, please try again in %minutes% minutes.' => '登錄失敗的次數過多，請在%minutes%分鐘後再試。',
   ),
 ));
 
@@ -259,6 +261,7 @@ $catalogueEn = new MessageCatalogue('en', array (
     'This value should satisfy at least one of the following constraints:' => 'This value should satisfy at least one of the following constraints:',
     'Each element of this collection should satisfy its own set of constraints.' => 'Each element of this collection should satisfy its own set of constraints.',
     'This value is not a valid International Securities Identification Number (ISIN).' => 'This value is not a valid International Securities Identification Number (ISIN).',
+    'This value should be a valid expression.' => 'This value should be a valid expression.',
     'This form should not contain extra fields.' => 'This form should not contain extra fields.',
     'The uploaded file was too large. Please try to upload a smaller file.' => 'The uploaded file was too large. Please try to upload a smaller file.',
     'The CSRF token is invalid. Please try to resubmit the form.' => 'The CSRF token is invalid. Please try to resubmit the form.',
@@ -312,6 +315,8 @@ $catalogueEn = new MessageCatalogue('en', array (
     'Account is locked.' => 'Account is locked.',
     'Too many failed login attempts, please try again later.' => 'Too many failed login attempts, please try again later.',
     'Invalid or expired login link.' => 'Invalid or expired login link.',
+    'Too many failed login attempts, please try again in %minutes% minute.' => 'Too many failed login attempts, please try again in %minutes% minute.',
+    'Too many failed login attempts, please try again in %minutes% minutes.' => 'Too many failed login attempts, please try again in %minutes% minutes.',
   ),
   'KnpPaginatorBundle' => 
   array (

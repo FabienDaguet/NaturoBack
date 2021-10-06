@@ -37,11 +37,11 @@ $catalogue = new MessageCatalogue('lt', array (
     'The file is too large.' => 'Byla per didelė.',
     'The file could not be uploaded.' => 'Byla negali būti įkelta.',
     'This value should be a valid number.' => 'Ši reikšmė turi būti skaičius.',
-    'This value is not a valid country.' => 'Ši reikšmė nėra tinkama šalis.',
     'This file is not a valid image.' => 'Byla nėra paveikslėlis.',
     'This is not a valid IP address.' => 'Ši reikšmė nėra tinkamas IP adresas.',
     'This value is not a valid language.' => 'Ši reikšmė nėra tinkama kalba.',
     'This value is not a valid locale.' => 'Ši reikšmė nėra tinkama lokalė.',
+    'This value is not a valid country.' => 'Ši reikšmė nėra tinkama šalis.',
     'This value is already used.' => 'Ši reikšmė jau yra naudojama.',
     'The size of the image could not be detected.' => 'Nepavyko nustatyti nuotraukos dydžio.',
     'The image width is too big ({{ width }}px). Allowed maximum width is {{ max_width }}px.' => 'Nuotraukos plotis per didelis ({{ width }}px). Maksimalus leidžiamas plotis yra {{ max_width }}px.',
@@ -101,6 +101,7 @@ $catalogue = new MessageCatalogue('lt', array (
     'This value should satisfy at least one of the following constraints:' => 'Ši reikšmė turėtų atitikti bent vieną iš šių nurodymų:',
     'Each element of this collection should satisfy its own set of constraints.' => 'Kiekvienas šio sąrašo elementas turi atitikti savo nurodymų rinkinį.',
     'This value is not a valid International Securities Identification Number (ISIN).' => 'Ši reišmė neatitinka tarptautinio vertybinių popierių identifikavimo numerio formato (ISIN).',
+    'This value should be a valid expression.' => 'Ši vertė turėtų būti teisinga išraiška.',
     'This form should not contain extra fields.' => 'Forma negali turėti papildomų laukų.',
     'The uploaded file was too large. Please try to upload a smaller file.' => 'Įkelta byla yra per didelė. bandykite įkelti mažesnę.',
     'The CSRF token is invalid. Please try to resubmit the form.' => 'CSRF kodas nepriimtinas. Bandykite siųsti formos užklausą dar kartą.',
@@ -154,6 +155,8 @@ $catalogue = new MessageCatalogue('lt', array (
     'Account is locked.' => 'Paskyra yra užblokuota.',
     'Too many failed login attempts, please try again later.' => 'Per daug nepavykusių prisijungimo bandymų, pabandykite dar kartą vėliau.',
     'Invalid or expired login link.' => 'Netinkama arba pasibaigusio galiojimo laiko prisijungimo nuoroda.',
+    'Too many failed login attempts, please try again in %minutes% minute.' => 'Per daug nepavykusių prisijungimo bandymų, pabandykite dar kartą po %minutes% minutės.',
+    'Too many failed login attempts, please try again in %minutes% minutes.' => 'Per daug nepavykusių prisijungimo bandymų, pabandykite dar kartą po %minutes% minutės.|Per daug nepavykusių prisijungimo bandymų, pabandykite dar kartą po %minutes% minučių.|Per daug nepavykusių prisijungimo bandymų, pabandykite dar kartą po %minutes% minučių.',
   ),
   'KnpPaginatorBundle' => 
   array (
@@ -315,6 +318,7 @@ $catalogueEn = new MessageCatalogue('en', array (
     'This value should satisfy at least one of the following constraints:' => 'This value should satisfy at least one of the following constraints:',
     'Each element of this collection should satisfy its own set of constraints.' => 'Each element of this collection should satisfy its own set of constraints.',
     'This value is not a valid International Securities Identification Number (ISIN).' => 'This value is not a valid International Securities Identification Number (ISIN).',
+    'This value should be a valid expression.' => 'This value should be a valid expression.',
     'This form should not contain extra fields.' => 'This form should not contain extra fields.',
     'The uploaded file was too large. Please try to upload a smaller file.' => 'The uploaded file was too large. Please try to upload a smaller file.',
     'The CSRF token is invalid. Please try to resubmit the form.' => 'The CSRF token is invalid. Please try to resubmit the form.',
@@ -368,6 +372,8 @@ $catalogueEn = new MessageCatalogue('en', array (
     'Account is locked.' => 'Account is locked.',
     'Too many failed login attempts, please try again later.' => 'Too many failed login attempts, please try again later.',
     'Invalid or expired login link.' => 'Invalid or expired login link.',
+    'Too many failed login attempts, please try again in %minutes% minute.' => 'Too many failed login attempts, please try again in %minutes% minute.',
+    'Too many failed login attempts, please try again in %minutes% minutes.' => 'Too many failed login attempts, please try again in %minutes% minutes.',
   ),
   'KnpPaginatorBundle' => 
   array (

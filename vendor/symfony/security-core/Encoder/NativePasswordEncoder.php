@@ -51,11 +51,11 @@ final class NativePasswordEncoder implements PasswordEncoderInterface, SelfSalti
         $algos = [1 => \PASSWORD_BCRYPT, '2y' => \PASSWORD_BCRYPT];
 
         if (\defined('PASSWORD_ARGON2I')) {
-            $this->algo = $algos[2] = $algos['argon2i'] = (string) \PASSWORD_ARGON2I;
+            $this->algo = $algos[2] = $algos['argon2i'] = \PASSWORD_ARGON2I;
         }
 
         if (\defined('PASSWORD_ARGON2ID')) {
-            $this->algo = $algos[3] = $algos['argon2id'] = (string) \PASSWORD_ARGON2ID;
+            $this->algo = $algos[3] = $algos['argon2id'] = \PASSWORD_ARGON2ID;
         }
 
         if (null !== $algo) {
@@ -75,7 +75,7 @@ final class NativePasswordEncoder implements PasswordEncoderInterface, SelfSalti
      */
     public function encodePassword(string $raw, ?string $salt): string
     {
-        if (\strlen($raw) > self::MAX_PASSWORD_LENGTH || ((string) \PASSWORD_BCRYPT === $this->algo && 72 < \strlen($raw))) {
+        if (\strlen($raw) > self::MAX_PASSWORD_LENGTH || (\PASSWORD_BCRYPT === $this->algo && 72 < \strlen($raw))) {
             throw new BadCredentialsException('Invalid password.');
         }
 
@@ -97,9 +97,9 @@ final class NativePasswordEncoder implements PasswordEncoderInterface, SelfSalti
             return false;
         }
 
-        if (0 !== strpos($encoded, '$argon')) {
+        if (!str_starts_with($encoded, '$argon')) {
             // BCrypt encodes only the first 72 chars
-            return (72 >= \strlen($raw) || 0 !== strpos($encoded, '$2')) && password_verify($raw, $encoded);
+            return (72 >= \strlen($raw) || !str_starts_with($encoded, '$2')) && password_verify($raw, $encoded);
         }
 
         if (\extension_loaded('sodium') && version_compare(\SODIUM_LIBRARY_VERSION, '1.0.14', '>=')) {

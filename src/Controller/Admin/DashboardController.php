@@ -35,7 +35,7 @@ class DashboardController extends AbstractDashboardController
 
         //dd($allPosts, $allCategory);
         return $this->render('bundles/easyadminBundle/welcome.html.twig', [
-            'allCategory' => $allCategory 
+            'allCategory' => $allCategory
         ]);
     }
 

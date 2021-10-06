@@ -35,6 +35,7 @@ use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Question\ConfirmationQuestion;
 use Symfony\Component\Console\Question\Question;
+use Symfony\UX\Turbo\Attribute\Broadcast;
 
 /**
  * @author Javier Eguiluz <javier.eguiluz@gmail.com>
@@ -84,6 +85,7 @@ final class MakeEntity extends AbstractMaker implements InputAwareMakerInterface
         $command
             ->addArgument('name', InputArgument::OPTIONAL, sprintf('Class name of the entity to create or update (e.g. <fg=yellow>%s</>)', Str::asClassName(Str::getRandomTerm())))
             ->addOption('api-resource', 'a', InputOption::VALUE_NONE, 'Mark this class as an API Platform resource (expose a CRUD API for it)')
+            ->addOption('broadcast', 'b', InputOption::VALUE_NONE, 'Add the ability to broadcast entity updates using Symfony UX Turbo?')
             ->addOption('regenerate', null, InputOption::VALUE_NONE, 'Instead of adding new fields, simply generate the methods (e.g. getter/setter) for existing fields')
             ->addOption('overwrite', null, InputOption::VALUE_NONE, 'Overwrite any existing getter/setter methods')
             ->setHelp(file_get_contents(__DIR__.'/../Resources/help/MakeEntity.txt'))
@@ -112,20 +114,32 @@ final class MakeEntity extends AbstractMaker implements InputAwareMakerInterface
 
         $argument = $command->getDefinition()->getArgument('name');
         $question = $this->createEntityClassQuestion($argument->getDescription());
-        $value = $io->askQuestion($question);
+        $entityClassName = $io->askQuestion($question);
 
-        $input->setArgument('name', $value);
+        $input->setArgument('name', $entityClassName);
 
         if (
             !$input->getOption('api-resource') &&
             class_exists(ApiResource::class) &&
-            !class_exists($this->generator->createClassNameDetails($value, 'Entity\\')->getFullName())
+            !class_exists($this->generator->createClassNameDetails($entityClassName, 'Entity\\')->getFullName())
         ) {
             $description = $command->getDefinition()->getOption('api-resource')->getDescription();
             $question = new ConfirmationQuestion($description, false);
-            $value = $io->askQuestion($question);
+            $isApiResource = $io->askQuestion($question);
 
-            $input->setOption('api-resource', $value);
+            $input->setOption('api-resource', $isApiResource);
+        }
+
+        if (
+            !$input->getOption('broadcast') &&
+            class_exists(Broadcast::class) &&
+            !class_exists($this->generator->createClassNameDetails($entityClassName, 'Entity\\')->getFullName())
+        ) {
+            $description = $command->getDefinition()->getOption('broadcast')->getDescription();
+            $question = new ConfirmationQuestion($description, false);
+            $isBroadcast = $io->askQuestion($question);
+
+            $input->setOption('broadcast', $isBroadcast);
         }
     }
 
@@ -148,10 +162,26 @@ final class MakeEntity extends AbstractMaker implements InputAwareMakerInterface
 
         $classExists = class_exists($entityClassDetails->getFullName());
         if (!$classExists) {
+            $broadcast = $input->getOption('broadcast');
             $entityPath = $this->entityClassGenerator->generateEntityClass(
                 $entityClassDetails,
-                $input->getOption('api-resource')
+                $input->getOption('api-resource'),
+                false,
+                true,
+                $broadcast
             );
+
+            if ($broadcast) {
+                $shortName = $entityClassDetails->getShortName();
+                $generator->generateTemplate(
+                    sprintf('broadcast/%s.stream.html.twig', $shortName),
+                    'doctrine/broadcast_twig_template.tpl.php',
+                    [
+                        'class_name' => Str::asSnakeCase($shortName),
+                        'class_name_plural' => Str::asSnakeCase(Str::singularCamelCaseToPluralCamelCase($shortName)),
+                    ]
+                );
+            }
 
             $generator->writeChanges();
         }
@@ -280,6 +310,13 @@ final class MakeEntity extends AbstractMaker implements InputAwareMakerInterface
             );
         }
 
+        if (null !== $input && $input->getOption('broadcast')) {
+            $dependencies->addClassDependency(
+                Broadcast::class,
+                'ux-turbo-mercure'
+            );
+        }
+
         ORMDependencyBuilder::buildDependencies($dependencies);
     }
 
@@ -316,7 +353,7 @@ final class MakeEntity extends AbstractMaker implements InputAwareMakerInterface
         $snakeCasedField = Str::asSnakeCase($fieldName);
 
         if ('_at' === $suffix = substr($snakeCasedField, -3)) {
-            $defaultType = 'datetime';
+            $defaultType = 'datetime_immutable';
         } elseif ('_id' === $suffix) {
             $defaultType = 'integer';
         } elseif (0 === strpos($snakeCasedField, 'is_')) {

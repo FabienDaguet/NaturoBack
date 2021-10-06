@@ -37,7 +37,7 @@ class AppFixtures extends Fixture
             ->setPassword($password);
             $manager->persist($user);
         }
-
+        
         for ($k = 0; $k < 3; $k++){
             $cat = new Category();
             $cat -> setCatName($generator->word());
@@ -55,7 +55,7 @@ class AppFixtures extends Fixture
             ->setPostImg($generator->imageUrl(750, 500));
             $manager->persist($post);
         }        
-
+    
         $manager->flush();
     }
 }

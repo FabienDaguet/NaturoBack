@@ -101,6 +101,7 @@ $catalogue = new MessageCatalogue('vi', array (
     'This value should satisfy at least one of the following constraints:' => 'Giá trị này nên thỏa mãn ít nhất một trong những ràng buộc sau:',
     'Each element of this collection should satisfy its own set of constraints.' => 'Mỗi phần tử trong bộ sưu tập này nên thỏa mãn những ràng buộc của nó.',
     'This value is not a valid International Securities Identification Number (ISIN).' => 'Giá trị này không phải là mã số chứng khoán quốc tế (ISIN) hợp lệ.',
+    'This value should be a valid expression.' => 'Giá trị này phải là một biểu thức hợp lệ.',
     'This form should not contain extra fields.' => 'Mẫu này không nên chứa trường mở rộng.',
     'The uploaded file was too large. Please try to upload a smaller file.' => 'Tập tin tải lên quá lớn. Vui lòng thử lại với tập tin nhỏ hơn.',
     'The CSRF token is invalid. Please try to resubmit the form.' => 'CSRF token không hợp lệ. Vui lòng thử lại.',
@@ -154,6 +155,8 @@ $catalogue = new MessageCatalogue('vi', array (
     'Account is locked.' => 'Tài khoản bị khóa.',
     'Too many failed login attempts, please try again later.' => 'Đăng nhập sai quá nhiều lần, vui lòng thử lại lần nữa.',
     'Invalid or expired login link.' => 'Liên kết đăng nhập không hợp lệ hoặc quá hạn.',
+    'Too many failed login attempts, please try again in %minutes% minute.' => 'Quá nhiều lần thử đăng nhập không thành công, vui lòng thử lại sau %minutes% phút.',
+    'Too many failed login attempts, please try again in %minutes% minutes.' => 'Quá nhiều lần thử đăng nhập không thành công, vui lòng thử lại sau %minutes% phút.',
   ),
 ));
 
@@ -256,6 +259,7 @@ $catalogueEn = new MessageCatalogue('en', array (
     'This value should satisfy at least one of the following constraints:' => 'This value should satisfy at least one of the following constraints:',
     'Each element of this collection should satisfy its own set of constraints.' => 'Each element of this collection should satisfy its own set of constraints.',
     'This value is not a valid International Securities Identification Number (ISIN).' => 'This value is not a valid International Securities Identification Number (ISIN).',
+    'This value should be a valid expression.' => 'This value should be a valid expression.',
     'This form should not contain extra fields.' => 'This form should not contain extra fields.',
     'The uploaded file was too large. Please try to upload a smaller file.' => 'The uploaded file was too large. Please try to upload a smaller file.',
     'The CSRF token is invalid. Please try to resubmit the form.' => 'The CSRF token is invalid. Please try to resubmit the form.',
@@ -309,6 +313,8 @@ $catalogueEn = new MessageCatalogue('en', array (
     'Account is locked.' => 'Account is locked.',
     'Too many failed login attempts, please try again later.' => 'Too many failed login attempts, please try again later.',
     'Invalid or expired login link.' => 'Invalid or expired login link.',
+    'Too many failed login attempts, please try again in %minutes% minute.' => 'Too many failed login attempts, please try again in %minutes% minute.',
+    'Too many failed login attempts, please try again in %minutes% minutes.' => 'Too many failed login attempts, please try again in %minutes% minutes.',
   ),
   'KnpPaginatorBundle' => 
   array (
