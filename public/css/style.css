@@ -44,7 +44,7 @@ body {
 
 .demo {
     z-index: -1;
-    font-size: 300px;
+    font-size: 450px;
     text-transform: uppercase;
     color: hsla(0, 0%, 50%, 0.335);
     position: relative; 
@@ -420,6 +420,10 @@ body {
 
 @media (max-width: 767px) {
 
+    .demo {
+        font-size: 180px;
+    }
+
 /*----Nav----*/
 
     .offcanvas-collapse {
@@ -454,6 +458,10 @@ body {
 /*------TABLETTE-FORMAT------*/
 
 @media (min-width: 768px) {
+
+    .demo {
+        font-size: 300px;
+    }
 
     /*----Body----*/
     html,body {
@@ -630,6 +638,7 @@ body {
 
 @media (min-width: 1024px) {
 
+
     /*---Body----*/
 
     .body-content {
@@ -732,4 +741,11 @@ body {
         width: calc(100% / 4);
     }
 
+}    
+
+@media (min-width: 1440px) {
+
+    .demo {
+        font-size: 600px;
+    }
 }    
